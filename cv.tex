@@ -1,0 +1,328 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{article} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage{marvosym} % Allows the use of symbols
+\usepackage{scrpage2} % Provides headers and footers configuration
+
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{tabularx,colortbl} % Advanced table configurations
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+\begin{document}
+
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Section formatting
+
+\pagestyle{scrheadings} % Print the headers and footers on all pages
+
+\addtolength{\voffset}{-0.5in} % Adjust the vertical offset - less whitespace at the top of the page
+\addtolength{\textheight}{3cm} % Adjust the text height - less whitespace at the bottom of the page
+
+%----------------------------------------------------------------------------------------
+% FOOTER SECTION
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\headfont}{\normalfont\rmfamily\scshape} % Font settings for footer
+
+\cofoot{
+\addfontfeature{LetterSpace=20.0}\fontsize{10.5}{17}\selectfont % Letter spacing and font size
+
+I-308, IIT Kanpur {\large\textperiodcentered} Kanpur {\large\textperiodcentered} UP 208016\\ % Your mailing address
+{\Large\Letter} srijan.shetty@gmail.com \ {\Large\Telefon} +(91) 9005900383 % Your email address and phone number
+}
+
+%----------------------------------------------------------------------------------------
+% HEADER SECTION
+%----------------------------------------------------------------------------------------
+
+{\addfontfeature{LetterSpace=20.0}\fontsize{36}{36}\selectfont\scshape Srijan R. Shetty} %Your name at the top
+\\ \\
+{Senior Undergraduate \\%
+Department of Computer Science and Engineering \\%
+Indian Institute of Technology, Kanpur}
+
+%----------------------------------------------------------------------------------------
+%   INTERESTS
+%----------------------------------------------------------------------------------------
+\section{Interests}
+
+Web Development, Natural Language Processing, Programming Languages, Distibuted Systems,
+Networks
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\begin{tabular}{rl}
+
+    \textsc{Current} & B. Tech in \textsc{Computer Science and Engineering},\\
+                     & \textbf{Indian Institute of Technology}, Kanpur\\
+                     & \normalsize \textsc{Gpa}: 9.6/10.0 \\
+                     & \textbf{Relevant Courses}: \\
+                     & Computer Organization (CS220) \\
+                    & Operating Systems (CS330) \\
+                    & Compilers (CS335) \\
+                    & Computer Networks (CS425) \\
+                    & Theory of Computation (CS3) \\
+                    & Computing Laboratory (CS251 \& CS252)\\
+                    & Discreet Mathematics (CS201)\\
+                    & Logic for Computer Science (CS202A)\\
+                    & Data Structure and Algorithms (CS210)\\
+                    & Design and Analysis of Algorithms (CS345)\\
+                    & Principles of Programming Languages (CS350)\\
+                    & Computer and Internet Security (CS628)\\
+                    & Artificial Intelligence (CS365)\\
+                    & Abstract Algebra (CS202B)\\
+                    & Linear Algebra (MTH102)\\
+                    & Computational Methods in Engineering (ESO208A)\\
+                    & Multivariate Calculus (MTH101)\\
+                    & Technical Communication(CS300)\\
+                     \\
+
+    \textsc{July} 2011 & \textsc{CBSE} Board, \normalsize\textbf{The Emerald Heights International School}, Indore\\
+                       &\normalsize \textsc{Percentage}: 91.4 \\
+                       \\
+
+    \textsc{July} 2011 & \textsc{ICSE} Board,  \normalsize\textbf{The Laurels School International}, Indore \\
+                       & \normalsize \textsc{Percentage}: 95.4 \\
+                       \\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	SCHOLARSHIPS AND CONFERENCES
+%----------------------------------------------------------------------------------------
+\section{Scholarships and Conferences}
+
+\begin{tabular}{rl}
+
+    \textsc{Jan} 2011 & Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship \\
+    \textsc{Dec} 2008 & FIITJEE Talent Reward Examination Scholarship \\
+    \textsc{Dec} 2009 & CSIR Programme on Youth for Leadership in Science (CPYLS camp) \\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\begin{tabular}{r|p{11cm}}
+    \textsc{May-Jul 2014} & Research Intern at \textsc{Microsoft Research India}, Bangalore\emph{}\\
+        & \footnotesize{Worked on Distibuted Systems} \\
+
+    \textsc{May-Jul 2013} & Software Development at \textsc{Aurus Networks}, Bangalore\emph{}\\
+        & \footnotesize{Used bleeding edge web technologies \textbf{HTML5, javascript, CSS3, Flash and XMPP} to develop a
+            \textbf{technology-agnostic video player and real time communication/interaction services.}
+            for the company's MOOC Service \textbf{CourseHub}}
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%  COURSE PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Course Projects}
+
+\begin{tabular}{r|p{11cm}}
+
+    \textsc{Spring 2014} & JavaScript to MIPS Compiler, \textsc{\raggedright Compilers} \\
+        & \footnotesize{An end to end compiler for a version of ECMAScript5.1 with static type hinting,
+            first class functions, and runtime support was implemented in Python which compiled to MIPS
+            architecture.}\\
+            \\
+
+    \textsc{Spring 2014} & Hindi author attribution, \textsc{\raggedright Artificial Intelligence} \\
+        & \footnotesize{The first half of this project was a multi-class clustering problem, wherein authors were to be clustered
+            according to their writing style. The features used for the same were, word frequency counts and collocation frequencies.
+            The second half of the project was to classify the text snippets into different authors using supervised learning techniques.
+            The project was supervised by \textbf{Professor Amitabha Mukherjee} and was inherently difficult due to the unavailability
+            of stemmers and POS taggers for Hindi.} \\
+            \\
+
+    \textsc{Fall 2013} & NachOS, \textsc{Operating Systems} \\
+        & \footnotesize{In the three phases of this project undertaken in the aegis of \textbf{Professor Mainak Chaudhuri},
+            three different areas of an Operating System were explored.
+            The first phase involved implementation of system calls; the second was process management and process scheduling;
+            and the last was different memory management schemes and page replacement algorithms }\\
+            \\
+
+    \textsc{Fall 2013} & Peer to Peer File transfer, \textsc{Computer Networks} \\
+        & \footnotesize{To understand the working of Transport Layer Protocols and socket programming
+            , a peer to peer file transfer architecture,
+            mimicking that of BitTorrent was created in Node.js to allow easy file sharing acorss any Local Area Network.
+            The project was supervised by \textbf{Professor Dheeraj Sanghi}. \href{https://github.com/srijanshetty/nodesock} {Repo}}\\
+            \\
+
+    \textsc{Fall 2013} & IP Spoofing, \textsc{Computer Networks} \\
+       & \footnotesize{Under the guidance of \textbf{Professor Dheeraj Sanghi}, different methodologies of spoofing
+            IP addresses and different uses of spoofing IPs were implemented and tested in a secure environment.}\\
+            \\
+
+    \textsc{Fall 2013} & Erlang Traffic Server, \textsc{Principles of Programming Languages} \\
+       & \footnotesize{A simple traffic Server was implemented in Erlang to grok message passing concurrency and other
+        functional aspects of the language under the guidance of \textbf{Professor P. Kurur}}\\
+            \\
+
+    \textsc{Fall 2013} & Metro Travel Plan(Prolog), \textsc{Principles of Programming Languages} \\
+       & \footnotesize{To grok the concepts of logic programming, we were tasked to implement a shortest path
+        algorithm on Delhi Metro route using solely logic programming constructs. This project was also supervised by
+        \textbf{Professor P. Kurur}}\\
+            \\
+
+    \textsc{Spring 2013} & 8-bit General Purpose Computer on a FPGA, \textsc{Computer Organization} \\
+        & \footnotesize{The GPC had a load-store architecture and was written in System Verilog and implemented on a \textbf{Xilinx Spartan 3 FPGA}.
+            The project was under the supervision of \textbf{Professor Subhajit Roy}.
+            It had a limited, but powerful Instruction Set Architecture which could implement recursive functions, jumps,
+            loops  other basic building blocks of a simple assembly language.
+            \href{https://github.com/srijanshetty/220_y11} {Github Repo}} \\
+            \\
+
+    \textsc{Spring 2013} & Web Crawler, \textsc{Computing Laboratory} \\
+        & \footnotesize{A python based web crawler which could obtain paper submission deadlines of a supplied conference name.
+            BeautifulSoup and urllib along with simple pattern matching through regular expressions were used to implement crawling.
+            \href{https://github.com/srijanshetty/crawler} {Github Repo} } \\
+            \\
+
+    \textsc{Fall 2011} & "No situation is unique and certain moral principles can be applied across all situation",
+        \textsc{Introduction to Philosophy} \\
+        & \footnotesize{ An argumentative presentation proving that certain moral principles can be applied throughout;
+                by proving different situations have certain fundamental similarity.
+                Albeit this would require a gross simplification of different situations.
+                The reviewing instructor was \textbf{Professor Vineet Sahu}} \\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%  SIDE PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Side Projects}
+
+\begin{tabular}{r|p{11cm}}
+
+    \textsc{May-July 2012} & Voicing, Archiving and Networking the Information \textsc{(VANI)}, IIT Kanpur\\
+        & \footnotesize{Vani is an \textbf{extensible} platform made for the campus community consisting of Wiki, Forums,
+                Community search, Calendars etc.; built using \textbf{Drupal} under the mentorship of
+                \textbf{Professor Manindra Agarwal} and \textbf{Professor T. V. Prabhakar} } \\
+            \\
+
+    \textsc{May-July 2012} & GNU/Linux Exploration, Programming Club, IIT Kanpur\\
+        & \footnotesize{ The project involved exploration of various facets of \textbf{GNU/Linux} like the file system,
+            process management, memory management, shell interface et al.
+            It was essentially a theoretical run through GNU/Linux.
+            \href{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing} {Documentation} } \\
+            \\
+
+    \textsc{July 2013} & Web development\\
+        & \footnotesize{Webpage of \textbf{Udghosh}, the annual sports festival of IIT Kanpur. \href{www.udghosh.org} {Webpage} } \\
+        & \footnotesize{Homepage of \textbf{Hall 5}, IIT Kanpur. \href{http://www.iitk.ac.in/hall5} {Webpage}. } \\
+        \\
+
+    \textsc{July 2013} & Projects on Github \\
+        & \footnotesize{\textbf{ShuffleRun}: a music player which changes tracks on the basis of running speed of the user
+            \href{https://github.com/srijanshetty/ShuffleRun} {Repo} }\\
+        & \footnotesize{\textbf{GYPH}: a music player which changes tracks on the basis of running speed of the user
+            \href{https://github.com/srijanshetty/ShuffleRun} {Repo} }\\
+        & \footnotesize{\textbf{OARS}: a music player which changes tracks on the basis of running speed of the user
+            \href{https://github.com/srijanshetty/ShuffleRun} {Repo} }\\
+        & \footnotesize{\textbf{Dotfiles}: an opinionated work flow on Linux Systems. \href{https://github.com/srijanshetty/dotfiles} {Repo} } \\
+        & \footnotesize{\textbf{Prezto}: a fork of the Prezto ZSH framework  \href{https://github.com/srijanshetty/prezto} {Repo}} \\
+        & \footnotesize {\textbf{oh-my-zsh}: a fork of the oh-my-zsh ZSH framework \href{https://github.com/srijanshetty/oh-my-zsh} {Repo} } \\
+        & \footnotesize{\textbf{DS}: implementation of certain algorithms and data structures \href{https://github.com/srijanshetty/DS} {Repo}} \\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%   SCHOLASTIC ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\section{Scholastic Achievements}
+
+\begin{tabular}{rp{12cm}}
+
+    \textsc{2012-2013}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
+    \textsc{2011-2012}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
+    \textsc{Fall 2012}   & \textbf{Academic Mentor} for Y12 batch in \textbf{Fundamentals of Computer Science (ESC101)}. \\
+                         & \footnotesize{As an academic Mentor, I was entrusted with the responsibility of making sure
+                            that the students under me were able to keep pace with instructor and aid them in understanding
+                            the difficult concepts of the course. }\\
+    \textsc{Jan 2010}    & Qualified for \textbf{Indian National Mathematics Olympaid} (INMO) \\
+    \textsc{May 2011}    & Secured All India rank \textbf{1937} in Joint Entrance Exam (JEE) \\
+    \textsc{Sep 2010}    & \textbf{AIR 17} in \textbf{Technothlon} (Techniche) conducted by Indian Institute of Technology Guwahati. \\
+    \textsc{2005, 2009}  & Awarded overall best student in grades 6th and 9th for displaying all round excellence. \\
+    \textsc{2000 - 2009} & Recipient of scholastic excellence awards for exemplary academic performance throughout 2nd to 12th grade. \\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%   SKILL SET
+%----------------------------------------------------------------------------------------
+\section{Skill Set}
+
+\begin{tabular}{rl}
+
+\textsc{Programming Languages}: %
+    & \textbf{C}, \textbf{C++},\textbf{Python}, \textbf{JavaScript} \\
+    \textsc{Web Development}: %
+    & \textbf{HTML5}, \textbf{CSS}, \textbf{JavaScript}, \textbf{Flash}, \textbf{SQL}\\
+    \textsc{Tools}: %
+    & \textbf{Git}, \textbf{Shell Scripting}, \textbf{Prezi}, \textbf{Vim}, \textbf{LaTeX}\\
+\\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%   OTHER SKILLS
+%----------------------------------------------------------------------------------------
+
+\section {Social, Leadership and Artistic Skills}
+\begin{tabular}{rp{12cm}}
+
+    -    & Volunteered to help \textbf{Professor Bhaskar Dasgupta} teach English to underprivileged children from the campus
+           and neighbouring village of Nankari.\\
+    2014 & \textbf{Head, Major Events and Competitions, Antaragni'14} , the annual cultural festival of
+    IIT Kanpur. \\
+    2013 & \textbf{Hospitality Coordinator, Antaragni ‘13}\\
+         & \footnotesize{As a Hospitality Coordinator, I was oversaw a team of 150 students responsible for
+            the hospitality of the 1500 students who visit the campus for Antaragni, the annual cultural festival
+            of IIT Kanpur which takes place in October every year.}\\
+    2013 & \textbf{Editor-in-chief, Vox Populi}, the campus newsletter. \\
+         & \footnotesize{Vox Populi is the campus newsletter of IIT Kanpur with a reach of more than 6000 students.
+            As, the Editor-in-chief, I was responsible for ensuring impeccable quality of content in the newsletter and
+            logistics of publishing the bi-monthly newsletter.}\\
+    2012 & \textbf{Member Gymkhana Review Committee}\\
+         & \footnotesize{The Gymkhana Review Committee was set up with the vision of revamping the Student's Gymkhana
+            of IIT Kanpur, which is the body responsible for all extra curricular activities of the campus. As a
+            member of the Gymkhana Review Committee, I chaired the sessions on \textbf{Extended Orientation of
+            incoming freshmen students}, as a member of the committee, I gave valuable inputs to other academic,
+            senate and activities reforms introduced by the committee.}\\
+    2012 & \textbf{Elected Senator Students' Gymkhana} IITK Y11 batch. \\
+    2012 & \textbf{Secretary, English Literary Society}. \\
+    2010 & A year of schooling in \textbf{Indian Classical Music}. (Prayag Sangeet Samiti Allahabad). \\
+    -   & Active blogger at \href{srijanshetty.quora.com} {srijanshetty.quora.com} \\
+
+\end{tabular}
+
+\end{document}
