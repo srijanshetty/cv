@@ -32,6 +32,8 @@
 \usepackage[margin=2cm]{geometry}
 \usepackage{array}
 
+\usepackage{enumitem}
+
 \begin{document}
 
 \font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
@@ -116,9 +118,8 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
     \textsc{2012-2013}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
     \textsc{2011-2012}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
     \textsc{Fall 2012}   & \textbf{Academic Mentor}, \textbf{Fundamentals of Computer Science (ESC101)}. \\
-                         & \footnotesize{As an academic Mentor, I was entrusted with the responsibility of making sure
-                            that the students under me were able to keep pace with instructor and aid them in understanding
-                            the difficult concepts of the course. }\\
+                         & \footnotesize{Tutored students in ESC101, which covered the basic concepts of
+                            programming.}\\
     \textsc{Jan 2010}    & Qualified for \textbf{Indian National Mathematics Olympaid} (INMO) \\
     \textsc{May 2011}    & Secured All India rank \textbf{1937} in Joint Entrance Exam (JEE) \\
     \textsc{Sep 2010}    & \textbf{AIR 17} in \textbf{Technothlon} (Techniche) conducted by Indian Institute of Technology Guwahati. \\
@@ -153,21 +154,32 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
 
 \section{Work Experience}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
-    \textsc{May-Jul 2014} & Research Intern at \textsc{Microsoft Research India}, Bangalore\emph{}\\
-                          & \footnotesize{The major objective of this project was to optimize
-                            \textbf{CScale for concurrency}. CScale provides a declarative programming model
-                            using LINQ, it does all the heavy lifting of scaling distributed systems and
-                            failure. The project also involved \textbf{failure testing and performance testing}
-                            of the concurrency optimizations in real world scenarios.}\\
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
+    \textsc{May-Jul 2014} & Research Intern at \textsc{Microsoft Research India}, Bangalore
+                            \footnotesize{
+                                \begin{itemize}[leftmargin=*]
+                                    \item Optimized \textbf{CScale for concurrency} using \textbf{TPL Dataflow}
+                                        for dataflow computations and pipeline processing.
+                                    \item CScale provides a declarative distributed systems programming
+                                        model using LINQ; it handles scaling and failures for the programmer.
+                                    \item Performed \textbf{failure testing and performance testing}
+                                        of the concurrency optimizations in real world scenarios.
+                                \end{itemize}
+                            }\\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
-    \textsc{May-Jul 2013} & Software Development at \textsc{Aurus Networks}, Bangalore\emph{}\\
-                          & \footnotesize{Using \textbf{HTML5, javascript, CSS3}, I ported the legacy
-                            \textbf{Flash} based online media player of \textbf{CourseHub} - Aurus'
-                            propriety MOOC offering. A new \textbf{XMPP} chat service for group chat
-                            was also created and integrated with CourseHub.}\\
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
+    \textsc{May-Jul 2013} & Software Development at \textsc{Aurus Networks}, Bangalore
+                            \footnotesize{
+                                \begin{itemize}[leftmargin=*]
+                                    \item Worked on \textbf{Aurus Networks} MOOC offereing \textbf{CourseHub}.
+                                    \item Using \textbf{HTML5, javascript, CSS3}, I ported the legacy
+                                          \textbf{Flash} based online media player to a multi-platform
+                                          Flash/HTML5 media player.
+                                      \item Developed a \textbf{XMPP} based \textbf{real-time chat service} for
+                                          conversations during live lectures.
+                                \end{itemize}
+                            }\\
 \end{tabular}
 
 %----------------------------------------------------------------------------------------
@@ -175,7 +187,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
 %----------------------------------------------------------------------------------------
 \section{Course Projects}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Spring 2014} & JavaScript to MIPS Compiler, \textsc{\raggedright Compilers} \\
                          & \footnotesize{An end-to-end compiler for a subset of ECMAScript5.1
                             which compiled to MIPS was implemented in Python. No runtime support
@@ -184,7 +196,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
                             \href{https://github.com/srijanshetty/javascript-compiler} {Git Repo}} \\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Spring 2014} & Hindi author attribution, \textsc{\raggedright Artificial Intelligence} \\
                          & \footnotesize{The first half of this project was a multi-class clustering problem,
                             wherein authors were to be clustered according to their writing style.
@@ -196,7 +208,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
                             \href{https://github.com/srijanshetty/author-attribution} {Git Repo}}\\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Fall 2013} & NachOS, \textsc{Operating Systems} \\
                        & \footnotesize{The coursework included implementation of system calls; process
                           management and scheduling; memory management schemes and page replacement
@@ -204,7 +216,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
                           the professor-in-charge}\\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Fall 2013} & P2P File Sharing and Streaming, \textsc{Computer Networks} \\
                        & \footnotesize{A Node.js based local file server and media playback server was implemented
                           to understand the underpinnings of Transport Layer Protocols, socket programming,
@@ -212,27 +224,27 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
                           \href{https://github.com/srijanshetty/nodesock} {Git Repo}}\\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Fall 2013} & IP Spoofing, \textsc{Computer Networks} \\
                        & \footnotesize{Under the guidance of \textbf{Professor Dheeraj Sanghi}, different methodologies
                           of spoofing IP addresses and different uses of spoofing IPs were implemented and tested
                           in a secure environment.}\\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Fall 2013} & Metro Travel Plan(Prolog), \textsc{Principles of Programming Languages} \\
                        & \footnotesize{Implementation of shortest paths in Prolog on the Delhi Metro route.
                           The professor-in-charge was \textbf{Professor P. Kurur}}\\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Fall 2013} & Erlang Traffic Server, \textsc{Principles of Programming Languages} \\
                        & \footnotesize{A simple traffic server implemented in Erlang using message passing
                           concurrency and tail call recursion functional aspects of the language under the
                           guidance of \textbf{Professor P. Kurur}}\\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Spring 2013} & 8-bit General Purpose Computer on a FPGA, \textsc{Computer Organization} \\
                          & \footnotesize{The GPC had a load-store architecture and was written in System Verilog and
                             implemented on a \textbf{Xilinx Spartan 3 FPGA}.  The project was under the
@@ -242,7 +254,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
                             \href{https://github.com/srijanshetty/220_y11} {Git Repo}} \\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Spring 2013} & Conference Dates Web Crawler, \textsc{Computing Laboratory} \\
                          & \footnotesize{A python based web crawler which could obtain paper submission
                             deadlines of a provided conference name.  BeautifulSoup and urllib along
@@ -250,7 +262,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
                             \href{https://github.com/srijanshetty/crawler} {Git Repo} } \\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Fall 2011} & "No situation is unique and certain moral principles can be applied across all situation",
                          \textsc{Introduction to Philosophy} \\
                        & \footnotesize{ An argumentative discourse proving that certain moral principles
@@ -264,7 +276,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
 %----------------------------------------------------------------------------------------
 \section{Side Projects}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{July 2014} & OARS\\
                        & \footnotesize{OARS is a \textbf{AngularJS} based front-end for the
                           courses offered in IIT Kanpur. It was created as a
@@ -276,7 +288,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
 
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{March 2014} & GYPH\\
                         & \footnotesize{GYPH or Get Your Personal Homepage
                            is a simple hassle-free homepage designer for students who are not
@@ -285,23 +297,22 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
                            \href{http://gyph2.herokuapp.com/} {Website} } \\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{August 2013} & ShuffleRun\\
                          & \footnotesize{A hack for Yahoo HackU. ShuffleRun is a
-                            web based music player which selects a track from the users library
-                            according to her running speed.
+                            web based music player which selects a track from the users library according to her running speed.
                             \href{https://github.com/srijanshetty/ShuffleRun} {GitHub Repo} }\\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
-    \textsc{July 2013} & Website of Udghosh, annual sport-fest IIT Kanpur \footnotesize{\href{www.udghosh.org} {Webpage} } \\
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
+    \textsc{July 2013} & Website of Udghosh, annual sports-fest IIT Kanpur \footnotesize{\href{www.udghosh.org} {Webpage} } \\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Dec 2012} & Website of Hall 5, IIT Kanpur \footnotesize{\href{http://www.iitk.ac.in/hall5} {Webpage}} \\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Summer 2012} & Voicing, Archiving and Networking the Information \textsc{(VANI)}, IIT Kanpur\\
                            & \footnotesize{Vani is an \textbf{extensible} platform
                               made for the campus community consisting of Wiki, Forums,
@@ -310,7 +321,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
                               \textbf{Professor T. V. Prabhakar} } \\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{Summer 2012} & GNU/Linux Exploration, Programming Club, IIT Kanpur\\
                            & \footnotesize{ The project involved exploration of various facets of
                              \textbf{GNU/Linux} like the file system, process management,
@@ -320,7 +331,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
                              {Documentation} } \\
 \end{tabular}
 
-\begin{tabular}{p{2.2cm}|p{14cm}}
+\begin{tabular}{>{\raggedleft}p{2.2cm}|p{14cm}}
     \textsc{July 2013} & Projects on Github \\
                        & \footnotesize{\textbf{Dotfiles}: an opinionated work flow on Linux Systems.
                           \href{https://github.com/srijanshetty/dotfiles} {Repo} } \\
