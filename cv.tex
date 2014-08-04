@@ -73,6 +73,15 @@
     \vspace{-0.4cm}
 }
 
+\newcommand{\projectlistdated}[3]{
+    \begin{tabular}{p{17cm}r}
+        \textcolor{NavyBlue}{#2} & \textsc{#1}\\
+        \vspace{-0.3cm}
+        \footnotesize{#3}
+    \end{tabular}
+    \vspace{-0.4cm}
+}
+
 \newcommand{\work}[3]{
     \begin{tabular}{>{\raggedleft}p{2.2cm}|p{17cm}}
         \textsc{#1} & #2
@@ -81,9 +90,16 @@
 }
 
 \newcommand{\itemlist}[1]{
-    \begin{tabular}{>{\raggedleft}p{2.2cm}p{17cm}}
+    \begin{tabular}{>{\raggedleft}p{1.5cm}p{17cm}}
         #1
     \end{tabular}
+}
+
+\newcommand{\skill}[2]{
+    \begin{tabular}{p{17cm}r}
+        #2 & \textsc{#1}\\
+    \end{tabular}
+    \vspace{-0.5cm}
 }
 
 %----------------------------------------------------------------------------------------
@@ -136,7 +152,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
 %----------------------------------------------------------------------------------------
 \section{Education}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}p{14cm}r}
+\begin{tabular}{>{\raggedleft}p{1.5cm}p{15.5cm}r}
 
     \textsc{Current} & B. Tech in \textsc{Computer Science and Engineering} &   9.6/10.0\\
                      & \textbf{Indian Institute of Technology}, Kanpur\\
@@ -185,10 +201,10 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
     \textsc{Jan 2010}    & Qualified for \textbf{Indian National Mathematics Olympaid} (INMO) \\
     \textsc{May 2011}    & Secured All India rank \textbf{1937} in Joint Entrance Exam (JEE) \\
     \textsc{Sep 2010}    & \textbf{AIR 17} in \textbf{Technothlon} (Techniche) conducted by Indian Institute of Technology Guwahati. \\
-    \textsc{June 2010}   & Awarded \textbf{Top Scorer in English} by \textbf{Laurels School International} in ICSE 2009. \\
+    \textsc{Jun 2010}   & Awarded \textbf{Top Scorer in English} by \textbf{Laurels School International} in ICSE 2009. \\
     \textsc{Dec 2009}    & Awarded \textbf{Overall Best Student} for displaying all round excellence. \\
     \textsc{Dec 2005}    & Awarded \textbf{Overall Best Student} for displaying all round excellence. \\
-    \textsc{2000 -- 2009} & Recipient of \textbf{Scholastic Excellence} awards for exemplary academic
+    \textsc{2000-2009} & Recipient of \textbf{Scholastic Excellence} awards for exemplary academic
                            performance throughout 2nd to 12th grade. \\
     \textsc{---} & Secured AIR \textbf{140 in 8th, 154 in 9th and 429 in 11th} National Cyber Olympaid.\\
     \textsc{---} & Secured AIR \textbf{54 in 9th} National Science Olympaid.\\
@@ -407,9 +423,6 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
 
 \section {Social, Leadership and Artistic Skills}
 
-\sideproject {2013 -- }
-             {Active blogger at \href{srijanshetty.quora.com} {srijanshetty.quora.com}}
-
 \projectlist {Hacker, Navya, FOSS Group IIT Kanpur}
              {
                    \begin{itemize}
@@ -420,59 +433,69 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
                    \end{itemize}
              }
 
-\projectlist {Community Service, English Proficiency Programme, 2013-2014}
-             {
-                   \begin{itemize}
-                       \item A brainchild of \textbf{Professor Bhaskardas Gupta}, English Proficiency
-                           Programme tries to impart a functional knowledge of English to students.
-                       \item I assisted in the first leg of the programme which focussed in helping
-                           under-privileged students learn English.
-                   \end{itemize}
-              }
+\projectlistdated {2014}
+                  {Head, Major Events and Competitions, Antaragni'14}
+                  {
+                       \begin{itemize}
+                           \item Oversaw a team of \textbf{150} students for a span of 8 months.
+                           \item Chalked out the logistics for the hospitality and accommodation of \textbf{1500 students} who
+                               participated in festival.
+                           \item Made sure everything went smoothly during the four days of the Festival from 24$^{th}$
+                               to 27$^{th}$ October.
+                       \end{itemize}
+                  }
 
-\itemlist{
-    2014 & \textbf{Head, Major Events and Competitions, Antaragni'14}
-           \footnotesize{
-               \begin{itemize}[leftmargin=*]
-                   \item Oversaw a team of \textbf{150} students for a span of 8 months.
-                   \item Chalked out the logistics for the hospitality and accommodation of \textbf{1500 students} who
-                       participated in festival.
-                   \item Made sure everything went smoothly during the four days of the Festival from 24$^{th}$
-                       to 27$^{th}$ October.
-               \end{itemize}
-           }\\
+\projectlistdated {2013}
+                  {Hospitality Coordinator, Antaragni'13}
+                  {
+                       \begin{itemize}
+                           \item Oversaw a team of \textbf{150} students for a span of 8 months.
+                           \item Chalked out the logistics for the hospitality and accommodation of \textbf{1500 students} who
+                               participated in festival.
+                           \item Made sure everything went smoothly during the four days of the Festival from 24$^{th}$
+                               to 27$^{th}$ October.
+                       \end{itemize}
+                  }
 
-    2013 & \textbf{Hospitality Coordinator, Antaragni ‘13}
-           \footnotesize{
-               \begin{itemize}[leftmargin=*]
-                   \item Oversaw a team of \textbf{150} students for a span of 8 months.
-                   \item Chalked out the logistics for the hospitality and accommodation of \textbf{1500 students} who
-                       participated in festival.
-                   \item Made sure everything went smoothly during the four days of the Festival from 24$^{th}$
-                       to 27$^{th}$ October.
-               \end{itemize}
-           }\\
+\projectlistdated {2013 -- 2014}
+                  {Community Service, English Proficiency Programme}
+                  {
+                       \begin{itemize}
+                           \item A brainchild of \textbf{Professor Bhaskardas Gupta}, English Proficiency
+                               Programme tries to impart a functional knowledge of English to students.
+                           \item I assisted in the first leg of the programme which focussed in helping
+                               under-privileged students learn English.
+                       \end{itemize}
+                  }
 
-    2013 & \textbf{Editor-in-chief, Vox Populi}, the campus newsletter. \\
+\projectlistdated {2013 -- 2014}
+                  {Member, Gymkhana Review Committee}
+                  {
+                       \begin{itemize}
+                           \item The GRC was established to revamp the Students' Gymkhana of IIT Kanpur,
+                               which is responsible for all the student activities of the institute.
+                           \item I chaired the sessions on \textbf{Extended Orientation of Freshmen}.
+                               And gave inputs to other academic, senate and activities sub-committees formed under the GRC.
+                       \end{itemize}
+                  }
 
-    2012 & \textbf{Member, Gymkhana Review Committee}
-           \footnotesize{
-               \begin{itemize}[leftmargin=*]
-                   \item The GRC was established to revamp the Students' Gymkhana of IIT Kanpur,
-                       which is responsible for all the student activities of the institute.
-                   \item I chaired the sessions on \textbf{Extended Orientation of Freshmen}.
-                       And gave inputs to other academic, senate and activities sub-committees formed under the GRC.
-               \end{itemize}
-           }\\
+\skill {2013 -- pre}
+       {Active blogger at \href{srijanshetty.quora.com} {srijanshetty.quora.com}}
 
-    2012 & \textbf{Senator, Students' Senate}, IITK Y11 batch. \\
+\skill {2013 -- 2014}
+       {Editor-in-chief, Vox Populi, the campus newsletter.}
 
-    2012 & \textbf{Secretary, English Literary Society}. \\
+\skill {2012 -- 2013}
+       {Senator, Students' Senate, IITK Y11 batch.}
 
-    2010 & Basic training in \textbf{Indian Classical Music}. (Prayag Sangeet Samiti Allahabad). \\
+\skill {2012 -- 2013}
+       {Secretary, English Literary Society}
 
-    2009 & Qualified for the semi-finals of \textbf{Outlook SpeakOut Debate}. \\
-}
+\skill {2010 -- 2011}
+       {Basic training in \textbf{Indian Classical Music}. (Prayag Sangeet Samiti Allahabad).}
+
+\skill {2009}
+       {Qualified for the semi-finals of \textbf{Outlook SpeakOut Debate}.}
 
 %----------------------------------------------------------------------------------------
 %   COURSE WORK
