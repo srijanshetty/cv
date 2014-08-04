@@ -11,6 +11,7 @@
 \usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
 
 \usepackage{marvosym} % Allows the use of symbols
+
 \usepackage{scrpage2} % Provides headers and footers configuration
 
 \usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
@@ -26,14 +27,35 @@
 
 \usepackage{titlesec} % Used to customize the \section command
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+
 \titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
 
-% Custom arrangement for the columns
-\usepackage[margin=2cm, lmargin=1cm, rmargin=1cm]{geometry}
-\usepackage{array}
+\usepackage{enumitem} % For left margin removal in itemize
 
-% For left margin removal in itemize
-\usepackage{enumitem}
+\usepackage{array} % Custom arrangement for the columns
+
+\usepackage[margin=2cm, lmargin=1cm, rmargin=1cm]{geometry} % The page Geometry
+
+%----------------------------------------------------------------------------------------
+% CUSTOM ENVIRONMENTS
+%----------------------------------------------------------------------------------------
+\newcommand{\project}[3]{
+    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
+        \textsc{#1} & #2 \\
+                    & \footnotesize{#3} \\
+    \end{tabular}
+}
+
+\newcommand{\workexperience}[3]{
+    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
+        \textsc{#1} & #2
+                    \footnotesize{#3}
+    \end{tabular}
+}
+
+%----------------------------------------------------------------------------------------
+% DOCUMENT BEGINS HERE
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 
@@ -46,7 +68,6 @@
 % \addtolength{\voffset}{-0.5in} % Adjust the vertical offset - less whitespace at the top of the page
 % \addtolength{\textheight}{3cm} % Adjust the text height - less whitespace at the bottom of the page
 % \addtolength{\textwidth}{-2cm}
-
 
 %----------------------------------------------------------------------------------------
 % FOOTER SECTION
@@ -165,207 +186,183 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
 
 \section{Work Experience}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{May-Jul 2014} & Research Intern at \textsc{Microsoft Research India}, Bangalore
-                            \footnotesize{
-                                \begin{itemize}[leftmargin=*]
-                                    \item Optimized \textbf{CScale for concurrency} using \textbf{TPL Dataflow}
-                                        for dataflow computations and pipeline processing.
-                                    \item CScale provides a declarative distributed systems programming
-                                        model using LINQ; it handles scaling and failures for the programmer.
-                                    \item Performed \textbf{failure testing and performance testing}
-                                        of the concurrency optimizations in real world scenarios.
-                                \end{itemize}
-                            }
-\end{tabular}
+\workexperience {May-Jul 2014}
+         {Research Intern at \textsc{Microsoft Research India}, Bangalore}
+         {
+            \begin{itemize}[leftmargin=*]
+                \item Optimized \textbf{CScale for concurrency} using \textbf{TPL Dataflow}
+                    for dataflow computations and pipeline processing.
+                \item CScale provides a declarative distributed systems programming
+                    model using LINQ; it handles scaling and failures for the programmer.
+                \item Performed \textbf{failure testing and performance testing}
+                    of the concurrency optimizations in real world scenarios.
+            \end{itemize}
+        }
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{May-Jul 2013} & Software Development at \textsc{Aurus Networks'}, Bangalore
-                            \footnotesize{
-                                \begin{itemize}[leftmargin=*]
-                                    \item Worked on \textbf{Aurus Networks} MOOC offereing \textbf{CourseHub}.
-                                    \item Using \textbf{HTML5, javascript, CSS3}, I ported the legacy
-                                          \textbf{Flash} based online media player to a multi-platform
-                                          Flash/HTML5 media player.
-                                      \item Developed a \textbf{XMPP} based \textbf{real-time chat service} for
-                                          conversations during live lectures.
-                                \end{itemize}
-                            }
-\end{tabular}
+\workexperience {May-Jul 2013}
+         {Software Development at \textsc{Aurus Networks'}, Bangalore}
+         {
+            \begin{itemize}[leftmargin=*]
+                \item Worked on \textbf{Aurus Networks} MOOC offereing \textbf{CourseHub}.
+                \item Using \textbf{HTML5, javascript, CSS3}, I ported the legacy
+                      \textbf{Flash} based online media player to a multi-platform
+                      Flash/HTML5 media player.
+                  \item Developed a \textbf{XMPP} based \textbf{real-time chat service} for
+                      conversations during live lectures.
+            \end{itemize}
+        }
 
 %----------------------------------------------------------------------------------------
 %  PROJECTS
 %----------------------------------------------------------------------------------------
 \section{Projects}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Fall 2014} & Multi Factor Authentication in OpenVPN, \textsc{\raggedright Mozilla Winter of Security} \\
-                         & \footnotesize{This project was one of the eleven
-                            projects selected for Mozilla Winter of Security's 2014 edition. Under the
-                            guidance of \textbf{Guillaume Destuynder} and \textbf{Professor Dheeraj Sanghi},
-                            the project aims to add true multi factor authentication support to OpenVPN.} \\
-\end{tabular}
+\project {Fall 2014}
+         {Multi Factor Authentication in OpenVPN, \textsc{\raggedright Mozilla Winter of Security}}
+         {This project was one of the eleven projects selected for Mozilla Winter of Security's 2014 edition.
+         Under the guidance of \textbf{Guillaume Destuynder} and \textbf{Professor Dheeraj Sanghi},
+         the project aims to add true multi factor authentication support to OpenVPN.}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Spring 2014} & JavaScript to MIPS Compiler, \textsc{\raggedright Compilers} \\
-                         & \footnotesize{An end-to-end compiler for a subset of ECMAScript5.1
-                            which compiled to MIPS was implemented in Python. No runtime support
-                            was provided ergo, static types and type annotations were used instead.
-                            The project was undertaken in the aegis of \textbf{Professor Subhajit Roy}.
-                            \href{https://github.com/srijanshetty/javascript-compiler} {[Git Repo]}} \\
-\end{tabular}
+\project {Spring 2014}
+         {JavaScript to MIPS Compiler, \textsc{\raggedright Compilers}}
+         {An end-to-end compiler for a subset of ECMAScript5.1 which compiled to MIPS was implemented in Python.
+          No runtime support was provided ergo, static types and type annotations were used instead.
+          The project was undertaken in the aegis of \textbf{Professor Subhajit Roy}.
+          \href{https://github.com/srijanshetty/javascript-compiler} {[Git Repo]}}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Spring 2014} & Hindi author attribution, \textsc{\raggedright Artificial Intelligence} \\
-                         & \footnotesize{The first half of this project was a multi-class clustering problem,
-                            wherein authors were to be clustered according to their writing style.
-                            The features used for the same were, word frequency counts and collocation
-                            frequencies.  The second half of the project was to classify the text snippets
-                            into different authors using supervised learning techniques.
-                            The project was supervised by \textbf{Professor Amitabha Mukherjee} and was
-                            inherently difficult due to the unavailability of stemmers and POS taggers for Hindi.
-                            \href{https://github.com/srijanshetty/author-attribution} {[Git Repo]}}\\
-\end{tabular}
+\project {Spring 2014}
+         {Hindi author attribution, \textsc{\raggedright Artificial Intelligence}}
+         {The first half of this project was a multi-class clustering problem,
+          wherein authors were to be clustered according to their writing style.
+          The features used for the same were, word frequency counts and collocation
+          frequencies.  The second half of the project was to classify the text snippets
+          into different authors using supervised learning techniques.
+          The project was supervised by \textbf{Professor Amitabha Mukherjee} and was
+          inherently difficult due to the unavailability of stemmers and POS taggers for Hindi.
+          \href{https://github.com/srijanshetty/author-attribution} {[Git Repo]}}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Fall 2013} & NachOS, \textsc{Operating Systems} \\
-                       & \footnotesize{The coursework included implementation of system calls; process
-                          management and scheduling; memory management schemes and page replacement
-                          algorithms in \textbf{NachOS}. \textbf{Professor Mainak Chaudhuri}, was
-                          the professor-in-charge}\\
-\end{tabular}
+\project {Fall 2013}
+         {NachOS, \textsc{Operating Systems}}
+         {The coursework included implementation of system calls; process
+          management and scheduling; memory management schemes and page replacement
+          algorithms in \textbf{NachOS}. \textbf{Professor Mainak Chaudhuri}, was
+          the professor-in-charge}\\
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Fall 2013} & P2P File Sharing and Streaming, \textsc{Computer Networks} \\
-                       & \footnotesize{A Node.js based local file server and media playback server was implemented
-                          to understand the underpinnings of Transport Layer Protocols, socket programming,
-                          and P2P architecture.  The project was supervised by \textbf{Professor Dheeraj Sanghi}.
-                          \href{https://github.com/srijanshetty/nodesock} {[Git Repo]}}\\
-\end{tabular}
+\project {Fall 2013}
+         {P2P File Sharing and Streaming, \textsc{Computer Networks}}
+         {A Node.js based local file server and media playback server was implemented
+          to understand the underpinnings of Transport Layer Protocols, socket programming,
+          and P2P architecture.  The project was supervised by \textbf{Professor Dheeraj Sanghi}.
+          \href{https://github.com/srijanshetty/nodesock} {[Git Repo]}}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Fall 2013} & IP Spoofing, \textsc{Computer Networks} \\
-                       & \footnotesize{Under the guidance of \textbf{Professor Dheeraj Sanghi}, different methodologies
-                          of spoofing IP addresses and different uses of spoofing IPs were implemented and tested
-                          in a secure environment.}\\
-\end{tabular}
+\project {Fall 2013}
+         {IP Spoofing, \textsc{Computer Networks}}
+         {Under the guidance of \textbf{Professor Dheeraj Sanghi}, different methodologies
+          of spoofing IP addresses and different uses of spoofing IPs were implemented and tested
+          in a secure environment.}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Fall 2013} & Metro Travel Plan(Prolog), \textsc{Principles of Programming Languages} \\
-                       & \footnotesize{Implementation of shortest paths in Prolog on the Delhi Metro route.
-                          The professor-in-charge was \textbf{Professor P. Kurur}}\\
-\end{tabular}
+\project {Fall 2013}
+         {Metro Travel Plan(Prolog), \textsc{Principles of Programming Languages}}
+         {Implementation of shortest paths in Prolog on the Delhi Metro route.
+          The professor-in-charge was \textbf{Professor P. Kurur}}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Fall 2013} & Erlang Traffic Server, \textsc{Principles of Programming Languages} \\
-                       & \footnotesize{A simple traffic server implemented in Erlang using message passing
-                          concurrency and tail call recursion functional aspects of the language under the
-                          guidance of \textbf{Professor P. Kurur}}\\
-\end{tabular}
+\project {Fall 2013}
+         {Erlang Traffic Server, \textsc{Principles of Programming Languages}}
+         {A simple traffic server implemented in Erlang using message passing
+          concurrency and tail call recursion functional aspects of the language under the
+          guidance of \textbf{Professor P. Kurur}}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Spring 2013} & 8-bit General Purpose Computer on a FPGA, \textsc{Computer Organization} \\
-                         & \footnotesize{The GPC had a load-store architecture and was written in System Verilog and
-                            implemented on a \textbf{Xilinx Spartan 3 FPGA}.  The project was under the
-                            supervision of \textbf{Professor Subhajit Roy}.  It had a limited, but powerful
-                            Instruction Set Architecture which could implement recursive functions, jumps,
-                            loops  other basic building blocks of a simple assembly language.
-                            \href{https://github.com/srijanshetty/220_y11} {[Git Repo]}} \\
-\end{tabular}
+\project {Spring 2013}
+         {8-bit General Purpose Computer on a FPGA, \textsc{Computer Organization}}
+         {The GPC had a load-store architecture and was written in System Verilog and
+          implemented on a \textbf{Xilinx Spartan 3 FPGA}.  The project was under the
+          supervision of \textbf{Professor Subhajit Roy}.  It had a limited, but powerful
+          Instruction Set Architecture which could implement recursive functions, jumps,
+          loops  other basic building blocks of a simple assembly language.
+          \href{https://github.com/srijanshetty/220_y11} {[Git Repo]}}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Spring 2013} & Conference Dates Web Crawler, \textsc{Computing Laboratory} \\
-                         & \footnotesize{A python based web crawler which could obtain paper submission
-                            deadlines of a provided conference name.  BeautifulSoup and urllib along
-                            with simple pattern matching through regular expressions were used to implement crawling.
-                            \href{https://github.com/srijanshetty/crawler} {[Git Repo]} } \\
-\end{tabular}
+\project {Spring 2013}
+         {Conference Dates Web Crawler, \textsc{Computing Laboratory}}
+         {A python based web crawler which could obtain paper submission
+          deadlines of a provided conference name.  BeautifulSoup and urllib along
+          with simple pattern matching through regular expressions were used to implement crawling.
+          \href{https://github.com/srijanshetty/crawler} {[Git Repo]}}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Fall 2011} & "No situation is unique and certain moral principles can be applied across all situation",
-                         \textsc{Introduction to Philosophy} \\
-                       & \footnotesize{ An argumentative discourse proving that certain moral principles
-                         can be applied throughout; by proving different situations have a certain
-                         fundamental similarity.  Albeit this would require a gross simplification of
-                         different situations.  The reviewing instructor was \textbf{Professor Vineet Sahu}} \\
-\end{tabular}
+\project {Fall 2011}
+         {"No situation is unique and certain moral principles can be applied across all situation",
+          \textsc{Introduction to Philosophy}}
+         {An argumentative discourse proving that certain moral principles
+          can be applied throughout; by proving different situations have a certain
+          fundamental similarity.  Albeit this would require a gross simplification of
+          different situations.  The reviewing instructor was \textbf{Professor Vineet Sahu}}
 
 %----------------------------------------------------------------------------------------
 %  SIDE PROJECTS
 %----------------------------------------------------------------------------------------
 \section{Side Projects}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{July 2014} & OARS\\
-                       & \footnotesize{OARS is a \textbf{AngularJS} based front-end for the
-                          courses offered in IIT Kanpur. It was created as a
-                          hack to alleviate the pain of the students in using the
-                          sluggish legacy course search. The data was obtained by
-                          scraping the official data portal of IIT Kanpur, and the
-                          project is now maintained by \textbf{Navya}
-                          \href{https://github.com/navya/oars} {[Git Repo]} }\\
+\project {July 2014}
+         {OARS}
+         {OARS is a \textbf{AngularJS} based front-end for the
+          courses offered in IIT Kanpur. It was created as a
+          hack to alleviate the pain of the students in using the
+          sluggish legacy course search. The data was obtained by
+          scraping the official data portal of IIT Kanpur, and the
+          project is now maintained by \textbf{Navya}
+          \href{https://github.com/navya/oars} {[Git Repo]} }
 
-\end{tabular}
+\project {March 2014}
+         {GYPH}
+         {GYPH or Get Your Personal Homepage
+          is a simple hassle-free homepage designer for students who are not
+          proficient in web technologies. It provides a WYSIWIG
+          interface for editing themes and downloading them for personal use.
+          \href{http://gyph2.herokuapp.com/} {[Website]} }
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{March 2014} & GYPH\\
-                        & \footnotesize{GYPH or Get Your Personal Homepage
-                           is a simple hassle-free homepage designer for students who are not
-                           proficient in web technologies. It provides a WYSIWIG
-                           interface for editing themes and downloading them for personal use.
-                           \href{http://gyph2.herokuapp.com/} {[Website]} } \\
-\end{tabular}
+\project {August 2013}
+         {ShuffleRun}
+         {ShuffleRun is a web based music player which selects a track from the
+          users library according to her running speed.
+          The project recieved an honorable mention in \textbf{Yahoo!  HackU 2013} IIT Kanpur round.
+          \href{https://github.com/srijanshetty/ShuffleRun} {[Git Repo]}}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{August 2013} & ShuffleRun\\
-                         & \footnotesize{ShuffleRun is a web based music player which selects a track from the
-                            users library according to her running speed.
-                            The project recieved an honorable mention in \textbf{Yahoo!  HackU 2013} IIT Kanpur round.
-                            \href{https://github.com/srijanshetty/ShuffleRun} {[Git Repo]}}\\
-\end{tabular}
+\project {July 2013}
+         {\href{www.udghosh.org}{Website of Udghosh}, the annual sports-fest of IIT Kanpur}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{July 2013} & \href{www.udghosh.org}{Website of Udghosh}, the annual sports-fest of IIT Kanpur\\
-\end{tabular}
+\project {Dec 2012}
+         {\href{http://www.iitk.ac.in/hall5}{Website of Hall 5}, IIT Kanpur }
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Dec 2012} & \href{http://www.iitk.ac.in/hall5}{Website of Hall 5}, IIT Kanpur \\
-\end{tabular}
+\project {Summer 2012}
+         {Voicing, Archiving and Networking the Information \textsc{(VANI)}, IIT Kanpur}
+         {Vani is an \textbf{extensible} platform
+          made for the campus community consisting of Wiki, Forums,
+          Community search, Calendars etc.; built using \textbf{Drupal}
+          under the mentorship of \textbf{Professor Manindra Agarwal} and
+          \textbf{Professor T. V. Prabhakar} }
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Summer 2012} & Voicing, Archiving and Networking the Information \textsc{(VANI)}, IIT Kanpur\\
-                           & \footnotesize{Vani is an \textbf{extensible} platform
-                              made for the campus community consisting of Wiki, Forums,
-                              Community search, Calendars etc.; built using \textbf{Drupal}
-                              under the mentorship of \textbf{Professor Manindra Agarwal} and
-                              \textbf{Professor T. V. Prabhakar} } \\
-\end{tabular}
+\project {Summer 2012}
+         {GNU/Linux Exploration, Programming Club, IIT Kanpur}
+         {The project involved exploration of various facets of
+          \textbf{GNU/Linux} like the file system, process management,
+          memory management, shell interface etc. And was
+          undertaken under the aegis of \textbf{Programming Club, IIT Kanpur}
+          \href{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing}
+          {[Documentation]} }
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{Summer 2012} & GNU/Linux Exploration, Programming Club, IIT Kanpur\\
-                           & \footnotesize{ The project involved exploration of various facets of
-                             \textbf{GNU/Linux} like the file system, process management,
-                             memory management, shell interface etc. And was
-                             undertaken under the aegis of \textbf{Programming Club, IIT Kanpur}
-                             \href{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing}
-                             {[Documentation]} } \\
-\end{tabular}
-
-\begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
-    \textsc{July 2013} & Projects on Github
-                         \footnotesize{
-                             \begin{itemize}[leftmargin=*]
-                                 \item \textbf{Dotfiles}: an opinionated work flow on Linux Systems.
-                                     \href{https://github.com/srijanshetty/dotfiles} {[Git Repo]}
-                                 \item \textbf{Prezto}: a fork of the Prezto ZSH framework
-                                     \href{https://github.com/srijanshetty/prezto} {[Git Repo]}
-                                 \item \textbf{oh-my-zsh}: a fork of the oh-my-zsh ZSH framework
-                                     \href{https://github.com/srijanshetty/oh-my-zsh} {[Git Repo]}
-                                 \item \textbf{DS}: implementation of certain algorithms and data structures
-                                     \href{https://github.com/srijanshetty/DS} {[Git Repo]}
-                             \end{itemize}
-                         }\\
-\end{tabular}
+\project {July 2013}
+         {Projects on Github}
+         {
+             \begin{itemize}[leftmargin=*]
+                 \item \textbf{Dotfiles}: an opinionated work flow on Linux Systems.
+                     \href{https://github.com/srijanshetty/dotfiles} {[Git Repo]}
+                 \item \textbf{Prezto}: a fork of the Prezto ZSH framework
+                     \href{https://github.com/srijanshetty/prezto} {[Git Repo]}
+                 \item \textbf{oh-my-zsh}: a fork of the oh-my-zsh ZSH framework
+                     \href{https://github.com/srijanshetty/oh-my-zsh} {[Git Repo]}
+                 \item \textbf{DS}: implementation of certain algorithms and data structures
+                     \href{https://github.com/srijanshetty/DS} {[Git Repo]}
+             \end{itemize}
+         }
 
 %----------------------------------------------------------------------------------------
 %   OTHER SKILLS
