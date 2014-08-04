@@ -1,4 +1,3 @@
 -Navya
 -Head Major Events
 -TA Projects
--Linux Project Pclub
