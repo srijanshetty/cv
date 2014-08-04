@@ -34,20 +34,24 @@
 
 \usepackage{array} % Custom arrangement for the columns
 
+%----------------------------------------------------------------------------------------
+% PAGE GEOMETRY
+%----------------------------------------------------------------------------------------
+
 \usepackage[margin=2cm, lmargin=1cm, rmargin=1cm]{geometry} % The page Geometry
 
 %----------------------------------------------------------------------------------------
 % CUSTOM ENVIRONMENTS
 %----------------------------------------------------------------------------------------
 \newcommand{\project}[3]{
-    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
+    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{16.5cm}}
         \textsc{#1} & #2 \\
                     & \footnotesize{#3} \\
     \end{tabular}
 }
 
-\newcommand{\workexperience}[3]{
-    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{15cm}}
+\newcommand{\projectlist}[3]{
+    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{16.5cm}}
         \textsc{#1} & #2
                     \footnotesize{#3}
     \end{tabular}
@@ -76,10 +80,10 @@
 \renewcommand{\headfont}{\normalfont\rmfamily\scshape} % Font settings for footer
 
 \cofoot{
-\addfontfeature{LetterSpace=20.0}\fontsize{10.5}{17}\selectfont % Letter spacing and font size
+    \addfontfeature{LetterSpace=20.0}\fontsize{10.5}{17}\selectfont % Letter spacing and font size
 
-I-308, IIT Kanpur {\large\textperiodcentered} Kanpur {\large\textperiodcentered} UP 208016\\ % Your mailing address
-{\Large\Letter} srijan.shetty@gmail.com \ {\Large\Telefon} +(91) 9005900383 % Your email address and phone number
+    I-308, IIT Kanpur {\large\textperiodcentered} Kanpur {\large\textperiodcentered} UP 208016\\ % Your mailing address
+    {\Large\Letter} srijan.shetty@gmail.com \ {\Large\Telefon} +(91) 9005900383 % Your email address and phone number
 }
 
 %----------------------------------------------------------------------------------------
@@ -186,7 +190,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
 
 \section{Work Experience}
 
-\workexperience {May-Jul 2014}
+\projectlist {May-Jul 2014}
          {Research Intern at \textsc{Microsoft Research India}, Bangalore}
          {
             \begin{itemize}[leftmargin=*]
@@ -199,7 +203,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
             \end{itemize}
         }
 
-\workexperience {May-Jul 2013}
+\projectlist {May-Jul 2013}
          {Software Development at \textsc{Aurus Networks'}, Bangalore}
          {
             \begin{itemize}[leftmargin=*]
@@ -349,7 +353,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
           \href{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing}
           {[Documentation]} }
 
-\project {July 2013}
+\projectlist {July 2013}
          {Projects on Github}
          {
              \begin{itemize}[leftmargin=*]
