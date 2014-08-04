@@ -38,22 +38,28 @@
 % PAGE GEOMETRY
 %----------------------------------------------------------------------------------------
 
-\usepackage[margin=2cm, lmargin=1cm, rmargin=1cm]{geometry} % The page Geometry
+\usepackage[margin=2cm, lmargin=0.5cm, rmargin=0.5cm]{geometry} % The page Geometry
 
 %----------------------------------------------------------------------------------------
 % CUSTOM ENVIRONMENTS
 %----------------------------------------------------------------------------------------
 \newcommand{\project}[3]{
-    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{16.5cm}}
+    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{17cm}}
         \textsc{#1} & #2 \\
                     & \footnotesize{#3} \\
     \end{tabular}
 }
 
 \newcommand{\projectlist}[3]{
-    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{16.5cm}}
+    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{17cm}}
         \textsc{#1} & #2
                     \footnotesize{#3}
+    \end{tabular}
+}
+
+\newcommand{\itemlist}[1]{
+    \begin{tabular}{>{\raggedleft}p{2.2cm}p{17cm}}
+        #1
     \end{tabular}
 }
 
@@ -125,22 +131,21 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
 %----------------------------------------------------------------------------------------
 \section{Scholarships and Conferences}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}p{15cm}}
 
+\itemlist {
     \textsc{Jan 2011} & Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship \\
     \textsc{Dec 2008} & FIITJEE Talent Reward Examination Scholarship \\
     \textsc{Dec 2009} & CSIR Programme on Youth for Leadership in Science (CPYLS camp),
                         held at Advanced Materials Research Institute, Bhopal\\
+}
 
-\end{tabular}
 
 %----------------------------------------------------------------------------------------
 %   SCHOLASTIC ACHIEVEMENTS
 %----------------------------------------------------------------------------------------
 \section{Scholastic Achievements}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}p{15cm}}
-
+\itemlist {
     \textsc{2011-2014}   & Recieved an \textbf{A* grade}, for exceptional performance in
                             \textbf{Computer, Internet and Network Security},
                             \textbf{Computer Networks},
@@ -164,16 +169,15 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
                            performance throughout 2nd to 12th grade. \\
     \textsc{---} & Secured AIR \textbf{140 in 8th, 154 in 9th and 429 in 11th} National Cyber Olympaid.\\
     \textsc{---} & Secured AIR \textbf{54 in 9th} National Science Olympaid.\\
+}
 
-\end{tabular}
 
 %----------------------------------------------------------------------------------------
 %   SKILL SET
 %----------------------------------------------------------------------------------------
 \section{Skill Set}
 
-\begin{tabular}{>{\raggedleft}p{2.2cm}p{15cm}}
-
+\itemlist {
     \textsc{Languages} %
             & \textbf{C\#}, \textbf{C++},\textbf{Python}, \textbf{JavaScript} \\
     \textsc{Web Dev} %
@@ -181,8 +185,7 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
               \textbf{AngularJS}, \textbf{Nodejs}, \textbf{NoSQL}\\
     \textsc{Tools} %
             & \textbf{Git}, \textbf{Shell Scripting}, \textbf{Prezi}, \textbf{Vim}, \textbf{LaTeX}\\
-
-\end{tabular}
+}
 
 %----------------------------------------------------------------------------------------
 %   WORK EXPERIENCE
