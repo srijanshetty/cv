@@ -38,13 +38,13 @@
 % PAGE GEOMETRY
 %----------------------------------------------------------------------------------------
 
-\usepackage[margin=2cm, lmargin=1cm, rmargin=1cm]{geometry} % The page Geometry
+\usepackage[margin=2cm, top=1cm, lmargin=0.5cm, rmargin=1cm]{geometry} % The page Geometry
 
 %----------------------------------------------------------------------------------------
 % CUSTOM ENVIRONMENTS
 %----------------------------------------------------------------------------------------
 \newcommand{\project}[4]{
-    \begin{tabular}{p{17cm}r}
+    \begin{tabular}{p{0.9\linewidth}r}
         \textcolor{NavyBlue}{#2} & \textsc{#1}\\
         #3
     \end{tabular}
@@ -55,7 +55,7 @@
 }
 
 \newcommand{\sideproject}[3]{
-    \begin{tabular}{p{17cm}r}
+    \begin{tabular}{p{0.9\linewidth}r}
         \textcolor{NavyBlue}{#2} & \textsc{#1}
     \end{tabular}
     \begin{tabular}{p{\linewidth}}
@@ -74,7 +74,7 @@
 }
 
 \newcommand{\projectlistdated}[3]{
-    \begin{tabular}{p{17cm}r}
+    \begin{tabular}{p{0.9\linewidth}r}
         \textcolor{NavyBlue}{#2} & \textsc{#1}\\
         \vspace{-0.3cm}
         \footnotesize{#3}
@@ -83,20 +83,20 @@
 }
 
 \newcommand{\work}[3]{
-    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{17cm}}
-        \textsc{#1} & #2
+    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{0.9\linewidth}}
+        \textsc{#1} & \textcolor{NavyBlue}{#2}
                     \footnotesize{#3}
     \end{tabular}
 }
 
 \newcommand{\itemlist}[1]{
-    \begin{tabular}{>{\raggedleft}p{1.5cm}p{17cm}}
+    \begin{tabular}{>{\raggedleft}p{1.5cm}p{0.9\linewidth}}
         #1
     \end{tabular}
 }
 
 \newcommand{\skill}[2]{
-    \begin{tabular}{p{17cm}r}
+    \begin{tabular}{p{0.9\linewidth}r}
         #2 & \textsc{#1}\\
     \end{tabular}
     \vspace{-0.5cm}
@@ -259,9 +259,9 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
       }
 
 %----------------------------------------------------------------------------------------
-%  PROJECTS
+%  COURSE PROJECTS
 %----------------------------------------------------------------------------------------
-\section{Projects}
+\section{Course Projects}
 
 \project {Fall 2014}
          {Multi Factor Authentication in OpenVPN}
@@ -344,9 +344,9 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
           different situations.  The reviewing instructor was \textbf{Professor Vineet Sahu}}
 
 %----------------------------------------------------------------------------------------
-%  SIDE PROJECTS
+%  INDEPENDENT PROJECTS
 %----------------------------------------------------------------------------------------
-\section{Side Projects}
+\section{Independent Projects}
 
 \sideproject {Jul 2014}
              {OARS}
