@@ -24,6 +24,8 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
 
 \usepackage{tabularx,colortbl} % Advanced table configurations
+\usepackage{array} % Custom arrangement for the columns
+\usepackage{multirow} %rows spanning multiple rows
 
 \usepackage{titlesec} % Used to customize the \section command
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
@@ -32,20 +34,19 @@
 
 \usepackage{enumitem} % For left margin removal in itemize
 
-\usepackage{array} % Custom arrangement for the columns
 
 %----------------------------------------------------------------------------------------
 % PAGE GEOMETRY
 %----------------------------------------------------------------------------------------
 
-\usepackage[margin=2cm, top=1cm, lmargin=0.5cm, rmargin=1cm]{geometry} % The page Geometry
+\usepackage[top=1cm, bottom=0.5cm, lmargin=0.5cm, rmargin=1.3cm]{geometry} % The page Geometry
 
 %----------------------------------------------------------------------------------------
 % CUSTOM ENVIRONMENTS
 %----------------------------------------------------------------------------------------
 \newcommand{\project}[4]{
-    \begin{tabular}{p{0.9\linewidth}r}
-        \textcolor{NavyBlue}{#2} & \textsc{#1}\\
+    \begin{tabular}{p{0.85\linewidth}r}
+        \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{3cm}}{\raggedleft \textsc{#1}}\\
         #3
     \end{tabular}
     \begin{tabular}{p{\linewidth}}
@@ -55,8 +56,8 @@
 }
 
 \newcommand{\sideproject}[3]{
-    \begin{tabular}{p{0.9\linewidth}r}
-        \textcolor{NavyBlue}{#2} & \textsc{#1}
+    \begin{tabular}{p{0.85\linewidth}r}
+        \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{3cm}}{\raggedleft \textsc{#1}}\\
     \end{tabular}
     \begin{tabular}{p{\linewidth}}
         \footnotesize{#3}
@@ -74,8 +75,8 @@
 }
 
 \newcommand{\projectlistdated}[3]{
-    \begin{tabular}{p{0.9\linewidth}r}
-        \textcolor{NavyBlue}{#2} & \textsc{#1}\\
+    \begin{tabular}{p{0.85\linewidth}r}
+        \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{3cm}}{\raggedleft \textsc{#1}}\\
         \vspace{-0.3cm}
         \footnotesize{#3}
     \end{tabular}
@@ -96,8 +97,8 @@
 }
 
 \newcommand{\skill}[2]{
-    \begin{tabular}{p{0.9\linewidth}r}
-        #2 & \textsc{#1}\\
+    \begin{tabular}{p{0.85\linewidth}r}
+        #2 & \multicolumn{1}{m{3cm}}{\raggedleft \textsc{#1}}\\
     \end{tabular}
     \vspace{-0.5cm}
 }
@@ -112,32 +113,30 @@
 
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Section formatting
 
-\pagestyle{scrheadings} % Print the headers and footers on all pages
+% \pagestyle{scrheadings} % Print the headers and footers on all pages
 
 % \addtolength{\voffset}{-0.5in} % Adjust the vertical offset - less whitespace at the top of the page
 % \addtolength{\textheight}{3cm} % Adjust the text height - less whitespace at the bottom of the page
 % \addtolength{\textwidth}{-2cm}
 
 %----------------------------------------------------------------------------------------
-% FOOTER SECTION
-%----------------------------------------------------------------------------------------
-
-\renewcommand{\headfont}{\normalfont\rmfamily\scshape} % Font settings for footer
-
-\cofoot{
-    \addfontfeature{LetterSpace=20.0}\fontsize{10.5}{17}\selectfont % Letter spacing and font size
-
-    I-308, IIT Kanpur {\large\textperiodcentered} Kanpur {\large\textperiodcentered} UP 208016\\ % Your mailing address
-    {\Large\Letter} srijan.shetty@gmail.com \ {\Large\Telefon} +(91) 9005900383 % Your email address and phone number
-}
-
-%----------------------------------------------------------------------------------------
 % HEADER SECTION
 %----------------------------------------------------------------------------------------
 
 {
-    {\addfontfeature{LetterSpace=20.0}\fontsize{24}{24}\selectfont\scshape
-    Srijan R. Shetty}\\
+    \begin{tabular}{rl}
+        \multirow{3}{0.75\linewidth}{
+            {
+                \addfontfeature{LetterSpace=20.0}\fontsize{24}{24}\selectfont\scshape
+                Srijan R. Shetty
+            }\\
+            \hspace{0.15cm} \emph{Deptarment of Computer Science and Engineering}
+        }
+
+        & {\Large\Mobilefone} +(91) 9005900383 \\
+        & {\Large\Info} \href{cse.iitk.ac.in/users/srijans}{cse.iitk.ac.in/users/srijans}\\
+        & {\Large\Letter} \href{mailto:srijan.shetty@gmail.com}{srijan.shetty@gmail.com}\\
+    \end{tabular}
 }
 
 %----------------------------------------------------------------------------------------
@@ -145,7 +144,7 @@
 %----------------------------------------------------------------------------------------
 \section{Interests}
 
-Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
+Programming Languages, Networks and Systems, Security, Web-Dev, NLP
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -218,12 +217,14 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
 
 \itemlist {
     \textsc{Languages} %
-            & \textbf{C\#}, \textbf{C++},\textbf{Python}, \textbf{JavaScript} \\
+            & \textbf{JavaScript} (Expert), \textbf{Python} (Proficient), \textbf{C++}
+              (Proficient), \textbf{C\#} (Efficient)\\
     \textsc{Web Dev} %
-            & \textbf{HTML5}, \textbf{CSS}, \textbf{JavaScript}, \textbf{Flash}, \textbf{SQL},
-              \textbf{AngularJS}, \textbf{Nodejs}, \textbf{NoSQL}\\
+            & \textbf{HTML5}, \textbf{CSS}, \textbf{SQL and NoSQL}, \textbf{AngularJS}, \textbf{Nodejs}\\
     \textsc{Tools} %
-            & \textbf{Git}, \textbf{Shell Scripting}, \textbf{Prezi}, \textbf{Vim}, \textbf{LaTeX}\\
+            & \textbf{Git} (Expert), \textbf{Shell Scripting} (Proficient),
+              \textbf{Prezi} (Proficient), \textbf{Vim} (Expert), \textbf{LaTeX}
+              (Proficient)\\
 }
 
 %----------------------------------------------------------------------------------------
@@ -390,6 +391,18 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
               \href{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing}
               {[Documentation]} }
 
+\projectlist {Web Development}
+             {
+                 \begin{itemize}[leftmargin=0.5cm]
+                     \item \textbf{Udghosh}: The annual sports-fest of IIT Kanpur.
+                         \href{www.udghosh.org} {[URL]}
+                     \item \textbf{Hall 5}: Fifth Hall of Residence, IIT Kanpur.
+                         \href{http://www.iitk.ac.in/hall5} {[URL]}
+                     \item \textbf{ALI}: Antaragni Leadership Initiative.
+                         \href{www.antargni.in/ali} {[URL]}
+                 \end{itemize}
+             }
+
 \projectlist {Projects on Github}
              {
                  \begin{itemize}[leftmargin=0.5cm]
@@ -401,18 +414,6 @@ Programming Languages, Distributed Systems, Systems and Security, Web-Dev, NLP
                          \href{https://github.com/srijanshetty/oh-my-zsh} {[Git Repo]}
                      \item \textbf{DS}: implementation of certain algorithms and data structures
                          \href{https://github.com/srijanshetty/DS} {[Git Repo]}
-                 \end{itemize}
-             }
-
-\projectlist {Web Development}
-             {
-                 \begin{itemize}[leftmargin=0.5cm]
-                     \item \textbf{Udghosh}: The annual sports-fest of IIT Kanpur.
-                         \href{www.udghosh.org} {[URL]}
-                     \item \textbf{Hall 5}: Fifth Hall of Residence, IIT Kanpur.
-                         \href{http://www.iitk.ac.in/hall5} {[URL]}
-                     \item \textbf{ALI}: Antaragni Leadership Initiative.
-                         \href{www.antargni.in/ali} {[URL]}
                  \end{itemize}
              }
 
