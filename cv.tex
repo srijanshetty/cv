@@ -34,7 +34,6 @@
 
 \usepackage{enumitem} % For left margin removal in itemize
 
-
 %----------------------------------------------------------------------------------------
 % PAGE GEOMETRY
 %----------------------------------------------------------------------------------------
@@ -44,6 +43,13 @@
 %----------------------------------------------------------------------------------------
 % CUSTOM ENVIRONMENTS
 %----------------------------------------------------------------------------------------
+\newcommand{\work}[3]{
+    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{0.9\linewidth}}
+        \textsc{#1} & \textcolor{NavyBlue}{#2}
+                    \footnotesize{#3}
+    \end{tabular}
+}
+
 \newcommand{\project}[4]{
     \begin{tabular}{p{0.85\linewidth}r}
         \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{3cm}}{\raggedleft \textsc{#1}}\\
@@ -55,14 +61,27 @@
     \vspace{-0.1cm}
 }
 
-\newcommand{\sideproject}[3]{
+\newcommand{\lproject}[4]{
+    \begin{tabular}{p{0.85\linewidth}r}
+        \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{3cm}}{\raggedleft \textsc{#1}}\\
+        #3
+    \end{tabular}
+    \begin{tabular}{p{\linewidth}}
+    \vspace{-0.3cm}
+        \footnotesize{#4}
+    \end{tabular}
+    \vspace{-0.5cm}
+}
+
+\newcommand{\iproject}[3]{
     \begin{tabular}{p{0.85\linewidth}r}
         \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{3cm}}{\raggedleft \textsc{#1}}\\
     \end{tabular}
     \begin{tabular}{p{\linewidth}}
+    \vspace{-0.3cm}
         \footnotesize{#3}
     \end{tabular}
-    \vspace{-0.2cm}
+    \vspace{-0.5cm}
 }
 
 \newcommand{\projectlist}[2]{
@@ -72,22 +91,6 @@
         \footnotesize{#2}
     \end{tabular}
     \vspace{-0.4cm}
-}
-
-\newcommand{\projectlistdated}[3]{
-    \begin{tabular}{p{0.85\linewidth}r}
-        \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{3cm}}{\raggedleft \textsc{#1}}\\
-        \vspace{-0.3cm}
-        \footnotesize{#3}
-    \end{tabular}
-    \vspace{-0.4cm}
-}
-
-\newcommand{\work}[3]{
-    \begin{tabular}{>{\raggedleft}p{2.2cm}|p{0.9\linewidth}}
-        \textsc{#1} & \textcolor{NavyBlue}{#2}
-                    \footnotesize{#3}
-    \end{tabular}
 }
 
 \newcommand{\itemlist}[1]{
@@ -237,20 +240,20 @@ Programming Languages, Networks and Systems, Security, Web-Dev, NLP
       {Research Intern at \textsc{Microsoft Research India}, Bangalore}
       {
          \begin{itemize}[leftmargin=*]
-             \item Studied and analysed the different distributed systems and
+             \item Analysed the implementations of different distributed systems and
                  databases architectures like \textbf{Google MapReduce}, \textbf{Google FileSystem},
-                 \textbf{Google MillWheel} \textbf{Yahoo! PNUT}, \textbf{Amazon DynamoDB}, \textbf{Apache
+                 \textbf{Google MillWheel} \textbf{Yahoo! PNUTS}, \textbf{Amazon DynamoDB}, \textbf{Apache
                  Kafka}, \textbf{Apache Spark}, \textbf{Apache Hadoop}, \textbf{Apache Storm},
-                 \textbf{Microsoft Dryad}, \textbf{Microsoft DryadLINQ}
-             \item Optimized \textbf{CScale for concurrency} using \textbf{TPL
-                     Dataflow}.
+                 \textbf{Microsoft Dryad}, and \textbf{Microsoft DryadLINQ}
              \item CScale provides a declarative distributed systems programming
                  model using LINQ. A programmer with no distributed system
                  experience can specify the computation intent in LINQ and
                  CScale handles scaling the system and fault tolerance.
+             \item Optimized \textbf{CScale for concurrency} using \textbf{TPL
+                     Dataflow}.
              \item Used \textbf{TPL Dataflow} and \textbf{Lightweight Tasks} to
                  implement concurrent pipeline processing of messages.
-             \item Developed and implemented a dataflow pipeline for processing
+             \item Designed and implemented a dataflow pipeline for processing
                  partially ordered messages in order to create a new totally
                  ordered sequence.
              \item Performed \textbf{performance testing} of the concurrency optimizations
@@ -268,8 +271,8 @@ Programming Languages, Networks and Systems, Security, Web-Dev, NLP
               \item Ported the legacy flash based web player to a technology
                   agnostic \textbf{HTML5/JavaScript} web player leading to a
                   uniform cross-platform viewing experience.
-              \item Developed a \textbf{XMPP} based \textbf{real-time chat service} for
-                  conversations during live lectures.
+              \item Developed a \textbf{XMPP} based \textbf{real-time chat service} using the existing
+                  Jabber framework, for conversations during live lectures.
           \end{itemize}
       }
 
@@ -278,132 +281,201 @@ Programming Languages, Networks and Systems, Security, Web-Dev, NLP
 %----------------------------------------------------------------------------------------
 \section{Course Projects}
 
-\project {Monsoon 2014}
-         {Multi Factor Authentication in OpenVPN}
-         {\textsc{\raggedright Mozilla Winter of Security}, Guillaume Destuynder and Professor Dheeraj Sanghi}
-         {This project was one of the eleven projects selected for Mozilla Winter of Security's 2014 edition.
-          The objective of the project is to implement multi factor session
-          support and first-class multifactor authentication support to
-          OpenVPN.}
+\lproject {Monsoon 2014}
+          {Multi Factor Authentication in OpenVPN}
+          {\textsc{\raggedright Mozilla Winter of Security}, Guillaume Destuynder and Professor Dheeraj Sanghi}
+          {
+              \begin{itemize}[leftmargin=0.5cm]
+                  \item One of the eleven projects selected as a part of Mozilla's Winter of Security Initiative 2014.
+                  \item The objective of the project is to implement true arbitary multi factor authentication support in
+                      OpenVPN; and to implement session-support for the second factor.
+                  \item \href{https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA}%
+                      {https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA}
+              \end{itemize}
+          }
 
-\project {Winter 2014}
-         {JavaScript to MIPS Compiler}
-         {\textsc{\raggedright Compilers}, Professor Subhajit Roy}
-         {An end-to-end compiler for a subset of ECMAScript5.1 which compiled to MIPS was implemented in Python.
-          No runtime support was provided ergo, static types and type annotations were used instead.
-          \href{https://github.com/srijanshetty/javascript-compiler} {[Git Repo]}}
+\lproject {Winter 2014}
+          {JavaScript to MIPS Compiler}
+          {\textsc{\raggedright Compilers}, Professor Subhajit Roy}
+          {
+              \begin{itemize}[leftmargin=0.5cm]
+                  \item Implemented an end-to-end compiler to compile ECMAScript5.1 to machine code for MIPS, in Python.
+                  \item Abstracted the compiler into modules corresponding to lexing, parsing, three address code generation
+                      and machine code generation, with swappable modules.
+                  \item Designed a standard library to handle printing of different data types.
+                  \item Implemented functional programming concepts and recursion.
+                  \item Circumvented runtime support by implementing static types and type annotations.
+                  \item \href{https://github.com/srijanshetty/javascript-compiler} {https://github.com/srijanshetty/javascript-compiler}
+              \end{itemize}
+          }
 
-\project {Winter 2014}
-         {Hindi author attribution}
-         {\textsc{\raggedright Artificial Intelligence}, Professor Amitabha
-          Mukherjee}
-         {The first half of this project was a multi-class clustering problem,
-          wherein authors were to be clustered according to their writing style.
-          The features used for the same were, word frequency counts and collocation
-          frequencies.  The second half of the project was to classify the text snippets
-          into different authors using supervised learning techniques.
-          The inherent difficult in the project was the unavailability of stemmers and POS taggers for Hindi.
-          \href{https://github.com/srijanshetty/author-attribution} {[Git Repo]}}
+\lproject {Winter 2014}
+          {Hindi author attribution}
+          {\textsc{\raggedright Artificial Intelligence}, Professor Amitabha Mukherjee}
+          {
+             \begin{itemize}[leftmargin=0.5cm]
+                 \item Clustered multiple authors using K-means unsupervised clustering.
+                 \item Classified each author using Support Vector Machine Classification using Radial Basis Kernel function.
+                 \item Used unigrams, bigrams and trigrams as features for clustering and Multiple Discrimanat Analysis for comparitive analysis.
+                 \item The inherent difficult in the project was the unavailability of stemmers and POS taggers for Hindi.
+                 \item \href{https://github.com/srijanshetty/author-attribution}{https://github.com/srijanshetty/author-attribution}
+             \end{itemize}
+         }
 
-\project {Monsoon 2013}
-         {NachOS}
-         {\textsc{Operating Systems}, Professor Mainak Chaudhari}
-         {The coursework included implementation of system calls; process
-          management and scheduling; memory management schemes and page replacement
-          algorithms in \textbf{NachOS}.}
+\lproject {Monsoon 2013}
+          {NachOS}
+          {\textsc{Operating Systems}, Professor Mainak Chaudhari}
+          {
+             \begin{itemize}[leftmargin=0.5cm]
+                 \item Implemented standard system calls in NachOS.
+                     \href{https://github.com/srijanshetty/nachos-syscalls/}{https://github.com/srijanshetty/nachos-syscalls/}
+                 \item Assessed the performance different Process scheduling algorithms: UNIX Scheduling, First in First Out,
+                     Round Robin, Shortest Job First and Non-preemptive job scheduling.
+                     \href{https://github.com/srijanshetty/nachos-scheduling}{https://github.com/srijanshetty/nachos-scheduling}
+                 \item Evaluated the performance of different page replacement algorithms: Random Page Allocation, First in First Out,
+                     Least Recently Used(LRU) and LRU Clock.
+                     \href{https://github.com/srijanshetty/nachos-final/}{https://github.com/srijanshetty/nachos-final/}
+              \end{itemize}
+          }
 
-\project {Monsoon 2013}
-         {P2P File Sharing and Streaming}
-         {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
-         {A Node.js based local file server and media playback server was implemented
-          to understand the underpinnings of Transport Layer Protocols, socket programming,
-          and P2P architecture.  \href{https://github.com/srijanshetty/nodesock} {[Git Repo]}}
+\lproject {Monsoon 2013}
+          {P2P File Sharing and Streaming}
+          {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
+          {
+             \begin{itemize}[leftmargin=0.5cm]
+                 \item Concieved a protocol for peer-to-peer based file and media transfer.
+                 \item Implemented the designed protocol to create a CLI agent for the same.
+                 \item Leveraged Node.js to handle high number of concurrent connections.
+                  \item \href{https://github.com/srijanshetty/nodesock}{https://github.com/srijanshetty/nodesock}
+             \end{itemize}
+          }
 
-\project {Monsoon 2013}
-         {IP Spoofing}
-         {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
-         {The objective of the project was to create raw Internet Protocol packets with a spoofed source
-          address. These spoofed packets were then used to implement common exploits like Smurfing,
-          ARP Poisoning, DOS attacks.}
+\lproject {Monsoon 2013}
+          {IP Spoofing}
+          {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
+          {
+              \begin{itemize}[leftmargin=0.5cm]
+                  \item Generated raw Internet Protocol (IP) packets with spoofed source address.
+                  \item Exploited spoofed packets to perform Smurfing, ARP Poisoning and SYN Flooding.
+                  \item Tested the implementation in a secure subnet.
+              \end{itemize}
+          }
 
-\project {Monsoon 2013}
-         {Prolog Shortest Paths and Erlang Traffic Server}
-         {\textsc{Principles of Programming Languages}, Professor Piyush Kurur}
-         {Shortest paths algorithm was implemented in Prolog on the Delhi Metro route
-          using Logic Programming. A simple traffic server was also implemented in Erlang
-          using message passing concurrency and tail call recursion.}
+\lproject {Monsoon 2013}
+          {Prolog Shortest Paths and Erlang Traffic Server}
+          {\textsc{Principles of Programming Languages}, Professor Piyush Kurur}
+          {
+               \begin{itemize}[leftmargin=0.5cm]
+                   \item Implemented shortest path algorithm in Prolog using Logic Programming on
+                       the Delhi Metro route.
+                   \item Implemented a simple traggice server in Erlang using message passing concurrency and
+                       tail call recursion.
+               \end{itemize}
+           }
 
-\project {Winter 2013}
-         {8-bit General Purpose Computer on a FPGA}
-         {\textsc{Computer Organization}, Professor Subhajit Roy}
-         {The GPC had a load-store architecture and was written in System Verilog and
-          implemented on a \textbf{Xilinx Spartan 3 FPGA}. It had a limited, but powerful
-          Instruction Set Architecture which could implement recursive functions, jumps,
-          loops  other basic building blocks of a simple assembly language.
-          \href{https://github.com/srijanshetty/220_y11} {[Git Repo]}}
+\lproject {Winter 2013}
+          {8-bit General Purpose Computer on a FPGA}
+          {\textsc{Computer Organization}, Professor Subhajit Roy}
+          {
+              \begin{itemize}[leftmargin=0.5cm]
+                  \item Designed an Instruction Set Architecture (ISA) for a 8-bit General Purpose
+                      Computer with a load-store architecture.
+                  \item Programmed a \textbf{Xilinx Spartan 3 FPGA} in System Verilog to implement
+                      the ISA.
+                  \item Encoded a simple assembly language to compile to the machine code.
+                  \item Accomplished recursion, jumps and loops.
+                  \item \href{https://github.com/srijanshetty/220\_y11} {https://github.com/srijanshetty/220\_y11}
+              \end{itemize}
+          }
 
-\project {Winter 2013}
-         {Conference Dates Web Crawler}
-         {\textsc{Computing Laboratory}}
-         {A python based web crawler which could obtain paper submission
-          deadlines of a provided conference name.  BeautifulSoup and urllib along
-          with simple pattern matching through regular expressions were used to implement crawling.
-          \href{https://github.com/srijanshetty/crawler} {[Git Repo]}}
+\lproject {Winter 2013}
+          {Conference Dates Web Crawler}
+          {\textsc{Computing Laboratory}}
+          {
+              \begin{itemize}[leftmargin=0.5cm]
+                   \item Developed a python based web crawler to crawl paper submission deadlines for a given paper
+                       and conference name.
+                   \item Quantitatively tested the advantage of Depth First Search over Bread First Search for crawling.
+                   \item Utilized regular expressions, BeautifulSoup and urllib to perform crawling.
+                   \href{https://github.com/srijanshetty/crawler} {https://github.com/srijanshetty/crawler}
+              \end{itemize}
 
-\project {Monsoon 2011}
-         {No situation is unique and certain moral principles can be applied across all situation}
-         {\textsc{Introduction to Philosophy}, Professor Vineet Sahu}
-         {An argumentative discourse proving that certain moral principles
-          can be applied throughout; by proving different situations have a certain
-          fundamental similarity.  Albeit this would require a gross simplification of
-          different situations.  The reviewing instructor was \textbf{Professor Vineet Sahu}}
+          }
+
+\lproject {Monsoon 2011}
+          {No situation is unique and certain moral principles can be applied across all situation}
+          {\textsc{Introduction to Philosophy}, Professor Vineet Sahu}
+          {
+               \begin{itemize}[leftmargin=0.5cm]
+                   \item Illustrated the existence of a fundamental similarity of different situtations, by
+                       a gross simplification of different situations.
+                   \item Justified the use certain moral principles across all situations by leveraging the
+                       above stated hypothesis.
+               \end{itemize}
+           }
 
 %----------------------------------------------------------------------------------------
 %  INDEPENDENT PROJECTS
 %----------------------------------------------------------------------------------------
 \section{Independent Projects}
 
-\sideproject {Jul 2014}
-             {OARS}
-             {OARS is a \textbf{AngularJS} based front-end for the
-              courses offered in IIT Kanpur. It was created as a
-              hack to alleviate the pain of the students in using the
-              sluggish legacy course search. The data was obtained by
-              scraping the official data portal of IIT Kanpur, and the
-              project is now maintained by \textbf{Navya}
-              \href{https://github.com/navya/oars} {[Git Repo]} }
+\iproject {Jul 2014}
+          {OARS}
+          {
+               \begin{itemize}[leftmargin=0.5cm]
+                   \item Scraped the institute academic records to create a database of all course offered by the
+                       institute.
+                   \item Created an AngularJS based frontend for the scraped data with a focus on ease of use
+                       and accessibility.
+                   \item \href{https://navya.github.io/oars}{https://navya.github.io/oars}
+               \end{itemize}
+           }
 
-\sideproject {Mar 2014}
-             {GYPH}
-             {GYPH or Get Your Personal Homepage
-              is a simple hassle-free homepage designer for students who are not
-              proficient in web technologies. It provides a WYSIWIG
-              interface for editing themes and downloading them for personal use.
-              \href{http://gyph2.herokuapp.com/} {[Website]} }
+\iproject {Mar 2014}
+          {Get Your Personal Homepage (GYPH)}
+          {
+               \begin{itemize}[leftmargin=0.5cm]
+                   \item Eased the process of creating minimalistic websites for not-so-tech-savvy students.
+                   \item Provided a directly editable interface for editing websites using JavaScript and HTML5.
+                   \item Enabled users to use custom themes and download the created website for personal use.
+                   \item \href{http://gyph2.herokuapp.com/} {http://gyph2.herokuapp.com/}
+               \end{itemize}
+           }
 
-\sideproject {Aug 2013}
-             {ShuffleRun}
-             {ShuffleRun is a web based music player which selects a track from the
-              users library according to her running speed.
-              The project recieved an honorable mention in \textbf{Yahoo!  HackU 2013} IIT Kanpur round.
-              \href{https://github.com/srijanshetty/ShuffleRun} {[Git Repo]}}
+\iproject {Aug 2013}
+          {ShuffleRun}
+          {
+              \begin{itemize}[leftmargin=0.5cm]
+                  \item Designed a web app which selects a music track from a user's library based on his running speed.
+                  \item Pitched the idea at \textbf{Yahoo! HackU 2013}.
+                  \item Recieved an honorable mention in \textbf{Yahoo!  HackU 2013} for the created hack.
+                  \item \href{https://github.com/srijanshetty/ShuffleRun} {https://github.com/srijanshetty/ShuffleRun}
+              \end{itemize}
+          }
 
-\sideproject {Summer 2012}
-             {Voicing, Archiving and Networking the Information \textsc{(VANI)}, IIT Kanpur}
-             {Vani is an \textbf{extensible} platform
-              made for the campus community consisting of Wiki, Forums,
-              Community search, Calendars etc.; built using \textbf{Drupal}
-              under the mentorship of \textbf{Professor Manindra Agarwal} and
-              \textbf{Professor T. V. Prabhakar} }
+\lproject {Summer 2012}
+          {Voicing, Archiving and Networking the Information \textsc{(VANI)}, IIT Kanpur}
+          {Professor Manindra Agarwal, Professor T. V. Prabhakar}
+          {
+              \begin{itemize}[leftmargin=0.5cm]
+                  \item Conceptualized the idea of VANI - an extensible student community platform consisting
+                      of a Student Wiki, Forums, Community Search, Calendar and Lost and Found.
+                  \item Developed the Lost and Found module using \textbf{Drupal}.
+                  \item Conducted session on the extending VANI for the benefit of students.
+              \end{itemize}
+          }
 
-\sideproject {Summer 2012}
-             {GNU/Linux Exploration, Programming Club, IIT Kanpur}
-             {The project involved exploration of various facets of
-              \textbf{GNU/Linux} like the file system, process management,
-              memory management, shell interface etc. And was
-              undertaken under the aegis of \textbf{Programming Club, IIT Kanpur}
-              \href{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing}
-              {[Documentation]} }
+\iproject {Summer 2012}
+          {GNU/Linux Exploration, Programming Club, IIT Kanpur}
+          {
+              \begin{itemize}[leftmargin=0.5cm]
+                  \item Explored various facets of \textbf{GNU/Linux} like the file system, process management,
+                      memory management, shell interface etc.
+                  \item Documented all salient points for use by the freshmen of the insititue.
+                  \item
+                      \href{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing}{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing}
+              \end{itemize}
+          }
 
 \projectlist {Web Development}
              {
@@ -431,7 +503,6 @@ Programming Languages, Networks and Systems, Security, Web-Dev, NLP
                  \end{itemize}
              }
 
-
 %----------------------------------------------------------------------------------------
 %   OTHER SKILLS
 %----------------------------------------------------------------------------------------
@@ -442,57 +513,62 @@ Programming Languages, Networks and Systems, Security, Web-Dev, NLP
              {
                    \begin{itemize}[leftmargin=0.5cm]
                        \item Navya is the resident Free and Open Source Software Group of IIT Kanpur.
-                       \item Promoted the FOSS initiative in campus by organizing student lectures and meetups.
-                       \item Created student-centric applications like Course Search and Student Search.
+                       \item Promoted the FOSS initiative in campus by organizing student lectures and meet-ups.
+                       \item Created student-centric applications like Course Search and Student Search, to circumvent
+                           their legacy institute counterparts.
                        \item \href{https://github.com/navya} {https://github.com/navya}
                    \end{itemize}
              }
 
-\projectlistdated {2014}
-                  {Head, Major Events and Competitions, Antaragni'14}
-                  {
-                       \begin{itemize}[leftmargin=0.5cm]
-                           \item Oversaw a team of \textbf{150} students for a span of 8 months.
-                       \end{itemize}
-                  }
+\iproject {2014}
+          {Head, Major Events and Competitions, Antaragni'14}
+          {
+               \begin{itemize}[leftmargin=0.5cm]
+                   \item Oversaw a team of \textbf{150} students for a span of 8 months.
+               \end{itemize}
+          }
 
-\projectlistdated {2013}
-                  {Hospitality Coordinator, Antaragni'13}
-                  {
-                       \begin{itemize}[leftmargin=0.5cm]
-                           \item Transformed the methodology of inviting colleges all around the country by focussing on
-                               college societies rather than the cultural union.
-                           \item Worked with a team of five fellow coordinators in planning the accommodation of 1500 participating students
-                               from all over the country.
-                           \item Helmed a team of 40 secretaries and 80 volunteers tasked with ensuring a flawless conduction of the
-                               festival.
-                           \item Chalked out the logistics for the hospitality of \textbf{1500 students} who
-                               participated in festival.
-                           \item Handled security during the four days of the Festival from 24$^{th}$ to 27$^{th}$ October.
-                       \end{itemize}
-                  }
+\iproject {2013}
+          {Hospitality Coordinator, Antaragni'13}
+          {
+               \begin{itemize}[leftmargin=0.5cm]
+                   \item Transformed the methodology of inviting colleges all around the country by focussing on
+                       calling college societies rather than the cultural union.
+                   \item Worked with a team of five fellow coordinators in planning the accommodation of 1500 participating students
+                       from all over the country.
+                   \item Chalked out the logistics for the hospitality of \textbf{1500 students} who
+                       participated in festival.
+                   \item Chalked out the logistics of the hospitality and accomodation of \textbf{1500 students} who
+                       participated in the festival with my fellow coordinators.
+                   \item Helmed a team of 40 secretaries and 80 volunteers tasked with ensuring a flawless conduction of the
+                       festival.
+                   \item Handled security during the four days of the Festival from 24$^{th}$ to 27$^{th}$ October.
+               \end{itemize}
+          }
 
-\projectlistdated {2013 -- 2014}
-                  {Community Service, English Proficiency Programme}
-                  {
-                       \begin{itemize}[leftmargin=0.5cm]
-                           \item A brainchild of \textbf{Professor Bhaskardas Gupta}, English Proficiency
-                               Programme tries to impart a functional knowledge of English to students.
-                           \item Worked as a English tutor in the pilot programme which was aimed at helping
-                               under-privileged students from and around IIT Kanpur campus.
-                       \end{itemize}
-                  }
+\iproject {2013 -- 2014}
+          {Community Service, English Proficiency Programme}
+          {
+               \begin{itemize}[leftmargin=0.5cm]
+                   \item A brainchild of \textbf{Professor Bhaskardas Gupta}, English Proficiency
+                       Programme tries to impart a functional knowledge of English to students.
+                   \item Worked as a English tutor in the pilot programme which was aimed at helping
+                       under-privileged students from and around IIT Kanpur campus.
+                   \item Helped in organizing the second phase of the programme, aimed at school teachers
+                       by meetings principals from schools in and around IIT Kanpur.
+               \end{itemize}
+          }
 
-\projectlistdated {2013 -- 2014}
-                  {Member, Gymkhana Review Committee}
-                  {
-                       \begin{itemize}[leftmargin=0.5cm]
-                           \item The GRC was established to revamp the Students' Gymkhana of IIT Kanpur,
-                               which is responsible for all the student activities of the institute.
-                           \item Chaired the meetings on \textbf{Extended Orientation of Incoming Freshmen}.
-                           \item Contributed actively as a member of academic, senate and activities sub-committees of the GRC.
-                       \end{itemize}
-                  }
+\iproject {2013 -- 2014}
+          {Member, Gymkhana Review Committee}
+          {
+               \begin{itemize}[leftmargin=0.5cm]
+                   \item The GRC was established to revamp the Students' Gymkhana of IIT Kanpur,
+                       which is responsible for all the student activities of the institute.
+                   \item Chaired the meetings on \textbf{Extended Orientation of Incoming Freshmen}.
+                   \item Contributed actively as a member of academic, senate and activities sub-committees of the GRC.
+               \end{itemize}
+          }
 
 \skill {2013 -- pre}
        {Active blogger at \href{srijanshetty.quora.com} {srijanshetty.quora.com}}
