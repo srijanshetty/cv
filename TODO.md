@@ -1,3 +1,1 @@
--Head Major Events
--TA Projects
 -ART Project
