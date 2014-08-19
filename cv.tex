@@ -70,6 +70,18 @@
     \vspace{-0.5cm}
 }
 
+\newcommand{\cproject}[5]{
+    \begin{tabular}{p{0.80\linewidth}r}
+        \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{4cm}}{\raggedleft \textsc{#1}}\\
+        #3 & #4
+    \end{tabular}
+    \begin{tabular}{p{\linewidth}}
+    \vspace{-0.3cm}
+        \footnotesize{#5}
+    \end{tabular}
+    \vspace{-0.5cm}
+}
+
 \newcommand{\iproject}[3]{
     \begin{tabular}{p{0.85\linewidth}r}
         \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{3cm}}{\raggedleft \textsc{#1}}\\
@@ -132,7 +144,6 @@
         }
 
         & {\Large\Mobilefone} +(91) 9005900383 \\
-        & {\Large\Info} \href{cse.iitk.ac.in/users/srijans}{cse.iitk.ac.in/users/srijans}\\
         & {\Large\Letter} \href{mailto:srijan.shetty@gmail.com}{srijan.shetty@gmail.com}\\
         & {\github} \href{https://github.com/srijanshetty}{https://github.com/srijanshetty}\\
     \end{tabular}
@@ -199,8 +210,8 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
     \textsc{Dec 2005}    & Awarded \textbf{Overall Best Student} for displaying all round excellence. \\
     \textsc{2000-2009}   & Recipient of \textbf{Scholastic Excellence} awards for exemplary academic performance throughout
                             2$^{nd}$ to 12$^{th}$ grade. \\
-    \textsc{---}         & Achieved AIR \textbf{140 in 8th, 154 in 9th and 429 in 11th} National Cyber Olympiad.\\
-    \textsc{---}         & Achieved AIR \textbf{54 in 9th} National Science Olympiad.\\
+    \textsc{---}         & Achieved AIR \textbf{140 in 8th, 154 in 9th and 429 in 11th} National Cyber Olympiad;
+                            and AIR \textbf{54 in 9th} National Science Olympiad.\\
 }
 
 
@@ -260,119 +271,133 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
  \let\thefootnote\relax\footnote{Monsoon semester: July to November}
  \let\thefootnote\relax\footnote{Winter Semester: January to April}
 
-\lproject {Monsoon 2014-2015}
-          {Multi Factor Authentication in OpenVPN}
-          {\textsc{\raggedright Mozilla Winter of Security}, Guillaume Destuynder and Professor Dheeraj Sanghi}
-          {
-              \begin{itemize}[leftmargin=0.5cm]
-                  \item One of the eleven projects to be selected as a part of Mozilla's Winter of Security Initiative 2014.
-                  \item The objective of the project is to implement true arbitrary multi-factor authentication support in
-                      OpenVPN; and to implement session-support for the additional factors.
-                  \item \href{https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA}%
-                      {https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA}
-              \end{itemize}
-          }
+\cproject
+    {Monsoon 2014-2015}
+    {Multi Factor Authentication in OpenVPN}
+    {\textsc{\raggedright Mozilla Winter of Security}, Guillaume Destuynder and Professor Dheeraj Sanghi}
+    {\href{https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA}{ \footnotesize{[Project Wiki]}} }
+    {
+      \begin{itemize}[leftmargin=0.5cm]
+          \item One of the eleven projects to be selected as a part of Mozilla's Winter of Security Initiative 2014.
+          \item The objective of the project is to implement true arbitrary multi-factor authentication support in
+              OpenVPN; and to implement session-support for the additional factors.
+      \end{itemize}
+    }
 
-\lproject {Winter 2013-2014}
-          {JavaScript to MIPS Compiler}
-          {\textsc{\raggedright Compilers}, Professor Subhajit Roy}
-          {
-              \begin{itemize}[leftmargin=0.5cm]
-                  \item Implemented an end-to-end ECMAScript 5.1 compiler for the MIPS architecture with support for first class
-                      functions, anonymous functions, static types, type annotations, recursion and nested functions.  \href{https://github.com/srijanshetty/javascript-compiler} {[Repository]}
-              \end{itemize}
-          }
+\cproject
+    {Winter 2013-2014}
+    {JavaScript to MIPS Compiler}
+    {\textsc{\raggedright Compilers}, Professor Subhajit Roy}
+    { \href{https://github.com/srijanshetty/javascript-compiler} { \footnotesize{[Repository]}} }
+    {
+      \begin{itemize}[leftmargin=0.5cm]
+          \item Implemented an end-to-end ECMAScript 5.1 compiler for the MIPS architecture with support for first class
+              functions, anonymous functions, static types, type annotations, recursion and nested functions.
+      \end{itemize}
+    }
 
-\lproject {Winter 2013-2014}
-          {Hindi author attribution}
-          {\textsc{\raggedright Artificial Intelligence}, Professor Amitabha Mukherjee}
-          {
-             \begin{itemize}[leftmargin=0.5cm]
-                 \item Presented a poster on Opinion Word Expansion and Target Extraction through Double Propogation, Guang Qin,
-                     Bing Liu, Jiajun Bu, Chun Chen that was nominated as the best poster by all students.
-                 \item Selected as one of the top seven projects at the end of the term.
-                 \item Generated a Hindi literature corpus consisting of works by Rabindranath Tagore,
-                     Vibhuti Narayan, Premchand, Sarat Chandra Chattopadhyay and Dhamarvir Bharati.
-                 \item Clustered a sample set of multiple Hindi authors using K-means unsupervised clustering to achieve
-                     F-scores in the range of 90-97\% for each author.
-                 \item Classified each author using Support Vector Machine Classification using Radial Basis Kernel function
-                     and achieved an F-score of 90--95\% for each author.
-                 \item Performed Multiple Discriminant Analysis on the data for a quantitative comparison with word
-                     collocations; there was no appreciable difference in the results with the F-scores increasing only
-                     marginally.
-                 \item \href{https://github.com/srijanshetty/author-attribution}{[Repository]}
-             \end{itemize}
-         }
+\cproject
+    {Winter 2013-2014}
+    {Hindi author attribution}
+    {\textsc{\raggedright Artificial Intelligence}, Professor Amitabha Mukherjee}
+    { \href{https://github.com/srijanshetty/author-attribution}{ \footnotesize{[Repository]}} }
+    {
+     \begin{itemize}[leftmargin=0.5cm]
+         \item Presented a poster on Opinion Word Expansion and Target Extraction through Double Propogation, Guang Qin,
+             Bing Liu, Jiajun Bu, Chun Chen that was nominated as the best poster by all students.
+         \item Selected as one of the top seven projects at the end of the term.
+         \item Generated a Hindi literature corpus consisting of works by Rabindranath Tagore,
+             Vibhuti Narayan, Premchand, Sarat Chandra Chattopadhyay and Dhamarvir Bharati.
+         \item Clustered a sample set of multiple Hindi authors using K-means unsupervised clustering to achieve
+             F-scores in the range of 90-97\% for each author.
+         \item Classified each author using Support Vector Machine Classification using Radial Basis Kernel function
+             and achieved an F-score of 90--95\% for each author.
+         \item Performed Multiple Discriminant Analysis on the data for a quantitative comparison with word
+             collocations; there was no appreciable difference in the results with the F-scores increasing only
+             marginally.
+     \end{itemize}
+    }
 
-\lproject {Monsoon 2013-2014}
-          {NachOS}
-          {\textsc{Operating Systems}, Professor Mainak Chaudhari}
-          {
-             \begin{itemize}[leftmargin=0.5cm]
-                 \item Extended the standard system call library of NachOS and implemented system calls pertaining to Fork, Exec,
-                     Join, Yield, Sleep and Exit.
-                     \href{https://github.com/srijanshetty/nachos-syscalls/}{[Repository]}
-                 \item Implemented process scheduling algorithms: UNIX Scheduling, First in First Out,
-                     Round Robin, Shortest Job First and Non-pre-emptive job scheduling to assess their relative performances.
-                     \href{https://github.com/srijanshetty/nachos-scheduling}{[Repository]}
-                 \item Programmed page replacement algorithms: Random Page Allocation, First in First Out,
-                     Least Recently Used(LRU) and LRU Clock to evaluate relative performances under difference scenarios.
-                     \href{https://github.com/srijanshetty/nachos-final/}{[Repository]}
-              \end{itemize}
-          }
+\cproject
+    {Monsoon 2013-2014}
+    {NachOS}
+    {\textsc{Operating Systems}, Professor Mainak Chaudhari}
+    {}
+    {
+     \begin{itemize}[leftmargin=0.5cm]
+         \item Extended the standard system call library of NachOS and implemented system calls pertaining to Fork, Exec,
+             Join, Yield, Sleep and Exit.
+             \href{https://github.com/srijanshetty/nachos-syscalls/}{[Repository]}
+         \item Implemented process scheduling algorithms: UNIX Scheduling, First in First Out,
+             Round Robin, Shortest Job First and Non-pre-emptive job scheduling to assess their relative performances.
+             \href{https://github.com/srijanshetty/nachos-scheduling}{[Repository]}
+         \item Programmed page replacement algorithms: Random Page Allocation, First in First Out,
+             Least Recently Used(LRU) and LRU Clock to evaluate relative performances under difference scenarios.
+             \href{https://github.com/srijanshetty/nachos-final/}{[Repository]}
+      \end{itemize}
+    }
 
-\lproject {Monsoon 2013-2014}
-          {P2P File Sharing and Streaming}
-          {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
-          {
-             \begin{itemize}[leftmargin=0.5cm]
-                 \item Conceived and implemented a peer-to-peer protocol for file and media transfer in Node.js to share
-                     data over the institute LAN.  \href{https://github.com/srijanshetty/nodesock}{[Repository]}
-             \end{itemize}
-          }
+\cproject
+    {Monsoon 2013-2014}
+    {P2P File Sharing and Streaming}
+    {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
+    { \href{https://github.com/srijanshetty/nodesock}{ \footnotesize{[Repository]} } }
+    {
+     \begin{itemize}[leftmargin=0.5cm]
+         \item Conceived and implemented a peer-to-peer protocol for file and media transfer in Node.js to share
+             data over the institute LAN.
+     \end{itemize}
+    }
 
-\lproject {Monsoon 2013-2014}
-          {IP Spoofing}
-          {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
-          {
-              \begin{itemize}[leftmargin=0.5cm]
-                  \item Generated raw IP packets with spoofed IP addresses to exploit test machines with ARP Poisoning,
-                      Smurfing and SYN Flooding.
-              \end{itemize}
-          }
+\cproject
+    {Monsoon 2013-2014}
+    {IP Spoofing}
+    {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
+    {}
+    {
+      \begin{itemize}[leftmargin=0.5cm]
+          \item Generated raw IP packets with spoofed IP addresses to exploit test machines with ARP Poisoning,
+              Smurfing and SYN Flooding.
+      \end{itemize}
+    }
 
-\lproject {Monsoon 2013-2014}
-          {Prolog Shortest Paths and Erlang Traffic Server}
-          {\textsc{Principles of Programming Languages}, Professor Piyush Kurur}
-          {
-               \begin{itemize}[leftmargin=0.5cm]
-                   \item Implemented shortest path algorithm in Prolog using Logic Programming on the Delhi Metro route.
-                   \item Implemented a simple traffic server in Erlang using message passing concurrency and tail call recursion.
-               \end{itemize}
-           }
+\cproject
+    {Monsoon 2013-2014}
+    {Prolog Shortest Paths and Erlang Traffic Server}
+    {\textsc{Principles of Programming Languages}, Professor Piyush Kurur}
+    {}
+    {
+       \begin{itemize}[leftmargin=0.5cm]
+           \item Implemented shortest path algorithm in Prolog using Logic Programming on the Delhi Metro route.
+           \item Implemented a simple traffic server in Erlang using message passing concurrency and tail call recursion.
+       \end{itemize}
+    }
 
-\lproject {Winter 2012-2013}
-          {8-bit General Purpose Computer on a FPGA}
-          {\textsc{Computer Organization}, Professor Subhajit Roy}
-          {
-              \begin{itemize}[leftmargin=0.5cm]
-                  \item Designed and programmed a simple Instruction set Architecture (ISA) for a 8-bit General Purpose Computer with a load-store
-                      architecture on \textbf{Xilinx Spartan 3 FPGA} using System Verilog.
-                  \item Demonstrated recursion, looping and conditionals on the Computer by using a simple assembly language.
-                  \item \href{https://github.com/srijanshetty/220\_y11} {https://github.com/srijanshetty/220\_y11}
-              \end{itemize}
-          }
+\cproject
+    {Winter 2012-2013}
+    {8-bit General Purpose Computer on a FPGA}
+    {\textsc{Computer Organization}, Professor Subhajit Roy}
+    { \href{https://github.com/srijanshetty/220\_y11} {\footnotesize{[Repository]}} }
+    {
+      \begin{itemize}[leftmargin=0.5cm]
+          \item Designed and programmed a simple Instruction set Architecture (ISA) for a 8-bit General Purpose Computer with a load-store
+              architecture on \textbf{Xilinx Spartan 3 FPGA} using System Verilog.
+          \item Demonstrated recursion, looping and conditionals on the Computer by using a simple assembly language.
+      \end{itemize}
+    }
 
-\lproject {Winter 2012-2013}
-          {Conference Dates Web Crawler}
-          {\textsc{Computing Laboratory}}
-          {
-              \begin{itemize}[leftmargin=0.5cm]
-                   \item Developed a python based web crawler to crawl paper submission deadlines for a given paper using BeautifulSoup and
-                       urllib.  \href{https://github.com/srijanshetty/crawler} {[Repository]}
-              \end{itemize}
+\cproject
+    {Winter 2012-2013}
+    {Conference Dates Web Crawler}
+    {\textsc{Computing Laboratory}}
+    {\href{https://github.com/srijanshetty/crawler} {\footnotesize{ [Repository]}} }
+    {
+      \begin{itemize}[leftmargin=0.5cm]
+           \item Developed a python based web crawler to crawl paper submission deadlines for a given paper using BeautifulSoup and
+               urllib.
+      \end{itemize}
 
-          }
+    }
 
 %----------------------------------------------------------------------------------------
 %  INDEPENDENT PROJECTS
