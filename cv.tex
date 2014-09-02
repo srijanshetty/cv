@@ -82,6 +82,18 @@
     \vspace{-0.5cm}
 }
 
+\newcommand{\scproject}[5]{
+    \begin{tabular}{p{0.80\linewidth}r}
+        \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{4cm}}{\raggedleft \textsc{#1}}\\
+        #3 & #4
+    \end{tabular}
+    \begin{tabular}{p{\linewidth}}
+    \vspace{-0.3cm}
+        \footnotesize{#5}
+    \end{tabular}
+    \vspace{-0.3cm}
+}
+
 \newcommand{\iproject}[3]{
     \begin{tabular}{p{0.85\linewidth}r}
         \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{3cm}}{\raggedleft \textsc{#1}}\\
@@ -91,6 +103,17 @@
         \footnotesize{#3}
     \end{tabular}
     \vspace{-0.5cm}
+}
+
+\newcommand{\siproject}[3]{
+    \begin{tabular}{p{0.85\linewidth}r}
+        \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{3cm}}{\raggedleft \textsc{#1}}\\
+    \end{tabular}
+    \begin{tabular}{p{\linewidth}}
+    \vspace{-0.3cm}
+        \footnotesize{#3}
+    \end{tabular}
+    \vspace{-0.3cm}
 }
 
 \newcommand{\projectlist}[2]{
@@ -284,16 +307,14 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
       \end{itemize}
     }
 
-\cproject
+\scproject
     {Winter 2013-2014}
     {JavaScript to MIPS Compiler}
     {\textsc{\raggedright Compilers}, Professor Subhajit Roy}
     { \href{https://github.com/srijanshetty/javascript-compiler} { \footnotesize{[Repository]}} }
     {
-      \begin{itemize}[leftmargin=0.5cm]
-          \item Implemented an end-to-end ECMAScript 5.1 compiler for the MIPS architecture with support for first class
-              functions, anonymous functions, static types, type annotations, recursion and nested functions.
-      \end{itemize}
+          Implemented an end-to-end ECMAScript 5.1 compiler for the MIPS architecture with support for first class
+          functions, anonymous functions, static types, type annotations, recursion and nested functions.
     }
 
 \cproject
@@ -337,28 +358,24 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
       \end{itemize}
     }
 
-\cproject
+\scproject
     {Monsoon 2013-2014}
     {P2P File Sharing and Streaming}
     {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
     { \href{https://github.com/srijanshetty/nodesock}{ \footnotesize{[Repository]} } }
     {
-     \begin{itemize}[leftmargin=0.5cm]
-         \item Conceived and implemented a peer-to-peer protocol for file and media transfer in Node.js to share
-             data over the institute LAN.
-     \end{itemize}
+         Conceived and implemented a peer-to-peer protocol for file and media transfer in Node.js to share
+         data over the institute LAN.
     }
 
-\cproject
+\scproject
     {Monsoon 2013-2014}
     {IP Spoofing}
     {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
     {}
     {
-      \begin{itemize}[leftmargin=0.5cm]
-          \item Generated raw IP packets with spoofed IP addresses to exploit test machines with ARP Poisoning,
-              Smurfing and SYN Flooding.
-      \end{itemize}
+          Generated raw IP packets with spoofed IP addresses to exploit test machines with ARP Poisoning,
+          Smurfing and SYN Flooding.
     }
 
 \cproject
@@ -386,16 +403,14 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
       \end{itemize}
     }
 
-\cproject
+\scproject
     {Winter 2012-2013}
     {Conference Dates Web Crawler}
     {\textsc{Computing Laboratory}}
     {\href{https://github.com/srijanshetty/crawler} {\footnotesize{ [Repository]}} }
     {
-      \begin{itemize}[leftmargin=0.5cm]
-           \item Developed a python based web crawler to crawl paper submission deadlines for a given paper using BeautifulSoup and
-               urllib.
-      \end{itemize}
+           Developed a python based web crawler to crawl paper submission deadlines for a given paper using BeautifulSoup and
+           urllib.
 
     }
 
@@ -404,32 +419,35 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
 %----------------------------------------------------------------------------------------
 \section{Independent Projects}
 
-\iproject {July 2014}
+\siproject {July 2014}
           {OARS}
           {
-               \begin{itemize}[leftmargin=0.5cm]
-                   \item Scraped the institute academic records to create a database of all courses offered by the institute to create an
-                       AngularJS based course search over the existing legacy course search.  \href{https://navya.github.io/oars}{[Website]}
-               \end{itemize}
+              Scraped the institute academic records to create a database of all courses offered by the institute to create an
+              AngularJS based course search over the existing legacy course search.  \href{https://navya.github.io/oars}{[Website]}
            }
 
-\iproject {March 2014}
+\siproject {March 2014}
           {Get Your Personal Homepage (GYPH)}
           {
-               \begin{itemize}[leftmargin=0.5cm]
-                   \item Eased the process of creating minimalistic websites for not-so-tech-savvy students by creating a WYSIWG website
-                       editor.  \href{http://gyph2.herokuapp.com/} {[Website]}
-               \end{itemize}
+               Eased the process of creating minimalistic websites for not-so-tech-savvy students by creating a WYSIWG website
+               editor.  \href{http://gyph2.herokuapp.com/} {[Website]}
            }
 
-\iproject {August 2013}
-          {ShuffleRun}
-          {
-              \begin{itemize}[leftmargin=0.5cm]
-                  \item Pitched ShuffleRun --- a music player which selects tracks on the basis of the user's running speed to receive
-                      and honourable mention at \textbf{Yahoo! HackU 2013}.  \href{https://github.com/srijanshetty/ShuffleRun} {[Repository]}
-              \end{itemize}
-          }
+\siproject {August 2013}
+           {ShuffleRun}
+           {
+               Pitched ShuffleRun --- a music player which selects tracks on the basis of the user's running speed to receive
+               and honourable mention at \textbf{Yahoo! HackU 2013}.  \href{https://github.com/srijanshetty/ShuffleRun} {[Repository]}
+           }
+
+\siproject {Summer 2012}
+           {GNU/Linux Exploration, Programming Club, IIT Kanpur}
+           {
+              Explored and documented the various facets of \textbf{GNU/Linux} like the file system,
+              process management, memory management, shell interface etc to serve as a reference for the
+              Student Community.
+              \href{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing}{[Documentation]}
+           }
 
 \lproject {Summer 2012}
           {Voicing, Archiving and Networking the Information \textsc{(VANI)}, IIT Kanpur}
@@ -440,16 +458,6 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
                       of a Student Wiki, Forums, Community Search, Calendar and Lost and Found.
                   \item Developed the Lost and Found module using \textbf{Drupal} for VANI.
                   \item Conducted sessions on the extending VANI to create rich applications.
-              \end{itemize}
-          }
-
-\iproject {Summer 2012}
-          {GNU/Linux Exploration, Programming Club, IIT Kanpur}
-          {
-              \begin{itemize}[leftmargin=0.5cm]
-                  \item Explored and documented the various facets of \textbf{GNU/Linux} like the file system, process management, memory management,
-                      shell interface etc to serve as a reference for the Student Community.
-                      \href{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing}{[Documentation]}
               \end{itemize}
           }
 
