@@ -201,16 +201,51 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
 \end{tabular}
 
 %----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\work {May-July 2014}
+      {Research Intern at \textsc{Microsoft Research India}, Bangalore}
+      {
+         \begin{itemize}[leftmargin=*]
+             \item Analysed the implementations of different distributed systems and databases architectures like
+                 \textbf{Google MapReduce}, \textbf{Google FileSystem}, \textbf{Google MillWheel} \textbf{Yahoo! PNUTS},
+                 \textbf{Amazon DynamoDB}, \textbf{Apache Kafka}, \textbf{Apache Spark}, \textbf{Apache Hadoop},
+                 \textbf{Apache Storm}, \textbf{Microsoft Dryad}, and \textbf{Microsoft DryadLINQ}
+                 to understand the design decisions involved.
+             \item Used \textbf{TPL Dataflow} and \textbf{Lightweight Tasks} to implement concurrent pipeline
+                 processing of messages in CScale to preserve processing order of partially ordered messages.
+             \item Performed \textbf{performance testing} of the concurrency optimizations in real world
+                 scenarios leading to a gain in processing time.
+             \item Performed \textbf{failure testing} of the existing infrastructure and debugged detrimental
+                 replication errors in the existing infrastructure.
+         \end{itemize}
+     }
+
+\work {May-July 2013}
+      {Software Development at \textsc{Aurus Networks'}, Bangalore}
+      {
+          \begin{itemize}[leftmargin=*]
+              \item Ported the legacy flash based web player in \textbf{CourseHub} --- Aurus Networks'
+                  MOOC offering --- to a technology agnostic \textbf{HTML5/JavaScript} web player leading
+                  to a uniform cross-platform viewing experience.
+              \item Developed a \textbf{XMPP} based \textbf{real-time chat service} using Jabber framework,
+                  for conversations during live lectures.
+              \item Engineered an extensible Jabber framework for real-time communications between different services.
+          \end{itemize}
+      }
+
+%----------------------------------------------------------------------------------------
 %	SCHOLARSHIPS AND CONFERENCES
 %----------------------------------------------------------------------------------------
 \section{Scholarships and Conferences}
-
 
 \itemlist {
     \textsc{Jan 2011} & Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship \\
     \textsc{Dec 2009} & CSIR Programme on Youth for Leadership in Science held at Advanced Materials Research Institute, Bhopal\\
 }
-
 
 %----------------------------------------------------------------------------------------
 %   SCHOLASTIC ACHIEVEMENTS
@@ -242,49 +277,14 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
 
 \itemlist {
     \textsc{Languages} %
-            & \textbf{JavaScript} (Expert), \textbf{Python} (Proficient), \textbf{C++} (Proficient), \textbf{C\#} (Efficient),
-              \textbf{C} (Proficient)\\
+            & \textbf{JavaScript} (Expert), \textbf{Python} (Proficient), \textbf{C++} (Proficient),
+              \textbf{C\#} (Efficient), \textbf{C} (Proficient)\\
     \textsc{Web Dev} %
             & \textbf{HTML5}, \textbf{CSS}, \textbf{SQL and NoSQL}, \textbf{AngularJS}, \textbf{Nodejs}\\
     \textsc{Tools} %
-            & \textbf{Git} (Expert), \textbf{Shell Scripting} (Proficient), \textbf{Prezi} (Proficient), \textbf{Vim} (Expert), \textbf{LaTeX}
-              (Proficient)\\
+            & \textbf{Git} (Expert), \textbf{Shell Scripting} (Proficient), \textbf{Prezi} (Proficient),
+              \textbf{Vim} (Expert), \textbf{LaTeX} (Proficient)\\
 }
-
-%----------------------------------------------------------------------------------------
-%   WORK EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-\section{Work Experience}
-
-\work {May-July 2014}
-      {Research Intern at \textsc{Microsoft Research India}, Bangalore}
-      {
-         \begin{itemize}[leftmargin=*]
-             \item Analysed the implementations of different distributed systems and databases architectures like
-                 \textbf{Google MapReduce}, \textbf{Google FileSystem}, \textbf{Google MillWheel} \textbf{Yahoo! PNUTS},
-                 \textbf{Amazon DynamoDB}, \textbf{Apache Kafka}, \textbf{Apache Spark}, \textbf{Apache Hadoop}, \textbf{Apache Storm},
-                 \textbf{Microsoft Dryad}, and \textbf{Microsoft DryadLINQ} to understand the design decisions involved.
-             \item Used \textbf{TPL Dataflow} and \textbf{Lightweight Tasks} to implement concurrent pipeline processing of messages in
-                 CScale to preserve processing order of partially ordered messages.
-             \item Performed \textbf{performance testing} of the concurrency optimizations in real world scenarios leading to a gain in processing time.
-             \item Performed \textbf{failure testing} of the existing infrastructure and debugged detrimental replication errors in the
-                 existing infrastructure.
-         \end{itemize}
-     }
-
-\work {May-July 2013}
-      {Software Development at \textsc{Aurus Networks'}, Bangalore}
-      {
-          \begin{itemize}[leftmargin=*]
-              \item Ported the legacy flash based web player in \textbf{CourseHub} --- Aurus Networks'
-                  MOOC offering --- to a technology agnostic \textbf{HTML5/JavaScript} web player leading
-                  to a uniform cross-platform viewing experience.
-              \item Developed a \textbf{XMPP} based \textbf{real-time chat service} using Jabber framework,
-                  for conversations during live lectures.
-              \item Engineered an extensible Jabber framework for real-time communications between different services.
-          \end{itemize}
-      }
 
 %----------------------------------------------------------------------------------------
 %  COURSE PROJECTS
@@ -340,6 +340,20 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
 
 \cproject
     {Monsoon 2013-2014}
+    {P2P File Sharing and Streaming and IP Spoofing}
+    {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
+    { \href{https://github.com/srijanshetty/nodesock}{ \footnotesize{[Repository]} } }
+    {
+        \begin{itemize}[leftmargin=0.5cm]
+            \item Conceived and implemented a peer-to-peer protocol for file and media transfer in Node.js to share
+                data over any LAN.
+            \item Generated raw IP packets with spoofed IP addresses to exploit test machines with ARP Poisoning,
+                Smurfing and SYN Flooding.
+        \end{itemize}
+    }
+
+\cproject
+    {Monsoon 2013-2014}
     {NachOS}
     {\textsc{Operating Systems}, Professor Mainak Chaudhari}
     {}
@@ -355,20 +369,6 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
              Least Recently Used(LRU) and LRU Clock to evaluate relative performances under difference scenarios.
              \href{https://github.com/srijanshetty/nachos-final/}{[Repository]}
       \end{itemize}
-    }
-
-\cproject
-    {Monsoon 2013-2014}
-    {P2P File Sharing and Streaming and IP Spoofing}
-    {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
-    { \href{https://github.com/srijanshetty/nodesock}{ \footnotesize{[Repository]} } }
-    {
-        \begin{itemize}[leftmargin=0.5cm]
-            \item Conceived and implemented a peer-to-peer protocol for file and media transfer in Node.js to share
-                data over any LAN.
-            \item Generated raw IP packets with spoofed IP addresses to exploit test machines with ARP Poisoning,
-                Smurfing and SYN Flooding.
-        \end{itemize}
     }
 
 \cproject
@@ -477,7 +477,6 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
                  \end{itemize}
              }
 
-
 %----------------------------------------------------------------------------------------
 %   OTHER SKILLS
 %----------------------------------------------------------------------------------------
@@ -570,15 +569,13 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
           }
 
 \lproject {2013 -- 2014}
-          {Community Service, English Proficiency Programme}
+          {Tutor, English Proficiency Programme}
           {Professor Bhaskar Das Gupta}
           {
                \begin{itemize}[leftmargin=0.5cm]
-                   \item A brainchild of \textbf{Professor Bhaskar Das Gupta}, English Proficiency Programme
-                       tries to impart a functional knowledge of English to students.
-                   \item Worked as a English tutor in the pilot programme to help under-privileged students from
-                       and around IIT Kanpur campus; and helped in the conduction of second phase of the project
-                       aimed at school teachers in nearby schools.
+                   \item Worked as a English tutor in the pilot English Proficiency Programme to help
+                       under-privileged students obtain a functional knowlege of English; and helped in the
+                       conduction of second phase of the project aimed at school teachers in nearby schools.
                \end{itemize}
           }
 
@@ -597,8 +594,8 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
           {Social Initiative, Antaragni '14}
           {
                \begin{itemize}[leftmargin=0.5cm]
-                   \item Organized a blood donation camp for the residents of IIT Kanpur.
-                   \item Mobilized information about road safety through infographics and questionnaires
+                   \item Organized a blood donation camp for the residents of IIT Kanpur to promote awarness
+                       about road accidents.  Mobilized information about road safety through infographics and questionnaires
                        via Antaragni's nation wide social campaign \textbf{Zara Sambhal Ke}.
                    \item Organized a Respect March on the 15$^{th}$ of August, to infuse a sense of patriotism
                        on the occassion of Indian Independence day.
