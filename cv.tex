@@ -59,6 +59,18 @@
     \vspace{-0.1cm}
 }
 
+\newcommand{\cproject}[5]{
+    \begin{tabular}{p{0.80\linewidth}r}
+        \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{4cm}}{\raggedleft \textsc{#1}}\\
+        #3 & #4
+    \end{tabular}
+    \begin{tabular}{p{\linewidth}}
+    \vspace{-0.3cm}
+        \footnotesize{#5}
+    \end{tabular}
+    \vspace{-0.5cm}
+}
+
 \newcommand{\lproject}[4]{
     \begin{tabular}{p{0.80\linewidth}r}
         \textcolor{NavyBlue}{#2} & \multicolumn{1}{m{4cm}}{\raggedleft \textsc{#1}}\\
@@ -133,7 +145,7 @@
         }
 
         & {\Large\Mobilefone} +(91) 9005900383 \\
-        & {\Large\Info} \href{cse.iitk.ac.in/users/srijans}{cse.iitk.ac.in/users/srijans}\\
+        & {\Large\Info} \href{cse.iitk.ac.in/users/srijans}{srijanshetty.in}\\
         & {\Large\Letter} \href{mailto:srijan.shetty@gmail.com}{srijan.shetty@gmail.com}\\
         & {\github} \href{https://github.com/srijanshetty}{https://github.com/srijanshetty}\\
     \end{tabular}
@@ -273,9 +285,11 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
  \let\thefootnote\relax\footnote{Monsoon semester: July to November}
  \let\thefootnote\relax\footnote{Winter Semester: January to April}
 
-\lproject {Monsoon 2014-2015}
-          {Multi Factor Authentication in OpenVPN}
-          {\textsc{\raggedright Mozilla Winter of Security}, Guillaume Destuynder and Professor Dheeraj Sanghi}
+\cproject
+    {Monsoon 2014-2015}
+    {Multi Factor Authentication in OpenVPN}
+    {\textsc{\raggedright Mozilla Winter of Security}, Guillaume Destuynder and Professor Dheeraj Sanghi}
+    {\href{https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA}{ \footnotesize{[Project Wiki]}} }
           {
               \begin{itemize}[leftmargin=0.5cm]
                   \item One of the eleven projects to be selected as a part of Mozilla's Winter of Security Initiative 2014.
@@ -286,9 +300,10 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
               \end{itemize}
           }
 
-\lproject {Winter 2013-2014}
+\cproject {Winter 2013-2014}
           {JavaScript to MIPS Compiler}
           {\textsc{\raggedright Compilers}, Professor Subhajit Roy}
+          { \href{https://github.com/srijanshetty/javascript-compiler} { \footnotesize{[Repository]}} }
           {
               \begin{itemize}[leftmargin=0.5cm]
                   \item Implemented an end-to-end compiler for an ECMAScript 5.1 based language to compile to MIPS
@@ -304,9 +319,11 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
               \end{itemize}
           }
 
-\lproject {Winter 2013-2014}
-          {Hindi author attribution}
-          {\textsc{\raggedright Artificial Intelligence}, Professor Amitabha Mukherjee}
+\cproject
+    {Winter 2013-2014}
+    {Hindi author attribution}
+    {\textsc{\raggedright Artificial Intelligence}, Professor Amitabha Mukherjee}
+    { \href{https://github.com/srijanshetty/author-attribution}{ \footnotesize{[Repository]}} }
           {
              \begin{itemize}[leftmargin=0.5cm]
                  \item Presented a poster on Opinion Word Expansion and Target Extraction through Double Propogation, Guang Qin,
@@ -343,9 +360,11 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
               \end{itemize}
           }
 
-\lproject {Monsoon 2013-2014}
-          {P2P File Sharing and Streaming}
-          {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
+\cproject
+    {Monsoon 2013-2014}
+    {P2P File Sharing and Streaming}
+    {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
+    { \href{https://github.com/srijanshetty/nodesock}{ \footnotesize{[Repository]} } }
           {
              \begin{itemize}[leftmargin=0.5cm]
                  \item Conceived a protocol for peer-to-peer file and media transfer.
@@ -380,9 +399,11 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
                \end{itemize}
            }
 
-\lproject {Winter 2012-2013}
-          {8-bit General Purpose Computer on a FPGA}
-          {\textsc{Computer Organization}, Professor Subhajit Roy}
+\cproject
+    {Winter 2012-2013}
+    {8-bit General Purpose Computer on a FPGA}
+    {\textsc{Computer Organization}, Professor Subhajit Roy}
+    { \href{https://github.com/srijanshetty/220\_y11} {\footnotesize{[Repository]}} }
           {
               \begin{itemize}[leftmargin=0.5cm]
                   \item Designed an Instruction Set Architecture (ISA) for a 8-bit General Purpose Computer with a load-store architecture.
@@ -396,9 +417,11 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
               \end{itemize}
           }
 
-\lproject {Winter 2012-2013}
-          {Conference Dates Web Crawler}
-          {\textsc{Computing Laboratory}}
+\cproject
+    {Winter 2012-2013}
+    {Conference Dates Web Crawler}
+    {\textsc{Computing Laboratory}}
+    {\href{https://github.com/srijanshetty/crawler} {\footnotesize{ [Repository]}} }
           {
               \begin{itemize}[leftmargin=0.5cm]
                    \item Developed a python based web crawler to crawl paper submission deadlines for a given paper and conference name.
@@ -458,6 +481,7 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
                    \item Scraped the institute academic records to create a database of all courses offered by the institute to create an
                        AngularJS based course search over the existing legacy course search.
                    \item \href{https://navya.github.io/oars}{https://navya.github.io/oars}
+                   \item \href{https://navya.github.io/oars}{[Website]}
                \end{itemize}
            }
 
@@ -471,6 +495,7 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
                    \item Eased the process of creating minimalistic websites for not-so-tech-savvy students by creating a WYSIWG website
                        editor.
                    \item \href{http://gyph2.herokuapp.com/} {http://gyph2.herokuapp.com/}
+                   \item \href{http://gyph2.herokuapp.com/} {[Website]}
                \end{itemize}
            }
 
@@ -484,6 +509,7 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
                   \item Pitched ShuffleRun --- a music player which selects tracks on the basis of the user's running speed to receive
                       and honourable mention at \textbf{Yahoo! HackU 2013}.
                   \item \href{https://github.com/srijanshetty/ShuffleRun} {https://github.com/srijanshetty/ShuffleRun}
+                  \item \href{https://github.com/srijanshetty/ShuffleRun} {[Repository]}
               \end{itemize}
           }
 
@@ -511,6 +537,8 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
                   \item \href{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing}{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing}
                   \item Explored and documented the various facets of \textbf{GNU/Linux} like the file system, process management, memory management,
                       shell interface etc to serve as a reference for the Student Community.
+                  \item
+                      \href{https://docs.google.com/document/d/1ZHO9w36aoq3oaZBR4Um1AOmDfiTDAEgM6baQAu3icw4/edit?usp=sharing}{[Documentation]}
               \end{itemize}
           }
 
@@ -537,6 +565,8 @@ Programming Languages, Networks and Systems, Security, Web-Development, Natural 
                  \begin{itemize}[leftmargin=0.5cm]
                      \item \textbf{Udghosh '13}: The annual sports-fest of IIT Kanpur.
                          \href{http://udghosh.srijanshetty.in}{http://udghosh.srijanshetty.in}
+                     \item \textbf{Junoon '14}: Eastern Band Competition, Antaragni '14.
+                         \href{http://junoon.srijanshetty.in}{http://junoon.srijanshetty.in}
                      \item \textbf{Hall 5}: Fifth Hall of Residence, IIT Kanpur.
                          \href{http://www.iitk.ac.in/hall5} {http://www.iitk.ac.in/hall5}
                      \item \textbf{ALI, Antaragni '14}: Antaragni Leadership Initiative.
