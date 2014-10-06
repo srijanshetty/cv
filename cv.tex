@@ -25,7 +25,7 @@
 \usepackage{titlesec} % Used to customize the \section command
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
 
-\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+\titlespacing{\section}{0pt}{2pt}{2pt} % Spacing around sections
 
 \usepackage{enumitem} % For left margin removal in itemize
 
@@ -35,7 +35,7 @@
 % PAGE GEOMETRY
 %----------------------------------------------------------------------------------------
 
-\usepackage[top=0.3cm, bottom=0.3cm, lmargin=0.5cm, rmargin=1.3cm]{geometry} % The page Geometry
+\usepackage[top=0.3cm, bottom=0.3cm, lmargin=0.3cm, rmargin=1.0cm]{geometry} % The page Geometry
 
 %----------------------------------------------------------------------------------------
 % CUSTOM ENVIRONMENTS
@@ -157,8 +157,8 @@
 %----------------------------------------------------------------------------------------
 
 {
-    \begin{tabular}{rl}
-        \multirow{3}{0.73\linewidth}{
+    \begin{tabular}{rp{4.5cm}l}
+        \multirow{3}{0.55\linewidth}{
             {
                 \addfontfeature{LetterSpace=20.0}\fontsize{24}{24}\selectfont\scshape
                 Srijan R. Shetty
@@ -166,9 +166,8 @@
             \hspace{0.15cm} \emph{Department of Computer Science and Engineering}
         }
 
-        & {\Large\Mobilefone} +(91) 9005900383 \\
-        & {\Large\Letter} \href{mailto:srijan.shetty@gmail.com}{srijan.shetty@gmail.com}\\
-        & {\github} \href{https://github.com/srijanshetty}{https://github.com/srijanshetty}\\
+        & {\Large\Mobilefone} \footnotesize{+(91) 9005900383} & {\Large\Letter} \footnotesize{\href{mailto:srijan.shetty@gmail.com}{srijan.shetty@gmail.com}}\\
+        & {\github} \footnotesize{\href{https://github.com/srijanshetty}{https://github.com/srijanshetty}}\\
     \end{tabular}
 }
 
@@ -212,11 +211,7 @@
                  \textbf{Apache Storm}, \textbf{Microsoft Dryad}, and \textbf{Microsoft DryadLINQ}
                  to understand the design decisions involved.
              \item Used \textbf{TPL Dataflow} and \textbf{Lightweight Tasks} to implement concurrent pipeline
-                 processing of messages in CScale to preserve processing order of partially ordered messages.
-             \item Performed \textbf{performance testing} of the concurrency optimizations in real world
-                 scenarios leading to a gain in processing time.
-             \item Performed \textbf{failure testing} of the existing infrastructure and debugged detrimental
-                 replication errors in the existing infrastructure.
+                 processing of messages in CScale to preserve processing order of partially ordered messages.  Performed \textbf{performance testing} and \textbf{failure testing} of the existing infrastructure.
          \end{itemize}
      }
 
@@ -232,7 +227,6 @@
                 to a uniform cross-platform viewing experience.
             \item Developed a \textbf{XMPP} based \textbf{real-time chat service} using Jabber framework,
                 for conversations during live lectures.
-            \item Engineered an extensible Jabber framework for real-time communications between different services.
         \end{itemize}
     }
 
@@ -252,12 +246,10 @@
     \textsc{2012-2013}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
     \textsc{2011-2012}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
     \textsc{May 2011}    & Secured All India rank \textbf{1937} in Joint Entrance Exam (JEE) \\
-    \textsc{Jan 2011} & Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship \\
+    \textsc{Jan 2011}    & Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship \\
     \textsc{Jan 2010}    & Qualified \textbf{Regional Mathematics Olympiad} (RMO) \\
-    \textsc{Dec 2009} & CSIR Programme on Youth for Leadership in Science held at Advanced Materials Research Institute, Bhopal\\
+    \textsc{Dec 2009}    & CSIR Programme on Youth for Leadership in Science held at Advanced Materials Research Institute, Bhopal\\
     \textsc{2009, 2005}  & Awarded \textbf{Overall Best Student} for displaying all round excellence. \\
-    \textsc{2000-2009}   & Recipient of \textbf{Scholastic Excellence} awards for exemplary academic performance throughout
-                            2$^{nd}$ to 12$^{th}$ grade. \\
 }
 
 %----------------------------------------------------------------------------------------
@@ -289,8 +281,10 @@
                     \item Negotiated with leading academies of Dance, Musicals, and Fine Arts to provide mentorships, and other
                         non-monetary incentives to the outstanding cultural performers in Antaragni under the banner
                         of \textbf{Dream On} campaign.
-                    \item Coordinated the conduction of fifty competitions and nine major events with a three tier team comprising of 50 coordinators, 200 secretaries and 1000 volunteers.
-                    \item Initiated and organized Mr. \& Ms. Fresher's competition and introduced Chreo Night in Antaragni's arsenal of competitions.
+                    \item Coordinated the conduction of fifty competitions and nine major events with a three tier team
+                        comprising of 50 coordinators, 200 secretaries and 1000 volunteers.
+                    \item Initiated and organized Mr. \& Ms. Fresher's competition and introduced Chreo Night in Antaragni's
+                        arsenal of competitions.
                \end{itemize}
           }
 
@@ -298,8 +292,10 @@
           {Hospitality Coordinator, Antaragni '13}
           {
                \begin{itemize}[leftmargin=0.5cm]
-                   \item Chalked out the logistics of hospitality and accommodation of \textbf{1500 participants} with four other coordinators.
-                   \item Managed a team of 40 secretaries and 80 volunteers, over a span of 8 months and ensured a flawless conduction of the festival.
+                   \item Chalked out the logistics of hospitality and accommodation of \textbf{1500 participants}
+                       with four other coordinators.
+                   \item Managed a team of 40 secretaries and 80 volunteers, over a span of 8 months and ensured
+                       a flawless conduction of the festival.
                \end{itemize}
           }
 
@@ -309,7 +305,8 @@
                \begin{itemize}[leftmargin=0.5cm]
                    \item The GRC, a standing committee of the Students' Senate of IIT Kanpur was mandated with
                        suggesting changes to the existing structure of the Students' Gymkhana, IIT Kanpur.
-                   \item Chaired the meetings on \textbf{Extended Orientation of Incoming Freshmen} and contributed actively as a member of academic, senate and activities sub-committees of the GRC.
+                   \item Chaired the meetings on \textbf{Extended Orientation of Incoming Freshmen} and
+                       contributed actively as a member of academic, senate and activities sub-committees of the GRC.
                \end{itemize}
           }
 
