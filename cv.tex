@@ -25,8 +25,8 @@
 
 % SECTIONS
 \usepackage{titlesec} % Used to customize the \section command
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
-\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+\titleformat{\section}{\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{1pt}{2pt} % Spacing around sections
 
 % LISTS
 \usepackage{enumitem} % For left margin removal in itemize
@@ -35,11 +35,17 @@
 \usepackage{marvosym} % Allows the use of symbols
 
 % PAGE GEOMETRY
-\usepackage[top=0.3cm, bottom=0.3cm, lmargin=0.4cm, rmargin=1.2cm,ignoreheadfoot]{geometry} % The page Geometry
+\usepackage[top=0.3cm, bottom=0.3cm, lmargin=0.5cm, rmargin=1.3cm,ignoreheadfoot]{geometry} % The page Geometry
 
 %----------------------------------------------------------------------------------------
 % CUSTOM ENVIRONMENTS
 %----------------------------------------------------------------------------------------
+\newcommand{\highlight}[2]{
+    \begin{tabular}{p{2.4cm}|l}
+        \textsc {\large #1} & #2
+    \end{tabular}
+}
+
 \newcommand{\work}[3]{
     \begin{tabular}{>{\raggedleft}p{2.2cm}|p{0.9\linewidth}}
         \textsc{#1} & \textcolor{NavyBlue}{#2}
@@ -82,12 +88,10 @@
 }
 
 \newcommand{\projectlist}[2]{
-    \begin{tabular}{p{\linewidth}}
-        \textcolor{NavyBlue}{\small #1}\\
-        \vspace{-0.3cm}
-        \footnotesize{#2}
+    \vspace{0.2cm}
+    \begin{tabular}{p{3cm}|l}
+        \textcolor{NavyBlue}{\small #1} & \footnotesize{#2}\\
     \end{tabular}
-    \vspace{-0.4cm}
 }
 
 \newcommand{\itemlist}[1]{
@@ -125,7 +129,7 @@
     \begin{tabular}{rp{5cm}l}
         \multirow{3}{0.55\linewidth}{
             {
-                \addfontfeature{LetterSpace=20.0}\fontsize{24}{24}\selectfont\scshape
+                \addfontfeature{LetterSpace=20.0}\fontsize{20}{20}\selectfont\scshape
                 Srijan R. Shetty
             }\\
             \hspace{0.15cm} \emph{Department of Computer Science and Engineering}
@@ -135,35 +139,64 @@
         & {\Large\Mobilefone} \footnotesize {+(91) 9005900383}\\
         & {\github} \footnotesize {\href{https://github.com/srijanshetty}{https://github.com/srijanshetty}}\\
     \end{tabular}
+    \vspace{-0.5cm}
+    \section{}
 }
+
+%----------------------------------------------------------------------------------------
+%   GLOBAL OPTIONS
+%----------------------------------------------------------------------------------------
+\vspace{0.1cm}
+\small
 
 %----------------------------------------------------------------------------------------
 %   INTERESTS
 %----------------------------------------------------------------------------------------
-\section{Interests}
-
-\small {Programming Languages, Networks and Systems, Security, Web-Development, Natural Language Processing}
+\highlight
+    {Interests}
+    {\small {Programming Languages, Networks and Systems, Security, Web-Development, Natural Language Processing}}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-\section{Education}
 
-\begin{tabular}{>{\raggedleft}p{1.5cm}p{16.3cm}r}
+\highlight
+    {Education}
+    {\small
+        \begin{tabular}{>{\raggedleft}p{1.5cm}p{13cm}r}
 
-    \textsc{Current} & B. Tech in \textsc{Computer Science and Engineering},
-                       \textbf{Indian Institute of Technology}, Kanpur
-                     &   9.5/10.0\\
+            \textsc{Current} & B. Tech, \textsc{Computer Science and Engineering},
+                               \textbf{Indian Institute of Technology}, Kanpur
+                             & \textbf{9.5/10.0}\\
 
-    \textsc{July 2011} & 12$^{th}$ Board, \textsc{CBSE} Board,
-                         \textbf{The Emerald Heights International School}, Indore
-                       &   91.4\% \\
+            \textsc{July 2011} & 12$^{th}$ Board, \textsc{CBSE} Board,
+                                 \textbf{The Emerald Heights International School}, Indore
+                               & \textbf{91.4}\% \\
 
-    \textsc{July 2011} & 10$^{th}$ Board, \textsc{ICSE} Board,
-                         \textbf{The Laurels School International}, Indore
-                       &   95.4\% \\
+            \textsc{July 2011} & 10$^{th}$ Board, \textsc{ICSE} Board,
+                                 \textbf{The Laurels School International}, Indore
+                               & \textbf{95.4}\% \\
 
-\end{tabular}
+        \end{tabular}
+    }
+
+%----------------------------------------------------------------------------------------
+%   SKILL SET
+%----------------------------------------------------------------------------------------
+\highlight
+    {Skill Set}
+    {
+        \itemlist {
+                \textsc{\small Languages} %
+                & \textbf{JavaScript} (Expert), \textbf{Python} (Proficient), \textbf{C++} (Proficient),
+                \textbf{C\#} (Efficient), \textbf{C} (Proficient)\\
+                \textsc{\small Web Dev} %
+                & \textbf{HTML5}, \textbf{CSS}, \textbf{SQL and NoSQL}, \textbf{AngularJS}, \textbf{Nodejs}\\
+                \textsc{\small Tools} %
+                & \textbf{Git} (Expert), \textbf{Shell Scripting} (Proficient), \textbf{Vim} (Expert),
+                \textbf{LaTeX} (Proficient)\\
+            }
+    }
 
 %----------------------------------------------------------------------------------------
 %   WORK EXPERIENCE
@@ -220,26 +253,11 @@
     \textsc{\small 2012-2013}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
     \textsc{\small 2011-2012}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
     \textsc{\small May 2011}    & Secured All India rank \textbf{1937} in Joint Entrance Exam (JEE) \\
-    \textsc{\small Jan 2011}    & Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship \\
+    \textsc{\small Jan 2011}    & Kishore Vaigyanik Protsahan Yojana (\textbf{KVPY}) Fellowship \\
     \textsc{\small Jan 2010}    & Qualified \textbf{Regional Mathematics Olympiad} (RMO) \\
-    \textsc{\small Dec 2009}    & CSIR Programme on Youth for Leadership in Science held at Advanced Materials Research Institute, Bhopal\\
+    \textsc{\small Dec 2009}    & \textbf{CSIR Programme on Youth for Leadership in Science} held at Advanced Materials Research Institute, Bhopal\\
 }
 
-%----------------------------------------------------------------------------------------
-%   SKILL SET
-%----------------------------------------------------------------------------------------
-\section{Skill Set}
-
-\itemlist {
-    \textsc{\small Languages} %
-            & \textbf{JavaScript} (Expert), \textbf{Python} (Proficient), \textbf{C++} (Proficient),
-              \textbf{C\#} (Efficient), \textbf{C} (Proficient)\\
-    \textsc{\small Web Dev} %
-            & \textbf{HTML5}, \textbf{CSS}, \textbf{SQL and NoSQL}, \textbf{AngularJS}, \textbf{Nodejs}\\
-    \textsc{\small Tools} %
-            & \textbf{Git} (Expert), \textbf{Shell Scripting} (Proficient), \textbf{Prezi} (Proficient),
-              \textbf{Vim} (Expert), \textbf{LaTeX} (Proficient)\\
-}
 
 %----------------------------------------------------------------------------------------
 %  COURSE PROJECTS
@@ -255,9 +273,9 @@
     {\href{https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA} {[Project Wiki]} }
     {
       \begin{itemize}[leftmargin=0.5cm]
-          \item One of the eleven projects to be selected as a part of Mozilla's Winter of Security Initiative 2014.
-          \item The objective of the project is to implement true arbitrary multi-factor authentication support in
-              OpenVPN; and to implement session-support for the additional factors.
+          \item One of the \textbf{eleven} projects to be selected as a part of Mozilla's Winter of Security Initiative 2014.
+          \item The objective of the project is to implement true \textbf{arbitrary multi-factor authentication} support in
+              \textbf{OpenVPN}; and to implement \textbf{session-support} for the additional factors.
       \end{itemize}
     }
 
@@ -270,8 +288,8 @@
      \begin{itemize}[leftmargin=0.5cm]
          \item Presented a poster on Opinion Word Expansion and Target Extraction through Double Propogation, Guang Qin,
              Bing Liu, Jiajun Bu, Chun Chen that was nominated as the best poster by all students.
-         \item Generated a Hindi literature corpus consisting of works by Rabindranath Tagore,
-             Vibhuti Narayan, Premchand, Sarat Chandra Chattopadhyay and Dhamarvir Bharati.
+         \item Generated a Hindi literature corpus consisting of works by Tagore,
+             Vibhuti Narayan, Premchand, Sarat Chattopadhyay and Dhamarvir Bharati.
          \item Clustered a sample set of multiple Hindi authors using K-means unsupervised clustering to achieve
              F-scores in the range of 90-97\% for each author.
          \item Classified each author using Support Vector Machine Classification using Radial Basis Kernel function
@@ -296,20 +314,6 @@
 
 \cproject
     {Monsoon 2013-2014}
-    {P2P File Sharing and Streaming and IP Spoofing}
-    {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
-    { \href{https://github.com/srijanshetty/nodesock} {[Repository]} }
-    {
-        \begin{itemize}[leftmargin=0.5cm]
-            \item Conceived and implemented a peer-to-peer protocol for file and media transfer in Node.js to share
-                data over any LAN.
-            \item Generated raw IP packets with spoofed IP addresses to exploit test machines with ARP Poisoning,
-                Smurfing and SYN Flooding.
-        \end{itemize}
-    }
-
-\cproject
-    {Monsoon 2013-2014}
     {NachOS}
     {\textsc{Operating Systems}, Professor Mainak Chaudhari}
     {}
@@ -329,6 +333,20 @@
 
 \cproject
     {Monsoon 2013-2014}
+    {P2P File Sharing and Streaming and IP Spoofing}
+    {\textsc{Computer Networks}, Professor Dheeraj Sanghi}
+    { \href{https://github.com/srijanshetty/nodesock} {[Repository]} }
+    {
+        \begin{itemize}[leftmargin=0.5cm]
+            \item Conceived and implemented a peer-to-peer protocol for file and media transfer in Node.js to share
+                data over any LAN.
+            \item Generated raw IP packets with spoofed IP addresses to exploit test machines with ARP Poisoning,
+                Smurfing and SYN Flooding.
+        \end{itemize}
+    }
+
+\cproject
+    {Monsoon 2013-2014}
     {Prolog Shortest Paths and Erlang Traffic Server}
     {\textsc{Principles of Programming Languages}, Professor Piyush Kurur}
     {}
@@ -339,6 +357,7 @@
        \end{itemize}
     }
 
+
 \cproject
     {Winter 2012-2013}
     {8-bit General Purpose Computer on a FPGA}
@@ -346,9 +365,9 @@
     { \href{https://github.com/srijanshetty/220\_y11} {[Repository]} }
     {
       \begin{itemize}[leftmargin=0.5cm]
-          \item Designed and programmed a simple Instruction set Architecture (ISA) for a 8-bit General Purpose Computer with a load-store
-              architecture on \textbf{Xilinx Spartan 3 FPGA} using System Verilog.
-          \item Demonstrated recursion, looping and conditionals on the Computer by using a simple assembly language.
+          \item Designed and programmed a simple \textbf{Instruction set Architecture (ISA)} for a 8-bit General
+              Purpose Computer with a \textbf{load-store}
+              architecture on \textbf{Xilinx Spartan 3 FPGA} using System Verilog.  Demonstrated recursion, looping and conditionals on the Computer by using a simple assembly language.
       \end{itemize}
     }
 
@@ -359,8 +378,8 @@
     {\href{https://github.com/srijanshetty/crawler} { [Repository] } }
     {
       \begin{itemize}[leftmargin=0.5cm]
-           \item Developed a python based web crawler to crawl paper submission deadlines for a given paper using BeautifulSoup and
-           urllib.
+          \item Developed a \textbf{python based web crawler} to crawl paper submission deadlines for a given paper
+              using BeautifulSoup and urllib.
       \end{itemize}
     }
 
@@ -385,8 +404,8 @@
     {OARS}
     {
         \begin{itemize}[leftmargin=0.5cm]
-            \item Scraped the institute academic records to create a database of all courses offered by the
-                institute to create an AngularJS based course search over the existing legacy course search.
+            \item \textbf{Scraped} the institute \textbf{academic records} to create a database of all courses offered by the
+                institute to create an AngularJS based \textbf{course search} over the existing legacy course search.
         \end{itemize}
     }
 
@@ -395,8 +414,8 @@
     {ShuffleRun}
     {
         \begin{itemize}[leftmargin=0.5cm]
-            \item Pitched ShuffleRun, a music player which selects tracks on the basis of the user's running speed;
-                recieved honourable mention at \textbf{Yahoo! HackU 2013}.
+            \item Pitched ShuffleRun, a \textbf{music player} which selects tracks on the basis of the user's
+                \textbf{running speed}; recieved honourable mention at \textbf{Yahoo! HackU 2013}.
         \end{itemize}
     }
 
@@ -405,44 +424,44 @@
     {Get Your Personal Homepage (GYPH)}
     {
         \begin{itemize}[leftmargin=0.5cm]
-            \item Eased the process of creating minimalistic websites for not-so-tech-savvy students by creating a
-                WYSIWG website editor.
+            \item Eased the process of creating \textbf{minimalistic websites} for not-so-tech-savvy students by creating a
+                WYSIWG website \textbf{editor.}
         \end{itemize}
     }
 
 \projectlist
     {Projects on Github}
     {
-     \begin{itemize}[leftmargin=0.5cm]
-         \item \textbf{DS}: implementation of certain algorithms and data structures
-             \href{https://github.com/srijanshetty/DS} {https://github.com/srijanshetty/DS}
-         \item \textbf{Notes}: notes on computing and social sciences.
-             \href{https://github.com/srijanshetty/notes} {https://github.com/srijanshetty/notes}
-         \item \textbf{Dotfiles}: an opinionated work flow on Linux Systems.
-             \href{https://github.com/srijanshetty/dotfiles} {https://github.com/srijanshetty/dotfiles}
-         \item \textbf{Bash Scripts}: handy configurations and shortcuts for ZSH
-             \href{https://github.com/srijanshetty/custom} {https://github.com/srijanshetty/custom}
-     \end{itemize}
+        \begin{tabular}{l}
+             \textbf{DS}: implementation of certain algorithms and data structures
+             \href{https://github.com/srijanshetty/DS} {https://github.com/srijanshetty/DS}\\
+             \textbf{Notes}: notes on computing and social sciences.
+             \href{https://github.com/srijanshetty/notes} {https://github.com/srijanshetty/notes}\\
+             \textbf{Dotfiles}: an opinionated work flow on Linux Systems.
+             \href{https://github.com/srijanshetty/dotfiles} {https://github.com/srijanshetty/dotfiles}\\
+             \textbf{Bash Scripts}: handy configurations and shortcuts for ZSH
+             \href{https://github.com/srijanshetty/custom} {https://github.com/srijanshetty/custom}\\
+         \end{tabular}
     }
 
 \projectlist
     {Web Development}
     {
-     \begin{itemize}[leftmargin=0.5cm]
-         \item \textbf{Udghosh '13}: The annual sports-fest of IIT Kanpur.
-             \href{http://udghosh.srijanshetty.in}{http://udghosh.srijanshetty.in}
-         \item \textbf{ALI, Antaragni '14}: Antaragni Leadership Initiative.
-             \href{http://ali.srijanshetty.in} {http://ali.srijanshetty.in}
-         \item \textbf{Junoon '14}: Eastern Band Competition, Antaragni '14.
-             \href{http://junoon.srijanshetty.in}{http://junoon.srijanshetty.in}
-     \end{itemize}
+        \begin{tabular}{l}
+             \textbf{Udghosh '13}: The annual sports-fest of IIT Kanpur.
+             \href{http://udghosh.srijanshetty.in}{http://udghosh.srijanshetty.in}\\
+             \textbf{ALI, Antaragni '14}: Antaragni Leadership Initiative.
+             \href{http://ali.srijanshetty.in} {http://ali.srijanshetty.in}\\
+             \textbf{Junoon '14}: Eastern Band Competition, Antaragni '14.
+             \href{http://junoon.srijanshetty.in}{http://junoon.srijanshetty.in}\\
+         \end{tabular}
     }
 
 %----------------------------------------------------------------------------------------
 %   OTHER SKILLS
 %----------------------------------------------------------------------------------------
 
-\section {Social, Leadership and Artistic Skills}
+\section {Leadership and Artistic Skills}
 
 \skill {\href{srijanshetty.quora.com} {[Blog]}}
        {Active blogger at \href{srijanshetty.quora.com} {srijanshetty.quora.com}}
@@ -451,8 +470,8 @@
           {Hacker, Navya, FOSS Group IIT Kanpur}
           {
                \begin{itemize}[leftmargin=0.5cm]
-                   \item Promoted the FOSS initiative in campus by organizing student lectures and meet-ups.
-                   \item Built student-centric applications like Course Search and Student Search, to circumvent
+                   \item Promoted the \textbf{FOSS initiative} in campus by organizing \textbf{student lectures} and meet-ups.
+                   \item Built student-centric applications like \textbf{Course Search and Student Search}, to circumvent
                        their legacy institute counterparts.
                \end{itemize}
           }
@@ -467,12 +486,12 @@
                     \item Negotiated with leading academies of Dance, Musicals, and Fine Arts to provide mentorships,
                         and other non-monetary incentives to the outstanding cultural performers in Antaragni
                         under the banner of \textbf{Dream On} campaign.
-                    \item Coordinated the conduction of fifty competitions and nine major events with a team
-                        comprising of over thousand volunteers.  Initiated and organized Mr. \& Ms. Fresher's
+                    \item Coordinated the conduction of \textbf{fifty competitions and nine major events} with a team
+                        comprising of over \textbf{thousand volunteers}.  Initiated and organized Mr. \& Ms. Fresher's
                         competition and introduced Chreo Night in Antaragni's arsenal of competitions.
-                   \item Organized a blood donation camp for the residents of IIT Kanpur to promote awarness
-                       about road accidents.  Mobilized information about road safety through infographics and questionnaires
-                       via Antaragni's nation wide social campaign \textbf{Zara Sambhal Ke}.
+                    \item Organized a \textbf{blood donation camp} for the residents of IIT Kanpur to promote awarness
+                        about road accidents.  Mobilized information about \textbf{road safety} through infographics
+                        and questionnaires via Antaragni's nation wide social campaign \textbf{Zara Sambhal Ke}.
                \end{itemize}
           }
 
@@ -480,9 +499,9 @@
           {Hospitality Coordinator, Antaragni '13}
           {
                \begin{itemize}[leftmargin=0.5cm]
-                   \item Chalked out the logistics of hospitality and accommodation of \textbf{1500 participants}
+                   \item Chalked out the logistics of \textbf{hospitality and accommodation} of \textbf{1500 participants}
                        with four other coordinators.
-                   \item Managed a team of 40 secretaries and 80 volunteers, over a span of 8 months and ensured a
+                   \item Managed a team of \textbf{40 secretaries and 80 volunteers}, over a span of 8 months and ensured a
                        flawless conduction of the festival.
                    \item Handled security arrangements during the four days of the Festival from 24$^{th}$ to 27$^{th}$ October.
                \end{itemize}
@@ -513,10 +532,10 @@
           {Member, Institute Anti Ragging Committee}
           {
                \begin{itemize}[leftmargin=0.5cm]
-                   \item Appointed as a member of the Institute Anti Ragging Committee, a 10 member committee responsible
+                   \item Appointed as a member of the Institute Anti Ragging Committee, \textbf{a 10 member committee} responsible
                        for welfare of the newly admitted freshmen.
                    \item Worked in tandem with the office of the Dean of Student Affairs, to organize sessions
-                       on easing the transition of freshmen.
+                       on \textbf{easing the transition of freshmen}.
                    \item Ensured institute norms regarding humane treatment of freshmen are properly conveyed to all senior batches
                        and worked towards the enforcement of those norms.
                \end{itemize}
@@ -528,8 +547,8 @@
           {}
           {
                \begin{itemize}[leftmargin=0.5cm]
-                   \item Worked as a English tutor in the pilot English Proficiency Programme to help
-                       under-privileged students obtain a functional knowlege of English.
+                   \item Worked as a \textbf{English tutor} in the pilot English Proficiency Programme to help
+                       \textbf{under-privileged students} obtain a functional knowlege of English.
                \end{itemize}
           }
 
