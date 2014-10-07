@@ -1,42 +1,41 @@
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-% !TEX program = xelatex
+\documentclass[a4paper]{article} % Default font size and paper size
 
-\documentclass[a4paper,10pt]{article} % Default font size and paper size
-
+%----------------------------------------------------------------------------------------
+% STYLING
+%----------------------------------------------------------------------------------------
+% FONTS
 \usepackage{fontspec} % For loading fonts
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
 
+% HEADERS
 \usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
-
 \usepackage{scrpage2} % Provides headers and footers configuration
 
-\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colours
-
+% HYPERREFS
 \usepackage{hyperref} % Required for adding links	and customizing them
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colours
 \definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link colour
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colours throughout the document
 
+% TABLES
 \usepackage{tabularx,colortbl} % Advanced table configurations
 \usepackage{array} % Custom arrangement for the columns
 \usepackage{multirow} %rows spanning multiple rows
 
+% SECTIONS
 \usepackage{titlesec} % Used to customize the \section command
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
-
 \titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
 
+% LISTS
 \usepackage{enumitem} % For left margin removal in itemize
 
+% SYMBOLS
 \usepackage{marvosym} % Allows the use of symbols
 
-%----------------------------------------------------------------------------------------
 % PAGE GEOMETRY
-%----------------------------------------------------------------------------------------
-
-\usepackage[top=1cm, bottom=0.5cm, lmargin=0.5cm, rmargin=1.3cm]{geometry} % The page Geometry
+\usepackage[top=0.3cm, bottom=0.3cm, lmargin=0.4cm, rmargin=1.2cm,ignoreheadfoot]{geometry} % The page Geometry
 
 %----------------------------------------------------------------------------------------
 % CUSTOM ENVIRONMENTS
