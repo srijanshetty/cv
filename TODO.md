@@ -1,24 +1,19 @@
-# Web Portfolio
+- shufflerun.srijanshetty.in
 
+# Web Portfolio
+- antaragni.srijanshetty.in
 - oars.navya.github.in
 - udghosh.srijanshetty.in
 - junoon.srijanshetty.in
 
-- aca.srijanshetty.in
-- ali.srijanshetty.in
-- atm.srijanshetty.in
+# Hackathons
+- gyph2.herokuapp.in
 
 # Open Source Contributions
 - MWoS (OpenVPN)
 - http://github.in
 
-
-# Hackathons
-- shufflerun.srijanshetty.in
-- gyph2.herokuapp.in
-
-- CV on website
-
 # TODO
-- A better website
-- antaragni.srijanshetty.in
+- atm.srijanshetty.in
+
+
