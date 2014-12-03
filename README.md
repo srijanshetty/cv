@@ -6,20 +6,22 @@ I don't know how to create .sty files yet, so you'll have to make do with the de
 # Dependencies
 
 - Latex Packages:
-1. Fonts:                    fontspec
-2. Headers:                  xunicode, xltxtra, url, parskip, scrpage2
-3. Hyperrefs                 hyperref, xcolor
-4. Tables:                   tabularx, colortbl, array, multirow
-5. Sections:                 titlesec
-6. Lists:                    enumitem
-7. Symbols:                  marvosym
-8. Page Geometry:            geometry
+
+  1. Fonts:                    fontspec
+  2. Headers:                  xunicode, xltxtra, url, parskip, scrpage2
+  3. Hyperrefs                 hyperref, xcolor
+  4. Tables:                   tabularx, colortbl, array, multirow
+  5. Sections:                 titlesec
+  6. Lists:                    enumitem
+  7. Symbols:                  marvosym
+  8. Page Geometry:            geometry
 
 - Fonts
   Install Fontin which has been bundled with this package
 
 # Instructions
 
+The following should work proviso you have all the dependencies listed above.
 ```shell
 xelatex cv
 ```
@@ -33,5 +35,13 @@ xelatex cv
 - Where's the documentation?
   Le documentation. I shall add more as soon as I get the time (read never).
 
-Share the love and my name :😄 :
+# Attribution
 
+This template takes elements from the Alessandro Plasmati's resume template but has been heavily modified
+to my aesthetic sensibilities (which more often than not might be bad).
+
+Share the love and my name 😄 
+
+# Todo
+
+- Get this working with ShareLatex compiler.
