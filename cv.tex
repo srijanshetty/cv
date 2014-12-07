@@ -129,8 +129,8 @@
 %----------------------------------------------------------------------------------------
 
 {
-    \begin{tabular}{rp{5cm}l}
-        \multirow{3}{0.50\linewidth}{
+    \begin{tabular}{rp{6cm}l}
+        \multirow{3}{0.45\linewidth}{
             {
                 \addfontfeature{LetterSpace=20.0}\fontsize{20}{20}\selectfont\scshape
                 Srijan R. Shetty
@@ -138,10 +138,10 @@
             \hspace{0.15cm} \emph{Department of Computer Science and Engineering}
         }
 
-        & {\Large\Letter} \footnotesize {\href{mailto:srijan.shetty@gmail.com}{srijan.shetty@gmail.com}}
-        & {\Large\Mobilefone} \footnotesize {+(91) 9005900383}\\
-        & {\github} \footnotesize {\href{https://github.com/srijanshetty}{https://github.com/srijanshetty}}
-        & {\Large\Mundus} \footnotesize{\href{https://srijanshetty.in}{https://srijanshetty.in}}\\
+        & {\Large\Letter} {\href{mailto:srijan.shetty@gmail.com}{srijan.shetty@gmail.com}}
+        & {\Large\Mobilefone} {+(91) 9005900383}\\
+        & {\github} {\href{https://github.com/srijanshetty}{https://github.com/srijanshetty}}
+        & {\Large\Mundus} {\href{https://srijanshetty.in}{https://srijanshetty.in}}\\
     \end{tabular}
     \vspace{-0.5cm}
     \section{}
@@ -238,11 +238,11 @@
          \begin{itemize}[leftmargin=0.5cm]
              \item Analysed the implementations of different distributed systems and databases architectures like
                  \textbf{Google MapReduce}, \textbf{Google FileSystem}, \textbf{Google MillWheel} \textbf{Yahoo! PNUTS},
-                 \textbf{Amazon DynamoDB}, \textbf{Apache Kafka}, \textbf{Apache Spark}, \textbf{Apache Hadoop},
-                 \textbf{Apache Storm}, \textbf{Microsoft Dryad}, and \textbf{Microsoft DryadLINQ}
-                 to understand the design decisions involved.
+                 \textbf{Amazon DynamoDB}, \textbf{Apache Hadoop}, \textbf{Apache Storm}, \textbf{Microsoft Dryad},
+                 and \textbf{Microsoft DryadLINQ} to understand the design decisions involved.
              \item Used \textbf{TPL Dataflow} and \textbf{Lightweight Tasks} to implement concurrent pipeline
-                 processing of messages in CScale to preserve processing order of partially ordered messages.
+                 processing of messages in CScale to preserve processing ord
+                 er of partially ordered messages.
                  Performed \textbf{performance testing}, \textbf{failure testing} of the existing infrastructure.
          \end{itemize}
      }
@@ -265,8 +265,9 @@
 %----------------------------------------------------------------------------------------
 %  COURSE PROJECTS
 %----------------------------------------------------------------------------------------
-% \let\thefootnote\relax\footnote{Monsoon semester: July to November}
-% \let\thefootnote\relax\footnote{Winter Semester: January to April}
+\vspace{-0.65cm}
+\let\thefootnote\relax\footnote{Monsoon semester: July to November}
+\let\thefootnote\relax\footnote{Winter Semester: January to April}
 \section{Course Projects}
 
 \cproject
@@ -337,18 +338,18 @@
         \end{itemize}
     }
 
-% \cproject
-%     {Monsoon 2013-2014}
-%     {Prolog Shortest Paths and Erlang Traffic Server}
-%     {\textsc{Principles of Programming Languages}, Professor Piyush Kurur}
-%     {}
-%     {
-%        \begin{itemize}[leftmargin=0.5cm]
-%            \item Implemented shortest path algorithm in Prolog using Logic Programming on the Delhi Metro route.
-%            \item Implemented a simple traffic server in Erlang using message passing concurrency and tail call recursion.
-%        \end{itemize}
-%     }
-%
+\cproject
+    {Monsoon 2013-2014}
+    {Prolog Shortest Paths and Erlang Traffic Server}
+    {\textsc{Principles of Programming Languages}, Professor Piyush Kurur}
+    {}
+    {
+       \begin{itemize}[leftmargin=0.5cm]
+           \item Implemented shortest path algorithm in Prolog using Logic Programming on the Delhi Metro route.
+           \item Implemented a simple traffic server in Erlang using message passing concurrency and tail call recursion.
+       \end{itemize}
+    }
+
 
 \cproject
     {Winter 2012-2013}
@@ -382,9 +383,11 @@
 %----------------------------------------------------------------------------------------
 \section{Independent Projects}
 
-\gitproject
+\cproject
+    {Summer 2012-2013}
+    {GNU/Linux Exploration}
+    {Programming Club, IIT Kanpur}
     {\href{http://bit.ly/pclubLinux}{\footnotesize{[http://bit.ly/pclubLinux]}}}
-    {GNU/Linux Exploration, Programming Club, IIT Kanpur}
     {
         Explored and documented the various facets of \textbf{GNU/Linux} like the file system,
         process management, memory management, shell interface etc to serve as a reference for the
@@ -392,38 +395,33 @@
     }
 \vspace{3mm}
 
-\gitproject
-    {\href{https://navya.github.io/oars}{\footnotesize{[https://navya.github.io/oars]}}}
-    {OARS}
-    {
-        \textbf{Scraped} the institute \textbf{academic records} to create a database of all courses offered by the
-        institute to create an AngularJS based \textbf{course search} over the existing legacy course search.
-    }
-\vspace{3mm}
-
 \projectlist
-    {Hackathons}
+    {Applications}
     {
-        \begin{tabular}{p{2cm}l}
+        \begin{tabular}{p{2cm}p{0.67\linewidth}}
             \textbf{ShuffleRun}:
             & Pitched ShuffleRun, a \textbf{music player} which selects tracks on the basis of the user's
-            running speed; recieved \\
-            & honourable mention at \textbf{Yahoo! HackU 2013}.
+            running speed; recieved honourable mention at \textbf{Yahoo! HackU 2013}.
             \href{https://github.com/srijanshetty/ShuffleRun} {https://github.com/srijanshetty/ShuffleRun]}\\
 
             \textbf{GYPH}:
             & Eased the process of creating minimalistic websites for not-so-tech-savvy students
-            by creating a WYSIWG \\
-            & website \textbf{editor.} \href{http://gyph2.herokuapp.com/template1} {http://gyph2.herokuapp.com/template1}
+            by creating a WYSIWG website \textbf{editor.} \href{http://gyph2.herokuapp.com/template1}
+            {http://gyph2.herokuapp.com/template1}\\
+
+            \textbf{OARS}:
+            & \textbf{Scraped} the institute \textbf{academic records} to create a database of all courses offered by the
+            institute to create an AngularJS based \textbf{course search} over the existing legacy course search.
+            {\href{https://navya.github.io/oars}{\footnotesize{[https://navya.github.io/oars]}}}
          \end{tabular}
      }
 
 \projectlist
     {Web Development}
     {
-        \begin{tabular}{p{2cm}l}
+        \begin{tabular}{p{2cm}p{0.67\linewidth}}
              \textbf{Antaragni '14}: & The annual cultural festival of IIT Kanpur.
-             \href{http://ali.srijanshetty.in} {http://ali.srijanshetty.in}\\
+             \href{http://antaragni.srijanshetty.in} {http://antaragni.srijanshetty.in}\\
              \textbf{Junoon '14}: & Eastern Band Competition, Antaragni '14.
              \href{http://junoon.srijanshetty.in}{http://junoon.srijanshetty.in}\\
             \textbf{Udghosh '13}: & The annual sports-fest of IIT Kanpur.
@@ -434,18 +432,13 @@
 \projectlist
     {Projects on Github}
     {
-        \begin{tabular}{p{2cm}l}
+        \begin{tabular}{p{2cm}p{0.67\linewidth}}
+             \textbf{udacity-dl}: & download course contents of any public udacity course.
+             \href{https://github.com/navya/udacity-dl} {https://github.com/navya/udacity-dl}\\
              \textbf{Bash Scripts}: & handy configurations and shortcuts for ZSH
              \href{https://github.com/srijanshetty/custom} {https://github.com/srijanshetty/custom}\\
-             \textbf{Dotfiles}: & an opinionated work flow on Linux Systems.
-             \href{https://github.com/srijanshetty/dotfiles} {https://github.com/srijanshetty/dotfiles}\\
-             \textbf{Notes}: & notes on computing and social sciences.
-             \href{https://github.com/srijanshetty/notes} {https://github.com/srijanshetty/notes}\\
-             \textbf{DS}: & implementation of certain algorithms and data structures
-             \href{https://github.com/srijanshetty/DS} {https://github.com/srijanshetty/DS}\\
          \end{tabular}
     }
-
 
 %----------------------------------------------------------------------------------------
 %   SCHOLASTIC ACHIEVEMENTS
