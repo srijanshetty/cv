@@ -1,4 +1,6 @@
 - CEO
 - Teaching : Academic Mentor, Tutor
-- Projects: BPlusTree, RTree, QuadTree
+- Projects: BPlusTree, RTree, QuadTree, VPTree
 - SideProjects: Elections System
+- Member STF
+- CEO, Head Logistics EC
