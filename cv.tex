@@ -56,11 +56,14 @@
 \usepackage{marvosym} % Allows the use of symbols
 
 % PAGE GEOMETRY
-\usepackage[top=0.3cm, bottom=0.3cm, lmargin=0.4cm, rmargin=0.5cm,ignoreheadfoot]{geometry} % The page Geometry
+\usepackage[top=1.0cm, bottom=1.0cm, lmargin=1.0cm, rmargin=2.0cm,ignoreheadfoot]{geometry} % The page Geometry
 
 %----------------------------------------------------------------------------------------
 % CUSTOM ENVIRONMENTS
 %----------------------------------------------------------------------------------------
+\newcommand{\verticalspacing}{-0.25cm}
+\newcommand{\headspace}{-0.3cm}
+
 \newcommand{\highlight}[2]{
     \begin{tabular}{p{2.4cm}|l}
         \textsc {\large #1} & #2
@@ -76,7 +79,7 @@
     \vspace{-0.3cm}
         \footnotesize {#5}
     \end{tabular}
-    \vspace{-0.4cm}
+    \vspace{\verticalspacing{}}
 }
 
 \newcommand{\gitproject}[3]{
@@ -84,10 +87,11 @@
         \textcolor{NavyBlue}{\small #2} & \multicolumn{1}{m{7.3cm}}{\raggedleft #1}\\
     \end{tabular}
     \begin{tabular}{p{0.98\linewidth}}
-    \vspace{-0.3cm}
+        \vspace{\headspace{}}
         \footnotesize{#3}
     \end{tabular}
-    \vspace{-0.4cm}
+    \vspace{\verticalspacing{}}
+    \vspace{-0.2cm}
 }
 
 \newcommand{\projectlist}[2]{
@@ -107,7 +111,7 @@
     \begin{tabular}{p{0.60\linewidth}r}
         \small {#2} & \multicolumn{1}{m{7.3cm}}{\raggedleft \textsc{\small #1}}\\
     \end{tabular}
-    \vspace{-0.4cm}
+    \vspace{\verticalspacing{}}
 }
 
 \newcommand{\github}{
@@ -154,30 +158,6 @@
 \small
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-
-\highlight
-    {Education}
-    {
-        \begin{tabular}{>{\raggedleft}p{1.5cm}p{13cm}r}
-
-            \textsc{Current} & B. Tech, \textsc{Computer Science and Engineering},
-                               \textbf{Indian Institute of Technology}, Kanpur
-                             & \textbf{9.5/10.0}\\
-
-            \textsc{July 2011} & 12$^{th}$ Board, \textsc{CBSE} Board,
-                                 \textbf{The Emerald Heights International School}, Indore
-                               & \textbf{91.4}\% \\
-
-            \textsc{July 2009} & 10$^{th}$ Board, \textsc{ICSE} Board,
-                                 \textbf{The Laurels School International}, Indore
-                               & \textbf{95.4}\% \\
-
-        \end{tabular}
-    }
-
-%----------------------------------------------------------------------------------------
 %   SKILL SET
 %----------------------------------------------------------------------------------------
 \highlight
@@ -209,6 +189,28 @@
 %         \end{tabular}
 %     }
 %
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\begin{tabular}{>{\raggedleft}p{1.5cm}p{15cm}r}
+
+    \textsc{Current} & B. Tech, \textsc{Computer Science and Engineering},
+    \textbf{Indian Institute of Technology}, Kanpur
+    & \textbf{9.5/10.0}\\
+
+    \textsc{July 2011} & 12$^{th}$ Board, \textsc{CBSE} Board,
+    \textbf{The Emerald Heights International School}, Indore
+    & \textbf{91.4}\% \\
+
+    \textsc{July 2009} & 10$^{th}$ Board, \textsc{ICSE} Board,
+    \textbf{The Laurels School International}, Indore
+    & \textbf{95.4}\% \\
+
+\end{tabular}
+
 %----------------------------------------------------------------------------------------
 %   WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
