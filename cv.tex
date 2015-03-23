@@ -56,7 +56,7 @@
 \usepackage{marvosym} % Allows the use of symbols
 
 % PAGE GEOMETRY
-\usepackage[top=1.0cm, bottom=1.0cm, lmargin=1.0cm, rmargin=2.0cm,ignoreheadfoot]{geometry} % The page Geometry
+\usepackage[top=1.0cm, bottom=1.0cm, lmargin=1.0cm, rmargin=1.8cm,ignoreheadfoot]{geometry} % The page Geometry
 
 %----------------------------------------------------------------------------------------
 % CUSTOM ENVIRONMENTS
@@ -77,7 +77,7 @@
     \end{tabular}
     \begin{tabular}{p{0.98\linewidth}}
     \vspace{-0.3cm}
-        \footnotesize {#5}
+        \small{#5}
     \end{tabular}
     \vspace{\verticalspacing{}}
 }
@@ -88,23 +88,25 @@
     \end{tabular}
     \begin{tabular}{p{0.98\linewidth}}
         \vspace{\headspace{}}
-        \footnotesize{#3}
+        \small{#3}
     \end{tabular}
     \vspace{\verticalspacing{}}
-    \vspace{-0.2cm}
+    \vspace{-0.2cm} % Needed for proper spacing
 }
 
 \newcommand{\projectlist}[2]{
     \vspace{0.2cm}
-    \begin{tabular}{p{3cm}|l}
-        \textcolor{NavyBlue}{\small #1} & \footnotesize{#2}\\
+    \begin{tabular}{p{3cm}|p{17.5cm}}
+        \textcolor{NavyBlue}{#1} & \footnotesize{#2}\\
     \end{tabular}
 }
 
 \newcommand{\itemlist}[1]{
+    \def\arraystretch{1.2}
     \begin{tabular}{>{\raggedleft}p{1.6cm}p{0.87\linewidth}}
         #1
     \end{tabular}
+    \def\arraystretch{1.0}
 }
 
 \newcommand{\skill}[2]{
@@ -195,6 +197,7 @@
 %----------------------------------------------------------------------------------------
 
 \section{Education}
+\def\arraystretch{1.2}
 \begin{tabular}{>{\raggedleft}p{1.5cm}p{15cm}r}
 
     \textsc{Current} & B. Tech, \textsc{Computer Science and Engineering},
@@ -210,6 +213,7 @@
     & \textbf{95.4}\% \\
 
 \end{tabular}
+\def\arraystretch{1}
 
 %----------------------------------------------------------------------------------------
 %   WORK EXPERIENCE
@@ -473,7 +477,7 @@
        {Active blogger at \href{srijanshetty.quora.com} {srijanshetty.quora.com}}
 
 \gitproject
-    {\href{https://github.com/navya} {\footnotesize{[https://github.com/navya]}}}
+    {\href{https://github.com/navya} {\small{[https://github.com/navya]}}}
     {Hacker, Navya, FOSS Group IIT Kanpur}
     {
         \begin{itemize}[leftmargin=0.5cm]
@@ -484,7 +488,7 @@
     }
 
 \gitproject
-    {\href{https://github.com/srijanshetty/elections} {\footnotesize{[https://github.com/elections]}}}
+    {\href{https://github.com/srijanshetty/elections} {\small{[https://github.com/elections]}}}
     {Head Logistics, Election Council, IIT Kanpur}
     {
         \begin{itemize}[leftmargin=0.5cm]
