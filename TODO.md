@@ -1,4 +1,3 @@
-- CEO, Head Logistics EC
 - Teaching : Academic Mentor, Tutor
-- Projects: BPlusTree, RTree, QuadTree, VPTree
-- SideProjects: Elections System
+- Projects: BPlusTree, RTree, QuadTree, VPTree, Compiler, Author-Attribution, nodesock, ShuffleRun
+- Relevant Courses:
