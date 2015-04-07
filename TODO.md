@@ -1,3 +1,2 @@
 - Teaching : Academic Mentor, Tutor
-- Projects: BPlusTree, RTree, QuadTree, VPTree, Compiler, Author-Attribution, nodesock, ShuffleRun
-- Relevant Courses:
+- CV: Index Structures,
