@@ -1,2 +1,16 @@
 - Teaching : Academic Mentor, Tutor
-- CV: Index Structures,
+
+- Projects:
+    - Index Structures
+    - UGP
+    - Kaggle
+
+Where
+-----
+
+- CV
+    - Important Course Projects
+    - Good Hacks
+
+- LinkedIn:
+    - Important Course Projects
