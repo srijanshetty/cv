@@ -1,2 +1,0 @@
-- Teaching : Academic Mentor, Tutor
-- CV: Index Structures,
