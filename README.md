@@ -5,25 +5,37 @@ I don't know how to create .sty files yet, so you'll have to make do with the de
 
 # Dependencies
 
-- Latex Packages:
-
-  1. Fonts:                    fontspec
-  2. Headers:                  xunicode, xltxtra, url, parskip, scrpage2
-  3. Hyperrefs                 hyperref, xcolor
-  4. Tables:                   tabularx, colortbl, array, multirow
-  5. Sections:                 titlesec
-  6. Lists:                    enumitem
-  7. Symbols:                  marvosym
-  8. Page Geometry:            geometry
-
 - Fonts
   Install Fontin which has been bundled with this package
 
 # Instructions
 
-The following should work proviso you have all the dependencies listed above.
+- The following should work proviso you have all the dependencies listed above.
+
 ```shell
 xelatex cv
+```
+
+- I like to use pdf2htmlEX to create a gh-pages branch with the HTML version of the PDF.
+  Additionally I have a post-commit hook which automatically generates the HTML version.
+
+```shell
+#!/usr/bin/env bash
+
+set -e
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+
+if [[ $branch == "master" ]]; then
+    xelatex cv
+    git checkout gh-pages
+    pdf2htmlEX --process-outline 0 --zoom 1.6 cv.pdf
+    mv cv.html index.html
+    git add index.html
+    git commit -m "Update to Website"
+    git push origin gh-pages
+    git checkout master
+fi
 ```
 
 # FAQ's
@@ -40,7 +52,7 @@ xelatex cv
 This template takes elements from the Alessandro Plasmati's resume template but has been heavily modified
 to my aesthetic sensibilities (which more often than not might be bad).
 
-Share the love and my name 😄 
+Share the love and my name 😄
 
 # Todo
 
