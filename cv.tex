@@ -56,7 +56,7 @@
 \usepackage{marvosym} % Allows the use of symbols
 
 % PAGE GEOMETRY
-\usepackage[top=1.0cm, bottom=1.0cm, lmargin=1.0cm, rmargin=1.8cm,ignoreheadfoot]{geometry} % The page Geometry
+\usepackage[top=1.0cm, bottom=1.5cm, lmargin=1.0cm, rmargin=1.8cm,ignoreheadfoot]{geometry} % The page Geometry
 
 %----------------------------------------------------------------------------------------
 % CUSTOM ENVIRONMENTS
@@ -64,6 +64,7 @@
 \newcommand{\verticalspacing}{-0.25cm}
 \newcommand{\headspace}{-0.3cm}
 \newcommand{\bulletspace}{0.7cm}
+\newcommand{\projectheadspacing}{6.9cm}
 
 \newcommand{\highlight}[2]{%
     \begin{tabular}{p{2.4cm}|l}
@@ -73,9 +74,9 @@
 
 \newcommand{\cproject}[5]{%
     \begin{tabular}{p{0.60\linewidth}r}
-        \textcolor{NavyBlue}{\small #2} & \multicolumn{1}{m{7.3cm}}{\raggedleft \small {\textsc{#1}}}\\
+        \textcolor{NavyBlue}{\small #2} & \multicolumn{1}{m{ \projectheadspacing{} }}{\raggedleft \small {\textsc{#1}}}\\
         \small {#3} & \small {#4}
-    \end{tabular}
+    \end{tabular}\\
     \begin{tabular}{p{0.98\linewidth}}
     \vspace{-0.3cm}
         \small{#5}
@@ -85,21 +86,14 @@
 
 \newcommand{\gitproject}[3]{%
     \begin{tabular}{p{0.60\linewidth}r}
-        \textcolor{NavyBlue}{\small #2} & \multicolumn{1}{m{7.3cm}}{\raggedleft #1}\\
-    \end{tabular}
+        \textcolor{NavyBlue}{\small #2} & \multicolumn{1}{m{ \projectheadspacing{} }}{\raggedleft #1}\\
+    \end{tabular}\\
     \begin{tabular}{p{0.98\linewidth}}
         \vspace{\headspace{}}
         \small{#3}
     \end{tabular}
     \vspace{\verticalspacing{}}
     \vspace{-0.2cm} % Needed for proper spacing
-}
-
-\newcommand{\projectlist}[2]{%
-    \vspace{0.2cm}
-    \begin{tabular}{p{3cm}|p{17.5cm}}
-        \textcolor{NavyBlue}{#1} & \footnotesize{#2}\\
-    \end{tabular}
 }
 
 \newcommand{\itemlist}[1]{%
@@ -112,7 +106,7 @@
 
 \newcommand{\skill}[2]{%
     \begin{tabular}{p{0.60\linewidth}r}
-        \small {#2} & \multicolumn{1}{m{7.3cm}}{\raggedleft \textsc{\small #1}}\\
+        \small {#2} & \multicolumn{1}{m{ \projectheadspacing{} }}{\raggedleft \textsc{\small #1}}\\
     \end{tabular}
     \vspace{\verticalspacing{}}
 }
@@ -199,7 +193,7 @@
 
 \section{Education}
 \def\arraystretch{1.2}
-\begin{tabular}{>{\raggedleft}p{1.5cm}p{15cm}r}
+\begin{tabular}{>{\raggedleft}p{1.5cm}p{14.6cm}r}
 
     \textsc{Current} & B. Tech, \textsc{Computer Science and Engineering},
     \textbf{Indian Institute of Technology}, Kanpur
@@ -415,6 +409,20 @@
 \section{Independent Projects}
 
 \cproject
+    {Winter 2014-2015}
+    {VS-3, Electronic Voting}
+    {Election Council, IIT Kanpur}
+    {\href{https://github.com/srijanshetty/elections} {\small{[GitHub]}}}
+    {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+            \item Designed and created a new electronic voting system in consultation with the \textbf{Students' Senate}
+                to facilitate smooth electonic voting in the campus.
+            \item The voting system was subsequently used in Students'
+                Gymkhana General Elections, Hall 8 HEC Elections, Hall 2 HEC Elections and Hall 4 HEC Elections.
+        \end{itemize}
+    }
+
+\cproject
     {Summer 2012-2013}
     {GNU/Linux Exploration}
     {Programming Club, IIT Kanpur}
@@ -428,18 +436,17 @@
     }
 
 \cproject
-    {Winter 2014-2015}
-    {VS-3, Electronic Voting}
-    {Election Council, IIT Kanpur}
-    {\href{https://github.com/srijanshetty/elections} {\small{[GitHub]}}}
+    {Summer 2012-2013}
+    {VANI - Voicing Archiving and Networking Information}
+    {Professor Manidra Agarwal, Professor T. V. Prabhakar}
+    {}
     {%
         \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Designed and created a new electronic voting system in consultation with the \textbf{Students' Senate}
-                to facilitate smooth electonic voting in the campus.
-            \item The voting system was subsequently used in Students'
-                Gymkhana General Elections, Hall 8 HEC Elections, Hall 2 HEC Elections and Hall 4 HEC Elections.
+            \item Initiated the creation of VANI - an extensible community platform with applications
+                for forums, wikis, search, lost and found and calendars.
         \end{itemize}
     }
+
 
 \gitproject
     {\href{https://navya.github.io/oars} {\small{[Site]}}}
@@ -462,12 +469,13 @@
     }
 
 \gitproject
-    {\href{https://github.com/srijanshetty/shufflerun} {\small{[GitHub]}}}
+    {\href{https://srijanshetty.in/shufflerun} {\small{[GitHub]}}}
     {ShuffleRun}
     {%
         \begin{itemize}[leftmargin=\bulletspace{}]
             \item Pitched ShuffleRun, a \textbf{music player} which selects tracks on the basis of the user's
                 running speed; recieved honourable mention at \textbf{Yahoo! HackU 2013}.
+            \item A test version of ShuffleRun is active \href{https://srijanshetty.in/shufflerun} {here}
         \end{itemize}
     }
 
