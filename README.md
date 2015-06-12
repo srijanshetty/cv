@@ -18,6 +18,8 @@ xelatex cv
 
 - I like to use pdf2htmlEX to create a gh-pages branch with the HTML version of the PDF.
   Additionally I have a post-commit hook which automatically generates the HTML version.
+  (You need to copy the contents of pdf2htmlEX to /usr/share/pdf2htmlEX for a good html
+  version to be renedered).
 
 ```shell
 #!/usr/bin/env bash
