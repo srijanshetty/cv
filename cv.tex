@@ -163,12 +163,11 @@
         \itemlist {%
                 \textsc{\small Languages} %
                 & \textbf{JavaScript} (Expert), \textbf{Java} (Proficient), \textbf{Python} (Proficient),
-                  \textbf{C/C++} (Intermediate), \textbf{}\\
+                  \textbf{C/C++} (Functional)\\
                 \textsc{\small Web Dev} %
                 & \textbf{HTML5}, \textbf{CSS}, \textbf{SQL and NoSQL}, \textbf{React}, \textbf{Nodejs}\\
                 \textsc{\small Tools} %
-                & \textbf{Git} (Expert), \textbf{Shell Scripting} (Proficient), \textbf{Vim} (Expert),
-                \textbf{LaTeX} (Proficient)\\
+                & \textbf{Git} (Expert), \textbf{Shell} (Proficient), \textbf{Vim} (Expert)\\
             }
     }
 
@@ -195,7 +194,7 @@
 \def\arraystretch{1.2}
 \begin{tabular}{>{\raggedleft}p{1.5cm}p{14.6cm}r}
 
-    \textsc{Current} & B. Tech, \textsc{Computer Science and Engineering},
+    \textsc{July 2015} & B. Tech, \textsc{Computer Science and Engineering},
     \textbf{Indian Institute of Technology}, Kanpur
     & \textbf{9.6/10}\\
 
@@ -222,47 +221,56 @@
 %
 \section{Work Experience}
 
-% \cproject
-%       {Oct 2017 - Present}
-%       {Analyst, Quant Market Making}
-%       {\textsc{Goldman Sachs}, Bangalore}
-%       {}
-%       {%
-%         \begin{itemize}[leftmargin=\bulletspace{}]
-%           \item Worked on franchise on exchange high frequency market making for the MiFiD 2 regime.
-%           \item Worked on the infrastructure to build out Systematic Internalizer and Public Quotes
-%                 to scale at the level of Goldman.
-%         \end{itemize}
-%       }
-
 \cproject
-      {June 2015 - Present}
+      {Oct 2017 - Present}
       {Analyst, Systematic Market Making}
       {\textsc{Goldman Sachs}, Bangalore}
       {}
       {%
         \begin{itemize}[leftmargin=\bulletspace{}]
+          \item Worked with the exchange market making team for the MiFiD II regime.
+          \item Scaled the web infrastructure (based on Vertx \& Angular) to match their intensive
+                data requirements.
+          \item Worked on fast PnL computation of One Delta Products.
+          \item Worked on the infrastructure to build out Systematic Internalizer and Public Quotes
+                to scale at the level of Goldman.
+        \end{itemize}
+      }
+
+\cproject
+      {June 2015 - Oct 2017}
+      {Analyst, Central Risk Book}
+      {\textsc{Goldman Sachs}, Bangalore}
+      {}
+      {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
           \item Worked on EMEA Central Risk Book Business of Goldman Sachs.
-          % \item Analyzed various unwind and RENTD strategies for pro-active risk management, according
-          %       to the alpha profile of flow.
+          \item Analyzed various unwind and RENTD strategies for pro-active risk management, according
+                to the alpha profile of flow.
           \item Developed the end-to-end full-stack infrastructure for centralizing FX \& Delta risk of
-                internal desks with a dynamic team working on a tech stack of Vertx, Java, React, Redux.
-          \item Designed a low latency block pricer REST service in Java and Vertx; dynamically adjusting
+                internal desks, with a dynamic team working on a tech stack of Vertx, Java, React, Redux
+                and proprietary systems.
+          \item Designed a low latency block pricing REST service in Java and Vertx; dynamically adjusting
                 quotes for volatility and volument in market.
-          \item Created a technical framework for realtime distributed process monitoring and functional
-                testing from scratch.
+          \item Generated a data certification and analytics framework which served as the gold standard for
+                data driven policy decisions.
+          \item Created a framework for realtime functional monitoring of processes using web based
+                D3.js visualization and live timeseries based metrics generated processes.
+          \item Built a resilient reference data framework which computes static data at the beginning of
+                the day for over thousands of entities in few minutes. The framework is currently being used
+                worldwide within Goldman.
         \end{itemize}
       }
 
 \cproject
       {May - June 2015}
-      {Summer Intern}
-      {\textsc{Klozee.}, Bangalore}
+      {DevOps Engineering}
+      {\textsc{Klozee}, Bangalore}
       {}
       {%
         \begin{itemize}[leftmargin=\bulletspace{}]
           \item Automated developer operations by creating a heroku style push to deploy model on AWS.
-          \item Worked full stack on Express, Angular, Node and Angular to create a apparel store for the web app.
+          \item Worked full stack on Express, Angular, Node and Angular to create an apparel store for the web app.
         \end{itemize}
       }
 
@@ -283,6 +291,24 @@
     }
 
 
+% \cproject
+%       {May-July 2014}
+%       {Research Intern}
+%       {\textsc{Microsoft Research India}, Bangalore}
+%       {}
+%       {%
+%           \begin{itemize}[leftmargin=\bulletspace{}]
+%               \item Analysed the implementations of different distributed systems and databases architectures like
+%                   \textbf{Google MapReduce}, \textbf{Google FileSystem}, \textbf{Google MillWheel} \textbf{Yahoo! PNUTS},
+%                   \textbf{Amazon DynamoDB}, \textbf{Apache Hadoop}, \textbf{Apache Storm}, \textbf{Microsoft Dryad},
+%                   and \textbf{Microsoft DryadLINQ} to understand the design decisions involved.
+%               \item Used \textbf{TPL Dataflow} and \textbf{Lightweight Tasks} to implement concurrent pipeline
+%                   processing of messages in CScale to preserve processing ord
+%                   er of partially ordered messages.
+%                   Performed \textbf{performance testing}, \textbf{failure testing} of the existing infrastructure.
+%           \end{itemize}
+%      }
+
 \cproject
       {May-July 2014}
       {Research Intern}
@@ -291,13 +317,11 @@
       {%
           \begin{itemize}[leftmargin=\bulletspace{}]
               \item Analysed the implementations of different distributed systems and databases architectures like
-                  \textbf{Google MapReduce}, \textbf{Google FileSystem}, \textbf{Google MillWheel} \textbf{Yahoo! PNUTS},
-                  \textbf{Amazon DynamoDB}, \textbf{Apache Hadoop}, \textbf{Apache Storm}, \textbf{Microsoft Dryad},
-                  and \textbf{Microsoft DryadLINQ} to understand the design decisions involved.
+                  \textbf{Google MapReduce}, \textbf{Google FileSystem}, \textbf{Google MillWheel},
+                  \textbf{Amazon DynamoDB}, \textbf{Apache Hadoop}, to understand the design decisions involved.
               \item Used \textbf{TPL Dataflow} and \textbf{Lightweight Tasks} to implement concurrent pipeline
-                  processing of messages in CScale to preserve processing ord
-                  er of partially ordered messages.
-                  Performed \textbf{performance testing}, \textbf{failure testing} of the existing infrastructure.
+                  processing of messages in CScale to preserve processing order of partially ordered messages.
+              \item Performed \textbf{performance testing}, \textbf{failure testing} of the existing infrastructure.
           \end{itemize}
      }
 
@@ -333,8 +357,8 @@
         \begin{itemize}[leftmargin=\bulletspace{}]
             \item Extended data sensitive hashing using standard Locality Sensitive Hashing extensions
              to compare effectiveness.
-            \item Implemented entropy based dsh, and multiprobe dsh and analysed relative performance with
-             respect to dsh.
+            % \item Implemented entropy based dsh, and multiprobe dsh and analysed relative performance with
+            %  respect to dsh.
         \end{itemize}
     }
 
@@ -349,8 +373,10 @@
                 Vibhuti Narayan, Premchand, Sarat Chattopadhyay and Dhamarvir Bharati.
             \item Clustered a sample set of multiple Hindi authors using K-means unsupervised clustering to achieve
                 F-scores in the range of 90-97\% for each author.
-            \item Classified each author using Support Vector Machine using Radial Basis Kernel function
+            \item Classified each author using Support Vector Machine using Kernel functions
                 and achieved an F-score of 90--95\% for each author.
+            % \item Classified each author using Support Vector Machine using Radial Basis Kernel function
+            %     and achieved an F-score of 90--95\% for each author.
             % \item Performed Multiple Discriminant Analysis on the data for a quantitative comparison with word
             %     collocations; there was no appreciable difference in the results with the F-scores increasing only
             %     marginally.
