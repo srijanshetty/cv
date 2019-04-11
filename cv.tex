@@ -207,18 +207,6 @@
 \section{Work Experience}
 
 \cproject
-      {Jan 2019 - Feb 2019}
-      {Policy in Action Fellow (Bangalore 2019)}
-      {\textsc{Young Leaders for Active Citizenship}, YLAC}
-      {}
-      {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Prepared a policy brief for an MP by having conversations with stakeholders and analyzing publicly available data on the topic.
-            \item Understand the public policy landscape in Indian and learn about effective advocacy and sound policy making.
-        \end{itemize}
-      }
-
-\cproject
       {Jan 2019 - Present}
       {Associate, Systematic Market Making}
       {\textsc{Goldman Sachs}, Bangalore}
@@ -226,8 +214,14 @@
       {%
         \begin{itemize}[leftmargin=\bulletspace{}]
           \item Worked on Principal Liquidity Provision and systematic internalizer (SI) for the MiFiD II regime.
-          \item Develop the SRE and monitoring infrastructure of the team using a variant of the TICKstack (Telegram, Influx, Grafana, Kapacitor)
-          \item Analyse and improve performance concurrent Java based infrastructure.
+          \item Develop the monitoring infrastructure of the team using a variant of the TICKstack
+              (Telegram, Influx, Grafana, Kapacitor) to have visibility over a cluster of hundreds of
+              processes on tens of deployments.
+          \item Scaled Java backend on vertx3 to live stream millions of positions
+              and trades to a React frontend by snapshotting data.
+          \item Analysed and improved performance regressions of multiple applications,
+              5x decrease on network congestion by coalescing packets on ZMQ.
+          \item Optimized PnL computations in python to handle millions of changes in positions.
         \end{itemize}
       }
 
@@ -237,13 +231,6 @@
       {\textsc{Goldman Sachs}, Bangalore}
       {}
       {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-          \item Worked on Principal Liquidity Provision and systematic internalizer (SI) for the MiFiD II regime.
-          \item Scaled the web infrastructure (based on Vertx \& Angular) as a full stack developer, to visualize
-                and monitor realtime data streams over web sockets.
-          \item Optimized PnL computations in python and worked on chunked messaging over ZeroMQ for performant
-                message delivery.
-        \end{itemize}
       }
 
 \cproject
@@ -254,21 +241,20 @@
       {%
         \begin{itemize}[leftmargin=\bulletspace{}]
           \item Analyzed various unwind and RENTD strategies for pro-active risk management, according
-                to the alpha profile of flow.
-          \item Developed the end-to-end full-stack infrastructure for centralizing FX \& Delta risk of
-                internal desks, with a dynamic team working on a tech stack of Vertx, Java, React, Redux
-                and proprietary systems.
+            to the alpha profile of flow.
+          \item Built a resilient reference data framework which computes static data and stores in memory.
+            Reduced application warmup time from 2-3 hours to few minutes. Optimized cache buildup times 1000x.
           \item Designed a low latency block pricing REST service in Java and Vertx; dynamically adjusting
-                quotes for volatility and volument in market.
-          \item Generated a data certification and analytics framework which served as the gold standard for
-                data driven policy decisions.
-          \item Created a framework for realtime functional monitoring of processes using web based
-                D3.js visualization and live timeseries based metrics generated processes.
-          \item Built a resilient reference data framework which computes static data at the beginning of
-                the day for over thousands of entities in few minutes. The framework is currently being used
-                worldwide within Goldman.
+            quotes for volatility and volume in market.
+            Reduced pricing time from few seconds to few milliseonds.
+          \item Created a framework for realtime functional monitoring of processes using D3.js.
           \item Overhauled the UI/UX with a React/Redux based soultion on the frontend and a Vertx3 based REST
-                backend to bring our interfaces closer to the industry.
+            backend to bring our interfaces closer to the industry.
+          \item Developed the end-to-end full-stack infrastructure for centralizing FX \& Delta risk of
+            internal desks, with a dynamic team working on a tech stack of Vertx, Java, React, Redux
+            and proprietary systems.
+          \item Generated an automated data certification and analytics framework
+              which served as the gold standard for data driven policy decisions.
         \end{itemize}
       }
 
@@ -279,7 +265,8 @@
       {}
       {%
         \begin{itemize}[leftmargin=\bulletspace{}]
-          \item Automated developer operations by creating a heroku style push to deploy model on AWS.
+          \item Automated developer operations by creating a heroku style push to deploy model on AWS,
+              reducing development time.
           \item Worked full stack on Express, Angular, Node and Angular to create an apparel store for the web app.
         \end{itemize}
       }
@@ -353,10 +340,10 @@
 %----------------------------------------------------------------------------------------
 %  PROJECTS
 %----------------------------------------------------------------------------------------
-\vspace{-0.35cm}
+% \vspace{-0.35cm}
 % \let\thefootnote\relax\footnote{Monsoon semester: July to November}
 % \let\thefootnote\relax\footnote{Winter Semester: January to April}
-\section{Projects}
+% \section{Projects}
 
 % \cproject
 %     {Winter 2014-2015}
@@ -372,28 +359,28 @@
 %         \end{itemize}
 %     }
 
-\cproject
-    {Winter 2013-2014}
-    {Hindi author attribution}
-    {\textsc{\raggedright Artificial Intelligence}, Professor Amitabha Mukherjee}
-    {\href{https://github.com/srijanshetty/author-attribution} {[GitHub]}}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Generated a Hindi literature corpus consisting of works by Tagore,
-                Vibhuti Narayan, Premchand, Sarat Chattopadhyay and Dhamarvir Bharati.
-            \item Clustered a sample set of multiple Hindi authors using K-means unsupervised clustering to achieve
-                F-scores in the range of 90-97\% for each author.
-            \item Classified each author using Support Vector Machine using Kernel functions
-                and achieved an F-score of 90--95\% for each author.
-            % \item Classified each author using Support Vector Machine using Radial Basis Kernel function
-            %     and achieved an F-score of 90--95\% for each author.
-            % \item Performed Multiple Discriminant Analysis on the data for a quantitative comparison with word
-            %     collocations; there was no appreciable difference in the results with the F-scores increasing only
-            %     marginally.
-            % \item Presented a poster on Opinion Word Expansion and Target Extraction through Double Propogation, Guang Qin,
-            %     Bing Liu, Jiajun Bu, Chun Chen that was nominated as the best poster by all students.
-        \end{itemize}
-    }
+% \cproject
+%     {Winter 2013-2014}
+%     {Hindi author attribution}
+%     {\textsc{\raggedright Artificial Intelligence}, Professor Amitabha Mukherjee}
+%     {\href{https://github.com/srijanshetty/author-attribution} {[GitHub]}}
+%     {%
+%         \begin{itemize}[leftmargin=\bulletspace{}]
+%             \item Generated a Hindi literature corpus consisting of works by Tagore,
+%                 Vibhuti Narayan, Premchand, Sarat Chattopadhyay and Dhamarvir Bharati.
+%             \item Clustered a sample set of multiple Hindi authors using K-means unsupervised clustering to achieve
+%                 F-scores in the range of 90-97\% for each author.
+%             \item Classified each author using Support Vector Machine using Kernel functions
+%                 and achieved an F-score of 90--95\% for each author.
+%             % \item Classified each author using Support Vector Machine using Radial Basis Kernel function
+%             %     and achieved an F-score of 90--95\% for each author.
+%             % \item Performed Multiple Discriminant Analysis on the data for a quantitative comparison with word
+%             %     collocations; there was no appreciable difference in the results with the F-scores increasing only
+%             %     marginally.
+%             % \item Presented a poster on Opinion Word Expansion and Target Extraction through Double Propogation, Guang Qin,
+%             %     Bing Liu, Jiajun Bu, Chun Chen that was nominated as the best poster by all students.
+%         \end{itemize}
+%     }
 
 %----------------------------------------------------------------------------------------
 %  INDEPENDENT PROJECTS
