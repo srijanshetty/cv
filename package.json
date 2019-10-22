@@ -1,0 +1,56 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "Personal CV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srijanshetty/cv.git"
+  },
+  "keywords": [
+    "cv",
+    "resume",
+    "intro",
+    "pdf",
+    "latex"
+  ],
+  "author": "Srijan R. Shetty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/srijanshetty/cv/issues"
+  },
+  "homepage": "https://github.com/srijanshetty/cv#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "husky": "^3.0.9"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        1,
+        "always",
+        [
+          "feat",
+          "fix",
+          "docs",
+          "build",
+          "refactor",
+          "revert",
+          "lint"
+        ]
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
