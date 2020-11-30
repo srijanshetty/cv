@@ -3,7 +3,7 @@
 set -e
 
 xelatex cv
-cp cv.pdf docs/
+mv cv.pdf docs/
 
 xelatex resume
-cp resume.pdf docs/
+mv resume.pdf docs/
