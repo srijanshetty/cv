@@ -55,7 +55,3 @@ This template takes elements from the Alessandro Plasmati's resume template but 
 to my aesthetic sensibilities (which more often than not might be bad).
 
 Share the love and my name 😄
-
-# Todo
-
-- Get this working with ShareLatex compiler.
