@@ -25,9 +25,9 @@
   },
   "homepage": "https://github.com/srijanshetty/cv#readme",
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
+    "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "husky": "^3.0.9"
+    "husky": "^9.1.7"
   },
   "commitlint": {
     "extends": [
