@@ -1,1 +1,10 @@
 node_modules/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+missfont.log
+
+# internal documents - do not publish
+it.pdf

@@ -1,0 +1,668 @@
+% -
+ %   Copyright (c) 2014 Srijan R Shetty <srijan.shetty+code@gmail.com>
+ %
+ %   Permission is hereby granted, free of charge, to any person obtaining a copy of
+ %   this software and associated documentation files (the "Software"), to deal in
+ %   the Software without restriction, including without limitation the rights to
+ %   use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ %   the Software, and to permit persons to whom the Software is furnished to do so,
+ %   subject to the following conditions:
+ %
+ %   The above copyright notice and this permission notice shall be included in all
+ %   copies or substantial portions of the Software.
+ %
+ %   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ %   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ %   FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ %   COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ %   IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ %   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ %%
+
+\documentclass[a4paper]{article} % Default font size and paper size
+
+%----------------------------------------------------------------------------------------
+% STYLING
+%----------------------------------------------------------------------------------------
+% FONTS
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+
+% HEADERS
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+\usepackage{scrlayer-scrpage} % Provides headers and footers configuration
+
+% HYPERREFS
+\usepackage{hyperref} % Required for adding links	and customizing them
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colours
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link colour
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colours throughout the document
+
+% TABLES
+\usepackage{tabularx,colortbl} % Advanced table configurations
+\usepackage{array} % Custom arrangement for the columns
+\usepackage{multirow} %rows spanning multiple rows
+
+% SECTIONS
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{1pt}{2pt} % Spacing around sections
+
+% LISTS
+\usepackage{enumitem} % For left margin removal in itemize
+
+% SYMBOLS
+\usepackage{marvosym} % Allows the use of symbols
+
+% PAGE GEOMETRY
+\usepackage[top=1.0cm, bottom=1.5cm, lmargin=1.0cm, rmargin=1.8cm,ignoreheadfoot]{geometry} % The page Geometry
+
+%----------------------------------------------------------------------------------------
+% CUSTOM ENVIRONMENTS
+%----------------------------------------------------------------------------------------
+\newcommand{\verticalspacing}{-0.25cm}
+\newcommand{\headspace}{-0.3cm}
+\newcommand{\bulletspace}{0.7cm}
+\newcommand{\projectheadspacing}{6.9cm}
+
+\newcommand{\highlight}[2]{%
+    \begin{tabular}{p{2.4cm}|l}
+        \textsc {\large #1} & #2
+    \end{tabular}
+}
+
+\newcommand{\cproject}[5]{%
+    \begin{tabular}{p{0.60\linewidth}r}
+        \textcolor{NavyBlue}{\small #2} & \multicolumn{1}{m{ \projectheadspacing{} }}{\raggedleft \small {\textsc{#1}}}\\
+        \small {#3} & \small {#4}
+    \end{tabular}\\
+    \begin{tabular}{p{0.98\linewidth}}
+    \vspace{-0.3cm}
+        \small{#5}
+    \end{tabular}
+    \vspace{\verticalspacing{}}
+}
+
+\newcommand{\gitproject}[3]{%
+    \begin{tabular}{p{0.60\linewidth}r}
+        \textcolor{NavyBlue}{\small #2} & \multicolumn{1}{m{ \projectheadspacing{} }}{\raggedleft #1}\\
+    \end{tabular}\\
+    \begin{tabular}{p{0.98\linewidth}}
+        \vspace{\headspace{}}
+        \small{#3}
+    \end{tabular}
+    \vspace{\verticalspacing{}}
+    \vspace{-0.2cm} % Needed for proper spacing
+}
+
+\newcommand{\itemlist}[1]{%
+    \def\arraystretch{1.2}
+    \begin{tabular}{>{\raggedleft}p{1.6cm}p{0.87\linewidth}}
+        #1
+    \end{tabular}
+    \def\arraystretch{1.0}
+}
+
+\newcommand{\skill}[2]{%
+    \begin{tabular}{p{0.60\linewidth}r}
+        \small {#2} & \multicolumn{1}{m{ \projectheadspacing{} }}{\raggedleft \textsc{\small #1}}\\
+    \end{tabular}
+    \vspace{\verticalspacing{}}
+}
+
+\newcommand{\github}{%
+    \includegraphics[height=9pt]{icons/octa.png}
+}
+
+%----------------------------------------------------------------------------------------
+% DOCUMENT BEGINS HERE
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% \font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Section formatting
+
+%----------------------------------------------------------------------------------------
+% HEADER SECTION
+%----------------------------------------------------------------------------------------
+
+{%
+    \begin{tabular}{rp{6cm}l}
+        \multirow{3}{0.70\linewidth}{%
+            \vfil
+            {%
+                \addfontfeature{LetterSpace=20.0}\fontsize{20}{20}\selectfont\scshape
+                Srijan R. Shetty
+            }\\
+        }
+
+        & {\Large\Letter} {\href{mailto:srijan.shetty@gmail.com}{srijan.shetty@gmail.com}}\\
+        & {\github} {\href{https://github.com/srijanshetty}{@srijanshetty}}\\
+        & {\Large\Mundus} {\href{https://srijanshetty.in}{https://srijanshetty.in}}\\
+    \end{tabular}
+    \vspace{-0.5cm}
+    \section{}
+}
+
+%----------------------------------------------------------------------------------------
+%   GLOBAL OPTIONS
+%----------------------------------------------------------------------------------------
+\vspace{0.1cm}
+\small
+
+%----------------------------------------------------------------------------------------
+%   SKILL SET
+%----------------------------------------------------------------------------------------
+\highlight
+    {Skill Set}
+    {%
+        \itemlist {%
+                \textsc{\small Languages} %
+                & \textbf{JavaScript} (Expert), \textbf{Python} (Expert), \textbf{Java} (Proficient),
+                  \textbf{C++} (Functional)\\
+                \textsc{\small Web Dev} %
+                & \textbf{HTML}, \textbf{CSS}, \textbf{React}, \textbf{Nodejs}\\
+                \textsc{\small Tools} %
+                & \textbf{Git} (Expert), \textbf{Shell} (Proficient), \textbf{Vim} (Expert)\\
+            }
+    }
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\def\arraystretch{1.2}
+\begin{tabular}{>{\raggedleft}p{1.5cm}p{14.6cm}r}
+
+    \textsc{July 2015} & B. Tech, \textsc{Computer Science and Engineering},
+    \textbf{Indian Institute of Technology}, Kanpur
+    & \textbf{9.6/10}\\
+
+    \textsc{July 2011} & 12$^{th}$ Board, \textsc{CBSE} Board,
+    \textbf{The Emerald Heights International School}, Indore
+    & \textbf{91.4}\% \\
+
+    \textsc{July 2009} & 10$^{th}$ Board, \textsc{ICSE} Board,
+    \textbf{The Laurels School International}, Indore
+    & \textbf{95.4}\% \\
+
+\end{tabular}
+\def\arraystretch{1}
+
+%----------------------------------------------------------------------------------------
+%	TEACHING
+%----------------------------------------------------------------------------------------
+
+% \section{Teaching}
+
+%----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+%
+\section{Security \& Compliance}
+
+\skill
+    {Compliance}
+    {ISO 27001 and SOC 2 Type II certified organization; continuous controls monitoring (Sprinto); annual external VAPT.}
+
+\skill
+    {Detection \& Response}
+    {Exaforce agentic AI SOC with 24/7 MDR (design partner); Wazuh SIEM; Falco NIDS/HIDS; incident management.}
+
+\skill
+    {Architecture}
+    {Zero Trust on Tailscale/WireGuard mesh with RBAC; custody security across Fireblocks (warm) and Tungsten (cold).}
+
+\skill
+    {DevSecOps}
+    {GitHub Advanced Security, Snyk, Semgrep, OSV Scanner, Dependabot; automated SBOM generation in CI/CD.}
+
+\skill
+    {Resilience}
+    {Multi-cloud BCP/DR with bi-annual drills and attestations; AWS Shield, WAF and Cloudflare DDoS protection.}
+
+\skill
+    {Threat Intelligence}
+    {FS-ISAC and Messari; NextDNS, SentinelOne and Rippling MDM for endpoint and social-engineering defense.}
+
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\cproject
+      {Nov 2022 - Present}
+      {Co-founder, CTO \& CISO}
+      {\textsc{fuze.finance}, UAE}
+      {}
+      {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+            \item Built the security program from scratch to ISO 27001 and SOC 2 Type II
+                certification, with annual VAPT and continuous compliance monitoring
+                via Sprinto.
+            \item Designed a Zero Trust architecture on a Tailscale/WireGuard mesh VPN
+                with RBAC enforced through ACLs across all internal services.
+            \item Established a 24/7 AI-driven SOC as design partner to Exaforce (agentic
+                AI SIEM and MDR), layered on Wazuh SIEM with Falco-based NIDS/HIDS
+                across AWS, Azure, and GitHub.
+            \item Architected digital-asset custody security: Fireblocks (warm) and
+                Tungsten (cold) behind a hexagonal integration layer, with AWS
+                Secrets Manager, WAF, Shield, and Cloudflare DDoS protection.
+            \item Instituted shift-left DevSecOps: SAST and secret scanning (GitHub
+                Advanced Security, Snyk, Semgrep), supply-chain scanning (OSV,
+                Dependabot) and automated SBOM generation in CI/CD.
+            \item Run BCP/DR with bi-annual disaster-recovery drills and attestations,
+                and threat intelligence via FS-ISAC and Messari.
+            \item Raised seed capital from Further Ventures, backed by ADQ; building
+                digital assets infrastructure for the Middle East.
+        \end{itemize}
+      }
+
+\cproject
+      {Jan 2020 - Mar 2022}
+      {Co-founder \& CTO}
+      {\textsc{allround.club}, Bangalore}
+      {}
+      {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+            \item Raised \$2.5m in seed capital from Stellaris Venture Partners and Athera Venture Partners.
+            \item Scaled revenues to \$1m ARR, with more than 100\% growth in revenue, month on month from January '21
+                to July '21.
+            \item Expanded globally to USA, UK, UAE, Phillipines and Indonesia apart from the core market of India.
+            \item Built a Map based learning environment for kids to progress through levels and multiple asynchronous
+                games to grasp concepts like note recognition in music, ear training, pitch recognition.
+        \end{itemize}
+      }
+
+\cproject
+      {Aug 2019 - Dec 2019}
+      {Freelance Software Developer}
+      {Bangalore}
+      {}
+      {%
+      }
+
+\cproject
+      {Jan 2019 - Feb 2019}
+      {Policy in Action Fellow (Bangalore 2019)}
+      {\textsc{Young Leaders for Active Citizenship}, YLAC}
+      {}
+      {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+            \item Prepared a policy brief for an MP by having conversations with stakeholders and analyzing publicly available data on the topic.
+            \item Understand the public policy landscape in Indian and learn about effective advocacy and sound policy making.
+        \end{itemize}
+      }
+
+\cproject
+      {Jan 2019 - Jul 2019}
+      {Associate, Systematic Market Making}
+      {\textsc{Goldman Sachs}, Bangalore}
+      {}
+      {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+          \item Worked on Principal Liquidity Provision and systematic internalizer (SI) for the MiFiD II regime.
+          \item Develop the monitoring infrastructure of the team using a variant of the TICKstack
+              (Telegram, Influx, Grafana, Kapacitor) to have visibility over a cluster of over hundred
+              processes co-located with exchanges across the globe.
+          \item Scaled Java backend on vertx3 to live stream upwards of 5 million positions
+              and trades to a React frontend by snapshotting data.
+          \item Analysed and improved performance regressions of multiple applications,
+              5x decrease on network congestion by coalescing packets on ZMQ running our Event Sourcing
+              infrastructure.
+          \item Optimized PnL computations in python to over 3 million postion changes by efficient
+              use of concurrency in python.
+        \end{itemize}
+      }
+
+\cproject
+      {Dec 2017 - Dec 2018}
+      {Analyst, Systematic Market Making}
+      {\textsc{Goldman Sachs}, Bangalore}
+      {}
+      {%
+      }
+
+\cproject
+      {June 2015 - Nov 2017}
+      {Analyst, Central Risk Book}
+      {\textsc{Goldman Sachs}, Bangalore}
+      {}
+      {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+          \item Analyzed various unwind and RENTD strategies for pro-active risk management, according
+            to the alpha profile of flow.
+          \item Built a resilient reference data framework which computes static data and stores in memory.
+            Reduced application warmup time from 2-3 hours to few minutes. Optimized cache buildup times 1000x.
+          \item Designed a low latency block pricing REST service in Java and Vertx; dynamically adjusting
+            quotes for volatility and volume in market.
+            Reduced pricing time from few seconds to few milliseonds.
+          \item Created a framework for realtime functional monitoring of processes using D3.js.
+          \item Overhauled the UI/UX with a React/Redux based soultion on the frontend and a Vertx3 based REST
+            backend to bring our interfaces closer to the industry.
+          \item Developed the end-to-end full-stack infrastructure for centralizing FX \& Delta risk of
+            internal desks, with a dynamic team working on a tech stack of Vertx, Java, React, Redux
+            and proprietary systems.
+          \item Generated an automated data certification and analytics framework
+              which served as the gold standard for data driven policy decisions.
+        \end{itemize}
+      }
+
+\cproject
+      {May - June 2015}
+      {DevOps Engineering}
+      {\textsc{Klozee}, Bangalore}
+      {}
+      {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+          \item Automated developer operations by creating a heroku style push to deploy model on AWS,
+              reducing development time.
+          \item Worked full stack on Express, Angular, Node and Angular to create an apparel store for the web app.
+        \end{itemize}
+      }
+
+\cproject
+    {2014 - 2015}
+    {Multi Factor Authentication in OpenVPN}
+    {\textsc{\raggedright Mozilla Winter of Security}, Guillaume Destuynder, Professor Dheeraj Sanghi}
+    {\href{https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA} {[Wiki]} }
+    {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+          \item One of the \textbf{eleven} teams all over the \textbf{world} to be selected as a part of Mozilla's Winter of Security Initiative 2014.
+          \item The objective of the project was to implement true \textbf{arbitrary multi-factor authentication} support in
+              \textbf{OpenVPN}; and to implement \textbf{session-support} for the additional factors.
+          \item The project presentation is archived at
+              \href{https://air.mozilla.org/mwos-2014-openvpn-mfa/}{https://air.mozilla.org/mwos-2014-openvpn-mfa/}.
+          \item The wiki for the project is located at \href{https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA} {https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA}
+      \end{itemize}
+    }
+
+
+% \cproject
+%       {May-July 2014}
+%       {Research Intern}
+%       {\textsc{Microsoft Research India}, Bangalore}
+%       {}
+%       {%
+%           \begin{itemize}[leftmargin=\bulletspace{}]
+%               \item Analysed the implementations of different distributed systems and databases architectures like
+%                   \textbf{Google MapReduce}, \textbf{Google FileSystem}, \textbf{Google MillWheel} \textbf{Yahoo! PNUTS},
+%                   \textbf{Amazon DynamoDB}, \textbf{Apache Hadoop}, \textbf{Apache Storm}, \textbf{Microsoft Dryad},
+%                   and \textbf{Microsoft DryadLINQ} to understand the design decisions involved.
+%               \item Used \textbf{TPL Dataflow} and \textbf{Lightweight Tasks} to implement concurrent pipeline
+%                   processing of messages in CScale to preserve processing ord
+%                   er of partially ordered messages.
+%                   Performed \textbf{performance testing}, \textbf{failure testing} of the existing infrastructure.
+%           \end{itemize}
+%      }
+
+\cproject
+      {May-July 2014}
+      {Research Intern}
+      {\textsc{Microsoft Research India}, Bangalore}
+      {}
+      {%
+          \begin{itemize}[leftmargin=\bulletspace{}]
+              \item Analysed the implementations of different distributed systems and databases architectures like
+                  \textbf{Google MapReduce}, \textbf{Google FileSystem}, \textbf{Google MillWheel},
+                  \textbf{Amazon DynamoDB}, \textbf{Apache Hadoop}, to understand the design decisions involved.
+              \item Used \textbf{TPL Dataflow} and \textbf{Lightweight Tasks} to implement concurrent pipeline
+                  processing of messages in CScale to preserve processing order of partially ordered messages.
+              \item Performed \textbf{performance testing}, \textbf{failure testing} of the existing infrastructure.
+          \end{itemize}
+     }
+
+\cproject
+    {May-July 2013}
+    {Software Development Intern}
+    {\textsc{Aurus Networks'}, Bangalore}
+    {}
+    {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+            \item Ported the legacy flash based web player in \textbf{CourseHub} --- Aurus Networks'
+                MOOC offering --- to a technology agnostic \textbf{HTML5/JavaScript} web player leading
+                to a uniform cross-platform viewing experience.
+            \item Developed a \textbf{XMPP} based \textbf{real-time chat service} using Jabber framework,
+                for conversations during live lectures.
+        \end{itemize}
+    }
+
+%----------------------------------------------------------------------------------------
+%  PROJECTS
+%----------------------------------------------------------------------------------------
+% \vspace{-0.35cm}
+% \let\thefootnote\relax\footnote{Monsoon semester: July to November}
+% \let\thefootnote\relax\footnote{Winter Semester: January to April}
+% \section{Projects}
+
+% \cproject
+%     {Winter 2014-2015}
+%     {Data Sensitive Hashing}
+%     {\textsc{\raggedright Indexing and Searching in Databases}, Professor Arnab Bhattacharya}
+%     {\href{https://github.com/srijanshetty/data-sensitive-hashing} {[GitHub]}}
+%     {%
+%         \begin{itemize}[leftmargin=\bulletspace{}]
+%             \item Extended data sensitive hashing using standard Locality Sensitive Hashing extensions
+%              to compare effectiveness.
+%             \item Implemented entropy based dsh, and multiprobe dsh and analysed relative performance with
+%              respect to dsh.
+%         \end{itemize}
+%     }
+
+% \cproject
+%     {Winter 2013-2014}
+%     {Hindi author attribution}
+%     {\textsc{\raggedright Artificial Intelligence}, Professor Amitabha Mukherjee}
+%     {\href{https://github.com/srijanshetty/author-attribution} {[GitHub]}}
+%     {%
+%         \begin{itemize}[leftmargin=\bulletspace{}]
+%             \item Generated a Hindi literature corpus consisting of works by Tagore,
+%                 Vibhuti Narayan, Premchand, Sarat Chattopadhyay and Dhamarvir Bharati.
+%             \item Clustered a sample set of multiple Hindi authors using K-means unsupervised clustering to achieve
+%                 F-scores in the range of 90-97\% for each author.
+%             \item Classified each author using Support Vector Machine using Kernel functions
+%                 and achieved an F-score of 90--95\% for each author.
+%             % \item Classified each author using Support Vector Machine using Radial Basis Kernel function
+%             %     and achieved an F-score of 90--95\% for each author.
+%             % \item Performed Multiple Discriminant Analysis on the data for a quantitative comparison with word
+%             %     collocations; there was no appreciable difference in the results with the F-scores increasing only
+%             %     marginally.
+%             % \item Presented a poster on Opinion Word Expansion and Target Extraction through Double Propogation, Guang Qin,
+%             %     Bing Liu, Jiajun Bu, Chun Chen that was nominated as the best poster by all students.
+%         \end{itemize}
+%     }
+
+%----------------------------------------------------------------------------------------
+%  INDEPENDENT PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Independent Projects}
+
+\cproject
+    {Winter 2014-2015}
+    {VS-3, Electronic Voting}
+    {Election Council, IIT Kanpur}
+    {\href{https://github.com/srijanshetty/elections} {\small{[GitHub]}}}
+    {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+            \item Designed and created a new electronic voting system in consultation with the \textbf{Students' Senate}
+                to facilitate smooth electonic voting in the campus.
+            \item The voting system was subsequently used in Students'
+                Gymkhana General Elections, Hall 8 HEC Elections, Hall 2 HEC Elections and Hall 4 HEC Elections.
+        \end{itemize}
+    }
+
+\cproject
+    {Summer 2012-2013}
+    {VANI - Voicing Archiving and Networking Information}
+    {Professor Manidra Agarwal, Professor T. V. Prabhakar}
+    {}
+    {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+            \item Initiated the creation of VANI - an extensible community platform with applications
+                for forums, wikis, search, lost and found and calendars.
+        \end{itemize}
+    }
+
+%----------------------------------------------------------------------------------------
+%   Awards and Achievements
+%----------------------------------------------------------------------------------------
+\section{Awards and Achievements}
+
+\itemlist {%
+    % \textsc{\small May 2015}    & Achieved a rank of \textbf{53} in
+    %                               \href{https://www.kaggle.com/c/bike-sharing-demand/leaderboard}
+    %                               {Kaggle's Bike Sharing Demand} Machine Learning Competition. \\
+    \textsc{\small 2011-2015}   & Students' \textbf{Gymkhana Leadership Award}, IIT Kanpur. \\
+    \textsc{\small Jan 2011}    & Kishore Vaigyanik Protsahan Yojana (\textbf{KVPY}) Fellowship \\
+    \textsc{\small Dec 2009}    & \textbf{CSIR Programme on Youth for Leadership in Science} held at
+                                  Advanced Materials Research Institute, Bhopal\\
+
+    \textsc{\small 2014-2015}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
+    \textsc{\small 2014-2015}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
+    \textsc{\small 2012-2013}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
+    \textsc{\small 2011-2012}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
+    % \textsc{\small Jan 2010}    & Qualified \textbf{Regional Mathematics Olympiad} (RMO) \\
+}
+
+%----------------------------------------------------------------------------------------
+%   OTHER SKILLS
+%----------------------------------------------------------------------------------------
+
+\section {Leadership Skills}
+
+\skill
+    {2014 - 2015}
+    {Chief Election Officer, Election Council, IIT Kanpur}
+
+% \gitproject
+%     {2014 - 2015}
+%     {Chief Election Officer, Election Council, IIT Kanpur}
+%     {%
+%         \begin{itemize}[leftmargin=\bulletspace{}]
+%             \item Conducted General Elections, Student's Gymkhana 2014 and
+%                 Girls Representative Elections, Students' Gymkhana 2014.
+%             \item Developed a new voting software from ground up to cater to the needs of IIT Kanpur.
+%         \end{itemize}
+%     }
+
+\skill
+    {2014 - 2015}
+    {Head, Major Events and Competitions, Antaragni '14}
+
+% \gitproject
+%     {2014 - 2015}
+%     {Head, Major Events and Competitions, Antaragni '14}
+%     {%
+%         \begin{itemize}[leftmargin=\bulletspace{}]
+%             \item Orchestrated Roadtrip --- the National Campaign of Antaragni '14, under which national
+%                 prelims for Nukkad, Dance, Quiz and Synchronicity were held in Pune, Mumbai, Chennai,
+%                 Bangalore, Chandigarh, Bhopal, Lucknow, Kolkata, and Kanpur.
+%             \item Negotiated with leading academies of Dance, Musicals, and Fine Arts to provide mentorships,
+%                 and other non-monetary incentives to the outstanding cultural performers in Antaragni
+%                 under the banner of \textbf{Dream On} campaign.
+%             \item Coordinated the conduction of \textbf{fifty competitions and nine major events} with a team
+%                 comprising of over \textbf{thousand volunteers}.  Initiated and organized Mr. \& Ms. Fresher's
+%                 competition and introduced Chreo Night in Antaragni's arsenal of competitions.
+%             \item Organized a \textbf{blood donation camp} for the residents of IIT Kanpur to promote awarness
+%                 about road accidents.  Mobilized information about \textbf{road safety} through infographics
+%                 and questionnaires via Antaragni's nation wide social campaign \textbf{Zara Sambhal Ke}.
+%         \end{itemize}
+%     }
+
+\skill
+    {2013 -- 2014}
+    {Editor-in-chief, Vox Populi, the campus newsletter.}
+
+% \skill
+%     {2012 -- 2013}
+%     {Senator, Students' Senate, IITK Y11 batch.}
+
+% \gitproject
+%     {2013 -- 2014}
+%     {Hospitality Coordinator, Antaragni '13}
+%     {%
+%         \begin{itemize}[leftmargin=\bulletspace{}]
+%             \item Managed a team of \textbf{40 secretaries and 80 volunteers}, over a span of 8 months and ensured a
+%                 flawless conduction of the festival.
+%             \item Chalked out the logistics of \textbf{hospitality and accommodation} of \textbf{1500 participants}
+%                 with four other coordinators.  Handled security arrangements during the four days of the
+%                 Festival from 24$^{th}$ to 27$^{th}$ October.
+%         \end{itemize}
+%     }
+
+% \skill
+%     {2013 -- 2014}
+%     {Member, Gymkhana Review Committee}
+
+%----------------------------------------------------------------------------------------
+%   COMMUNITY SERVICE
+%----------------------------------------------------------------------------------------
+
+\section{Volunteer Work}
+
+\skill
+    {2014 -- 2015}
+    {Member, Institute Anti Ragging Committee}
+
+% \gitproject
+%     {2014 -- 2015}
+%     {Member, Institute Anti Ragging Committee}
+%     {%
+%         \begin{itemize}[leftmargin=\bulletspace{}]
+%             \item Appointed as a member of the Institute Anti Ragging Committee, \textbf{a 10 member committee} responsible
+%                 for welfare of the newly admitted freshmen.
+%             \item Worked in tandem with the office of the Dean of Student Affairs, to organize sessions
+%                 on \textbf{easing the transition of freshmen}.  Ensured institute norms regarding humane treatment
+%                 of freshmen are properly conveyed to all senior batches and worked towards the enforcement of those norms.
+%         \end{itemize}
+%     }
+
+
+\skill
+    {2013 -- 2014}
+    {Tutor, English Proficiency Programme, Professor Bhaskar Das Gupta}
+
+% \cproject
+%     {2013 -- 2014}
+%     {Tutor, English Proficiency Programme}
+%     {Professor Bhaskar Das Gupta}
+%     {}
+%     {%
+%         \begin{itemize}[leftmargin=\bulletspace{}]
+%             \item Worked as a \textbf{English tutor} in the pilot English Proficiency Programme to help
+%                 \textbf{under-privileged students} obtain a functional knowlege of English.
+%         \end{itemize}
+%     }
+
+\skill
+    {2012 -- 2013}
+    {Academic Mentor, Fundamentals of Computing, Professor Sumit Ganguly}
+
+%----------------------------------------------------------------------------------------
+%   EXTRA-CURRICULAR ACTIVITIES
+%----------------------------------------------------------------------------------------
+
+% \section{Extra-Curricular Activities}
+%
+% \skill {\href{srijanshetty.quora.com} {[Blog]}}
+%        {Sporadic blogger at \href{srijanshetty.in} {srijanshetty.in}}
+%
+% \gitproject
+%     {\href{https://github.com/navya} {\small{[Site]}}}
+%     {Hacker, Navya, FOSS Group IIT Kanpur}
+%     {%
+%         \begin{itemize}[leftmargin=\bulletspace{}]
+%             \item Promoted the \textbf{FOSS initiative} in campus by organizing \textbf{student lectures} and meet-ups.
+%             \item Built student-centric applications like \textbf{Course Search and Student Search}, to circumvent
+%                 their legacy institute counterparts.
+%         \end{itemize}
+%     }
+%
+% \skill
+%     {\href{https://github.com/srijanshetty} {\small{[GitHub]}}}
+%     {Active contributor to numerous open source projects}
+
+\end{document}
